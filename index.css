@@ -12,6 +12,10 @@
     animation-duration: 1s;
 }
 
+#titleimage-index {
+    background-image: url(img/NewPercillia.png);
+}
+
 #titlesubheadings-container, #titlesubheadings-container-animated {
     align-items: center;
     justify-content: center;

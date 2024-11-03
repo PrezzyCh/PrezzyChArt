@@ -111,10 +111,12 @@ footer {
 #headerdividercommissions-animated,
 #commissionsparagraph-animated, 
 #dividercommissions-animated, 
-#commissionbutton-animated
+#commissionbutton-animated,
 /* about me */
-
-{
+#aboutmeh2-animated,
+#headerdivideraboutme-animated,
+#divideraboutme-animated,
+#aboutmeparagraph-animated {
     opacity: 0%;
     animation-timing-function: cubic-bezier(0.1, 0.4, 0.6, 0.7, 0.8, 0.85, 0.9, 0.92, 0.95, 0.96, 0.97, 0.98, 0.99, 1);
     animation-delay: 0.5s;
@@ -125,6 +127,7 @@ footer {
 #titleh1,
 #titlesubheadings-container,
 #socials,
+/* Index */
 #introductionh2,
 #headerdividerintroduction,
 #introductionparagraph,
@@ -138,7 +141,12 @@ footer {
 #headerdividercommissions,
 #commissionsparagraph,
 #dividercommissions,  
-#commissionbutton {
+#commissionbutton,
+/* about me */
+#aboutmeh2,
+#headerdivideraboutme,
+#divideraboutme,
+#aboutmeparagraph {
     opacity: 0%;
 }
 
@@ -241,6 +249,16 @@ footer {
     height: fit-content;
     align-items: center;
     overflow: hidden;
+}
+
+.titleimage {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    position: fixed;
+    z-index: -1;
 }
 
 .navbarlinks:hover,
@@ -439,16 +457,6 @@ footer {
 #titleh1-animated {
     animation-name: animation-fadeinTTB;
     animation-duration: 1s;
-}
-
-#titleimage {
-    background-image: url(img/NewPercillia.png);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 800px;
-    position: fixed;
-    z-index: -1;
 }
 
 #main-title-gradient {

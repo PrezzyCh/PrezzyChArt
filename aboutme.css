@@ -3,6 +3,12 @@
     THESE IDS ARE ONLY USED FOR aboutme
 */
 
+/* - title -*/
+
+#titleimage-aboutme {
+    background-image: url("img/Koi Fox.png");
+}
+
 /*- about me section -*/
 #aboutme-container {
     border-top-left-radius: 0px;
@@ -32,6 +38,18 @@
 #headerdivideraboutme-animated {
     animation: animation-fadeinLTR;
     animation-duration: 1.2s;
+}
+
+#aboutmecontentarticlecontainer {
+    align-items: start;
+}
+
+#divideraboutme, #divideraboutme-animated {
+    width: 200px;
+}
+#divideraboutme-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1.3s;
 }
 
 #aboutmeparagraph-animated {

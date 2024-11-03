@@ -51,6 +51,12 @@ function animateElements() {
     } 
 }
 
+function loadMultiple(index, change) {
+    index.forEach(element => {
+        element.id = change;
+    });
+}
+
 function animateIndex() {
     //|-----------------------containers -----------------------|
     let titleContainer = document.getElementById("titlecontainer-index");
@@ -65,7 +71,7 @@ function animateIndex() {
     //introductions 
     let introductionh2 = document.getElementById("introductionh2");
     let headerdividerintroduction = document.getElementById("headerdividerintroduction");
-    let introductionparagraph = document.getElementById("introductionparagraph");
+    let introductionparagraph = document.querySelectorAll("#introductionparagraph");
     let dividerintroduction = document.getElementById("dividerintroduction");
     let introductionbutton = document.getElementById("introductionbutton");
     //gallery
@@ -99,7 +105,7 @@ function animateIndex() {
     if ((introductionContainerPos >= topBounds) && (introductionContainerPos <= bottomBounds) && !introductionIsActivated) {
         introductionh2.id = "introductionh2-animated";
         headerdividerintroduction.id = "headerdividerintroduction-animated";
-        introductionparagraph.id = "introductionparagraph-animated";
+        loadMultiple(introductionparagraph, "introductionparagraph-animated");
         dividerintroduction.id = "dividerintroduction-animated";
         introductionbutton.id = "introductionbutton-animated";
 
@@ -135,7 +141,8 @@ function animateAboutMe() {
     //aboutme
     let aboutmeh2 = document.getElementById("aboutmeh2");
     let headerdivideraboutme = document.getElementById("headerdivideraboutme");
-    let aboutmeparagraph = document.getElementById("aboutmeparagraph");
+    let aboutmeparagraph = document.querySelectorAll("#aboutmeparagraph");
+    let divideraboutme = document.getElementById("divideraboutme");
     //|----------------------- Values -----------------------|
     let topBounds = 0;
     let bottomBounds = document.documentElement.clientHeight;
@@ -148,7 +155,8 @@ function animateAboutMe() {
     if ((aboutmeContainerPos >= topBounds) && (aboutmeContainerPos <= bottomBounds) && !aboutmeIsActivated) {
         aboutmeh2.id = "aboutmeh2-animated";
         headerdivideraboutme.id = "headerdivideraboutme-animated";
-        aboutmeparagraph.id = "aboutmeparagraph-animated";
+        loadMultiple(aboutmeparagraph, "aboutmeparagraph-animated");
+        divideraboutme.id = "divideraboutme-animated";
         aboutmeIsActivated = true;
     }
 
