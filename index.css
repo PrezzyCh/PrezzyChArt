@@ -1,0 +1,237 @@
+/* Behavior:
+    This is the CSS for the Index.html file.
+    THESE IDS ARE ONLY USED FOR INDEX
+*/
+
+/*- Title -*/
+#titleh1-index, #titleh1-animated-index {
+    font-size: 150px;
+}
+#titleh1-animated-index {
+    animation-name: animation-fadeinLTR;
+    animation-duration: 1s;
+}
+
+#titlesubheadings-container, #titlesubheadings-container-animated {
+    align-items: center;
+    justify-content: center;
+}
+#titlesubheadings-container-animated {
+    animation-name: animation-fadeinLTR;
+    animation-duration: 1.4s;
+}
+
+#titlesubheadings-container > h2 {
+    text-shadow: 3px 3px #395d77;
+}
+
+#socials-animated {
+    display: flex;
+    animation-name: animation-fadeinLTR;
+    animation-duration: 1s;
+}
+
+#socialsinsta {
+    background-image: url(img/Royalty.png);
+    background-size: cover;
+}
+
+#socialsdevi {
+    background-image: url(img/Royalty.png);
+    background-size: cover;
+}
+
+#socialscara {
+    background-image: url(img/Royalty.png);
+    background-size: cover;
+}
+
+/* introduction */
+#introduction-container {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-image: linear-gradient(100deg, #31465B 65%, #31465b00 80%), url("img/Peak of Dawn.png");
+    background-color: #a13b20; /* Fallback color */
+    align-items: flex-start;
+    flex-direction: column;
+    background-position: right;
+    background-size: cover, auto 200%;
+    background-repeat: no-repeat;
+} 
+
+#introductionheader {
+    position: relative;
+    right: 100px;
+}
+
+#introductionh2, #introductionh2-animated {
+    text-shadow: 5px 5px #395d77;
+}
+#introductionh2-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1s;
+}
+
+#headerdividerintroduction, #headerdividerintroduction-animated {
+    box-shadow: 5px 5px #395d77;
+}
+#headerdividerintroduction-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1.2s;
+}
+
+#introductionparagraph-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1.5s;
+}
+
+#dividerintroduction, #dividerintroduction-animated {
+    width: 200px;
+}
+#dividerintroduction-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1.3s;
+}
+
+#introductioncontentarticlecontainer {
+    align-items: start;
+}
+
+#introductionbutton-transitionlock {
+    width: initial;
+    height: 75px;
+}
+
+#introductionbutton-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1s;
+}
+
+
+
+/*- gallery -*/
+#gallerycontainer {
+    clip-path: fill-box;
+    width: 100%;
+    height: fit-content;
+    border-radius: inherit;
+}
+
+#galleryheader {
+    background-image: linear-gradient(90deg, #0C4160, #03080C);
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    flex-direction: column;
+}
+
+#galleryh2, #galleryh2-animated {
+    text-shadow: 0px 5px #395d77;
+}
+#galleryh2-animated {
+    animation: animation-fadeinTTB;
+    animation-duration: 1s;
+}
+
+#headerdividergallery, #headerdividergallery-animated {
+    box-shadow: 0px 5px #395d77;
+}
+#headerdividergallery-animated {
+    animation: animation-fadeinTTB;
+    animation-duration: 1.5s;
+}
+
+#gallerywindow {
+    margin: 0;
+    background-image: url("img/GalleryPreview.png");
+    background-size: cover;
+    background-position-x: center;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#galleryparagraph-animated {
+    animation: animation-fadeinTTB;
+    animation-duration: 1.3s;
+}
+
+#gallerybutton, #gallerybutton-animated {
+    box-shadow: 10px 15px 20px #03080C;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#gallerybutton-animated {
+    animation: animation-fadeinTTB;
+    animation-duration: 1s;
+}
+
+/*- Commissions -*/
+#commissions-container {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-image: linear-gradient(70deg, #31465b00 35%, #31465B 40%), url("img/Royalty.png");
+    background-color: #471302; /* Fallback color */
+    background-position: 0 0, 0 -40px;
+    align-items: flex-end;
+    flex-direction: column;
+    background-size: cover, auto 150%;
+    background-repeat: no-repeat;
+}
+
+#commissionsheader {
+    position: relative;
+    justify-items: flex-end;
+    left: 100px;
+}
+
+#commissionsh2, #commissionsh2-animated {
+    text-shadow: -5px 5px #395d77;
+}
+#commissionsh2-animated {
+    animation: animation-fadeinRTL;
+    animation-duration: 1s;
+}
+
+#headerdividercommissions, #headerdividercommissions-animated{
+    box-shadow: -5px 5px #395d77;
+}
+#headerdividercommissions-animated {
+    animation: animation-fadeinRTL;
+    animation-duration: 1.2s;
+}
+
+#commissionscontentarticlecontainer {
+    align-items: end;
+}
+
+#commissionsparagraph, #commissionsparagraph-animated {
+    text-align: right;
+}
+#commissionsparagraph-animated {
+    animation: animation-fadeinRTL;
+    animation-duration: 1.5s;
+}
+
+#dividercommissions, #dividercommissions-animated {
+    width: 200px;
+}
+#dividercommissions-animated {
+    animation: animation-fadeinRTL;
+    animation-duration: 1.3s;
+}
+
+#commissionbutton, #commissionbutton-animated {
+    background-color: #494e53;
+    color: rgb(188, 189, 190);
+}
+#commissionbutton-animated {
+    animation: animation-fadeinRTL;
+    animation-duration: 1s;
+}
+
+#commissionbutton-transitionlock { /*Disabled button*/
+    margin-top: 20px;
+    height: 75px;
+}

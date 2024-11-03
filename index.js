@@ -1,10 +1,13 @@
 // Animations is activated
-let commissionsIsActivated = false;
 let titleIsActivated = false;
 let introductionIsActivated = false;
 let galleryIsActivated = false;
+let commissionsIsActivated = false;
+
+let aboutmeIsActivated = false;
 //constants 
 
+// On starts
 window.onresize = function() {
     // possible realign of elements with this.
 }
@@ -18,6 +21,9 @@ window.onscroll = function() {
     animateElements();
 }
 
+// Functions
+
+//These functions handles the loading animation for all HTML files globally
 function loadingScreenAnimation() {
     let loadingscreen = document.getElementById("loading");
     loadingscreen.id = "loadingscreen-animated";
@@ -33,15 +39,27 @@ function loadingScreen(index) {
     document.getElementById("decor" + index).style.animationPlayState = "running";
 }
 
+// These functions handles custom animation for each part, taking the load location in order to 
+// initiate the animation.
 function animateElements() {
+    let currentHTML = window.location.href;
+    if (currentHTML.includes("index.html")) {
+        animateIndex();
+    }
+    if (currentHTML.includes("aboutme.html")) {
+        animateAboutMe();
+    } 
+}
+
+function animateIndex() {
     //|-----------------------containers -----------------------|
-    let titleContainer = document.getElementById("title-container");
+    let titleContainer = document.getElementById("titlecontainer-index");
     let introductionContainer = document.getElementById("introduction-container");
     let galleryContainer = document.getElementById("gallerycontainer");
     let commissionsContainer = document.getElementById("commissions-container");
     // ------------IDs-----------
     //title
-    let titleh1 = document.getElementById("titleh1");
+    let titleh1 = document.getElementById("titleh1-index");
     let titlesubheadingscontainer = document.getElementById("titlesubheadings-container");
     let socials = document.getElementById("socials");
     //introductions 
@@ -64,15 +82,15 @@ function animateElements() {
     //|----------------------- Values -----------------------|
     let topBounds = 0;
     let bottomBounds = document.documentElement.clientHeight;
-    let titleContainerPos = titleContainer.getBoundingClientRect().y + (titleContainer.getBoundingClientRect().height/3);
-    let introductionContainerPos = introductionContainer.getBoundingClientRect().y + (introductionContainer.getBoundingClientRect().height/3);
-    let galleryContainerPos = galleryContainer.getBoundingClientRect().y + (galleryContainer.getBoundingClientRect().height/3);
+    let titleContainerPos = titleContainer.getBoundingClientRect().y + (titleContainer.getBoundingClientRect().height / 3);
+    let introductionContainerPos = introductionContainer.getBoundingClientRect().y + (introductionContainer.getBoundingClientRect().height / 3);
+    let galleryContainerPos = galleryContainer.getBoundingClientRect().y + (galleryContainer.getBoundingClientRect().height / 3);
     let commissionsContainerPos = commissionsContainer.getBoundingClientRect().y + (commissionsContainer.getBoundingClientRect().height / 3);
 
     // This section allows the animation to be swapped once in bound. Then will activate a revert to keep elements visible
     
     if ((titleContainerPos >= topBounds) && (titleContainerPos <= bottomBounds) && !titleIsActivated) {
-        titleh1.id = "titleh1-animated";
+        titleh1.id = "titleh1-animated-index";
         titlesubheadingscontainer.id = "titlesubheadings-container-animated";
         socials.id = "socials-animated";
 
@@ -103,5 +121,35 @@ function animateElements() {
         commissionbutton.id = "commissionbutton-animated";
 
         commissionsIsActivated = true;
-    }   
+    }  
+}
+
+function animateAboutMe() {
+    //|-----------------------containers -----------------------|
+    let titleContainer = document.getElementById("titlecontainer-centered");
+    let aboutmeContainer = document.getElementById("aboutme-container");
+
+    //------------IDs---------------
+    //title
+    let titleh1 = document.getElementById("titleh1");
+    //aboutme
+    let aboutmeh2 = document.getElementById("aboutmeh2");
+    let headerdivideraboutme = document.getElementById("headerdivideraboutme");
+    let aboutmeparagraph = document.getElementById("aboutmeparagraph");
+    //|----------------------- Values -----------------------|
+    let topBounds = 0;
+    let bottomBounds = document.documentElement.clientHeight;
+    let titleContainerPos = titleContainer.getBoundingClientRect().y + (titleContainer.getBoundingClientRect().height / 3);
+    let aboutmeContainerPos = aboutmeContainer.getBoundingClientRect().y + (aboutmeContainer.getBoundingClientRect().height / 3);
+    if ((titleContainerPos >= topBounds) && (titleContainerPos <= bottomBounds) && !titleIsActivated) {
+        titleh1.id = "titleh1-animated";
+        titleIsActivated = true;
+    }
+    if ((aboutmeContainerPos >= topBounds) && (aboutmeContainerPos <= bottomBounds) && !aboutmeIsActivated) {
+        aboutmeh2.id = "aboutmeh2-animated";
+        headerdivideraboutme.id = "headerdivideraboutme-animated";
+        aboutmeparagraph.id = "aboutmeparagraph-animated";
+        aboutmeIsActivated = true;
+    }
+
 }

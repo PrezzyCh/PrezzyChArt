@@ -1,0 +1,40 @@
+/* Behavior:
+    This is the CSS for the aboutme.html file.
+    THESE IDS ARE ONLY USED FOR aboutme
+*/
+
+/*- about me section -*/
+#aboutme-container {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    /* background-image: ; */
+    background-color: #31465B; /* Fallback color */
+    align-items: flex-start;
+    flex-direction: column;
+} 
+
+#aboutmeheader {
+    position: relative;
+    right: 100px;
+}
+
+#aboutmeh2, #aboutmeh2-animated {
+    text-shadow: 5px 5px #395d77;
+}
+#aboutmeh2-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1s;
+}
+
+#headerdivideraboutme, #headerdivideraboutme-animated {
+    box-shadow: 5px 5px #395d77;
+}
+#headerdivideraboutme-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1.2s;
+}
+
+#aboutmeparagraph-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1.5s;
+}
