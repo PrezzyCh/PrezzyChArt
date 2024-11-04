@@ -14,8 +14,8 @@ window.onresize = function() {
 }
 
 window.onload = function() {
-    loadingScreenAnimation();
     animateElements();
+    loadingScreenAnimation();
 
     let navbaraboutme = document.getElementById("navbaraboutme");
     let navbarhome = document.getElementById("navbarhome");
@@ -35,6 +35,19 @@ window.onload = function() {
     footeraboutme.onclick = function(event) {
         linkDelay("aboutme.html", event);
     }
+
+    let currentHTML = window.location.href;
+    if (currentHTML.includes("index.html")) {
+        let introductionbutton = document.getElementById("introductionbutton-animated");
+        if(introductionbutton != null) {
+            introductionbutton.onclick = function(event) {
+                linkDelay("aboutme.html", event);
+            }
+        }
+    }
+    if (currentHTML.includes("aboutme.html")) {
+
+    } 
 
 }
 
@@ -60,19 +73,10 @@ function loadingScreenAnimation() {
         let loadingscreen = document.getElementById("loading");
         loadingscreen.id = "loadingscreen-animated";
         loadingIsActivated = true;
-        for (let i = 1; i <= 6; i++) {
-            setTimeout(() => {
-                loadingScreen(i);
-            }, 300 * i);
-        }
     } else {
         let loadingscreen = document.getElementById("loadingscreen-animated");
         loadingscreen.id = "loadingscreen-animated-reverse";
     }
-}
-
-function loadingScreen(index) {
-    document.getElementById("decor" + index).style.animationPlayState = "running";
 }
 
 // These functions handles custom animation for each part, taking the load location in order to 
@@ -125,7 +129,6 @@ function animateIndex() {
     let commissionsContainerPos = commissionsContainer.getBoundingClientRect().y + (commissionsContainer.getBoundingClientRect().height / 3);
 
     // This section allows the animation to be swapped once in bound. Then will activate a revert to keep elements visible
-    
     if ((titleContainerPos >= topBounds) && (titleContainerPos <= bottomBounds) && !titleIsActivated) {
         titleh1.id = "titleh1-animated-index";
         titlesubheadingscontainer.id = "titlesubheadings-container-animated";

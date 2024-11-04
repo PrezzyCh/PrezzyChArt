@@ -25,7 +25,8 @@ footer,
 .footer-container,
 .footerlinks-container, 
 #commissionbutton, 
-#commissionbutton-animated {
+#commissionbutton-animated, 
+#aboutmeimagecontainer {
     display: flex;
 }
 
@@ -136,6 +137,7 @@ footer {
 #introductionh2,
 #headerdividerintroduction,
 #introductionparagraph,
+#introductionparagraph2,
 #dividerintroduction,
 #introductionbutton,
 #galleryh2,
@@ -154,35 +156,28 @@ footer {
 #headerdivideraboutme,
 #divideraboutme,
 #divideraboutme2,
-#aboutmeparagraph {
+#aboutmeparagraph,
+#aboutmeparagraph2 {
     opacity: 0%;
-}
-
-@keyframes loadingdecor-cont {
-    from {
-        transform: scaleY(0);
-    } to {
-        transform: scaleY(1);
-    }
 }
 
 @keyframes loadingscreen-out {
     from {
         opacity: 100%;
-        visibility: visible;
+        display: unset;
     } to {
         opacity: 0%;
-        visibility: hidden;
+        display: none;
     }
 }
 
 @keyframes loadingscreen-in {
     from {
         opacity: 0%;
-        visibility: hidden;
+        display: none;
     } to {
         opacity: 100%;
-        visibility: visible;
+        display: unset;
     }
 }
 
@@ -228,22 +223,6 @@ footer {
     background-color: #071330;
     height: 100%;
     width: 100%;
-}
-
-.loadingdecor {
-    margin-left: 30px;
-    border-radius: 10px;
-    background-color: aliceblue;
-    width: 50px;
-    height: 100px;
-    animation: loadingdecor-cont;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-    animation-direction: alternate;
-    transform-origin: bottom;
-    animation-timing-function: ease-out;
-    animation-play-state: paused;
-    animation-duration: 0.5s;
 }
 
 .dividerdot {

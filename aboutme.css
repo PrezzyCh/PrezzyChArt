@@ -14,9 +14,10 @@
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     /* background-image: ; */
-    background-color: #31465B; /* Fallback color */
-    align-items: flex-start;
-    flex-direction: column;
+    background-color: #31465B;
+    justify-content: space-around;
+    align-items: center;
+
 } 
 
 #aboutmeheader {
@@ -40,8 +41,13 @@
     animation-duration: 1.2s;
 }
 
+#aboutmedivider {
+    width: 50%;
+}
+
 #aboutmecontentarticlecontainer {
     align-items: start;
+    max-width: 100%;
 }
 
 #aboutmeh3, #aboutmeh3-animated {
@@ -73,4 +79,24 @@
 #aboutmeparagraph-animated {
     animation: animation-fadeinLTR;
     animation-duration: 1.5s;
+}
+
+#aboutmeimagecontainer {
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+#aboutmeimageclipping {
+    clip-path: fill-box;
+    width: 400px;
+    height: 600px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#aboutmeimage {
+    height: 100%;
+    object-fit: contain;
 }
