@@ -6,6 +6,7 @@
 <html lang="en">
     <head>
         <title> PrezzyCh </title>
+        <meta charset="UTF-8">
         <link rel="icon" href="img/PrezzyChlogo.png">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="index.css">
@@ -31,9 +32,9 @@
         <header>
             <section id="header-container">
                 <nav id="navbar">
-                    <a class="navbarlinks" href=""> Home </a>
+                    <a class="navbarlinks" id="navbarhome" href="index.html"> Home </a>
                     <div class="dividerdot"></div>
-                    <a class="navbarlinks"> AboutMe </a>
+                    <a class="navbarlinks" id="navbaraboutme" href="aboutme.html"> AboutMe </a>
                     <div class="dividerdot"></div>
                     <a class="navbarlinks"> Gallery </a>
                 </nav>
@@ -85,11 +86,11 @@
                             I feel ready and have the time to do so.
                         </p>
                         <div class="linedivider" id="dividerintroduction"></div>
-                        <p class="sectionparagraph" id="introductionparagraph">
+                        <p class="sectionparagraph" id="introductionparagraph2">
                             If you want to know more, visit my about me page!
                         </p>
                         <div class="transitionlock" id="introductionbutton-transitionlock">
-                            <a class="mainbuttons" id="introductionbutton"> About me </a>
+                            <a class="mainbuttons" id="introductionbutton" href="javascript: linkDelay('aboutme.html')"> About me </a>
                         </div>
                     </article>
                 </section>
@@ -146,8 +147,8 @@
                     <article class="footerlinks-container">
                         <h3> Explore </h3>
                         <div class="dividerdot"></div>
-                        <a class="footer-a" href=""> Home </a>
-                        <a class="footer-a" href=""> About Me </a>
+                        <a class="footer-a" id="footerhome" href="index.html"> Home </a>
+                        <a class="footer-a" id="footeraboutme" href="aboutme.html"> About Me </a>
                         <a class="footer-a" href=""> Commissions </a>
                     </article>
                 </section>

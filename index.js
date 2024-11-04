@@ -1,4 +1,5 @@
 // Animations is activated
+let loadingIsActivated = false;
 let titleIsActivated = false;
 let introductionIsActivated = false;
 let galleryIsActivated = false;
@@ -15,6 +16,26 @@ window.onresize = function() {
 window.onload = function() {
     loadingScreenAnimation();
     animateElements();
+
+    let navbaraboutme = document.getElementById("navbaraboutme");
+    let navbarhome = document.getElementById("navbarhome");
+    let footerhome = document.getElementById("footerhome");
+    let footeraboutme = document.getElementById("footeraboutme");
+
+    //General buttons for nav bar and footer
+    navbaraboutme.onclick = function(event) {
+        linkDelay("aboutme.html", event);
+    }
+    navbarhome.onclick = function(event) {
+        linkDelay("index.html", event);
+    }
+    footerhome.onclick = function(event) {
+        linkDelay("index.html", event);
+    }
+    footeraboutme.onclick = function(event) {
+        linkDelay("aboutme.html", event);
+    }
+
 }
 
 window.onscroll = function() {
@@ -23,15 +44,30 @@ window.onscroll = function() {
 
 // Functions
 
+//Link transitions
+
+function linkDelay(link, event) {
+    event.preventDefault();
+    loadingScreenAnimation();
+    setTimeout(() => {
+        window.location = link;
+    }, 1000);
+}
+
 //These functions handles the loading animation for all HTML files globally
 function loadingScreenAnimation() {
-    let loadingscreen = document.getElementById("loading");
-    loadingscreen.id = "loadingscreen-animated";
-
-    for (let i = 1; i <= 6; i++) {
-        setTimeout(() => {
-            loadingScreen(i);
-        }, 300 * i);
+    if (!loadingIsActivated) {
+        let loadingscreen = document.getElementById("loading");
+        loadingscreen.id = "loadingscreen-animated";
+        loadingIsActivated = true;
+        for (let i = 1; i <= 6; i++) {
+            setTimeout(() => {
+                loadingScreen(i);
+            }, 300 * i);
+        }
+    } else {
+        let loadingscreen = document.getElementById("loadingscreen-animated");
+        loadingscreen.id = "loadingscreen-animated-reverse";
     }
 }
 
@@ -51,12 +87,6 @@ function animateElements() {
     } 
 }
 
-function loadMultiple(index, change) {
-    index.forEach(element => {
-        element.id = change;
-    });
-}
-
 function animateIndex() {
     //|-----------------------containers -----------------------|
     let titleContainer = document.getElementById("titlecontainer-index");
@@ -71,7 +101,8 @@ function animateIndex() {
     //introductions 
     let introductionh2 = document.getElementById("introductionh2");
     let headerdividerintroduction = document.getElementById("headerdividerintroduction");
-    let introductionparagraph = document.querySelectorAll("#introductionparagraph");
+    let introductionparagraph = document.getElementById("introductionparagraph");
+    let introductionparagraph2 = document.getElementById("introductionparagraph2");
     let dividerintroduction = document.getElementById("dividerintroduction");
     let introductionbutton = document.getElementById("introductionbutton");
     //gallery
@@ -105,7 +136,8 @@ function animateIndex() {
     if ((introductionContainerPos >= topBounds) && (introductionContainerPos <= bottomBounds) && !introductionIsActivated) {
         introductionh2.id = "introductionh2-animated";
         headerdividerintroduction.id = "headerdividerintroduction-animated";
-        loadMultiple(introductionparagraph, "introductionparagraph-animated");
+        introductionparagraph.id = "introductionparagraph-animated";
+        introductionparagraph2.id = "introductionparagraph-animated";
         dividerintroduction.id = "dividerintroduction-animated";
         introductionbutton.id = "introductionbutton-animated";
 
@@ -141,8 +173,12 @@ function animateAboutMe() {
     //aboutme
     let aboutmeh2 = document.getElementById("aboutmeh2");
     let headerdivideraboutme = document.getElementById("headerdivideraboutme");
-    let aboutmeparagraph = document.querySelectorAll("#aboutmeparagraph");
+    let aboutmeh3 = document.getElementById("aboutmeh3");
+    let aboutmepronouns = document.getElementById("aboutmepronouns");
+    let aboutmeparagraph = document.getElementById("aboutmeparagraph");
+    let aboutmeparagraph2 = document.getElementById("aboutmeparagraph2");
     let divideraboutme = document.getElementById("divideraboutme");
+    let divideraboutme2 = document.getElementById("divideraboutme2");
     //|----------------------- Values -----------------------|
     let topBounds = 0;
     let bottomBounds = document.documentElement.clientHeight;
@@ -155,8 +191,12 @@ function animateAboutMe() {
     if ((aboutmeContainerPos >= topBounds) && (aboutmeContainerPos <= bottomBounds) && !aboutmeIsActivated) {
         aboutmeh2.id = "aboutmeh2-animated";
         headerdivideraboutme.id = "headerdivideraboutme-animated";
-        loadMultiple(aboutmeparagraph, "aboutmeparagraph-animated");
+        aboutmeh3.id = "aboutmeh3-animated";
+        aboutmepronouns.id = "aboutmepronouns-animated";
+        aboutmeparagraph.id = "aboutmeparagraph-animated";
+        aboutmeparagraph2.id = "aboutmeparagraph-animated";
         divideraboutme.id = "divideraboutme-animated";
+        divideraboutme2.id = "divideraboutme-animated";
         aboutmeIsActivated = true;
     }
 
