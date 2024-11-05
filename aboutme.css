@@ -6,7 +6,7 @@
 /* - title -*/
 
 #titleimage-aboutme {
-    background-image: url("img/Koi Fox.png");
+    background-image: url("img/Koi Fox.webp");
 }
 
 /*- about me section -*/
@@ -23,6 +23,18 @@
 #aboutmeheader {
     position: relative;
     right: 100px;
+}
+
+#title {
+    align-items: center;
+}
+
+#dividertitle, #dividertitle-animated {
+    margin-top: 10px;
+}
+#dividertitle-animated {
+    animation: animation-fadeinTTB;
+    animation-duration: 1.2s;
 }
 
 #aboutmeh2, #aboutmeh2-animated {

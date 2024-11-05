@@ -13,7 +13,7 @@
 }
 
 #titleimage-index {
-    background-image: url(img/NewPercillia.png);
+    background-image: url(img/NewPercillia.webp);
 }
 
 #titlesubheadings-container, #titlesubheadings-container-animated {
@@ -36,17 +36,17 @@
 }
 
 #socialsinsta {
-    background-image: url(img/Royalty.png);
+    background-image: url(img/Royalty.webp);
     background-size: cover;
 }
 
 #socialsdevi {
-    background-image: url(img/Royalty.png);
+    background-image: url(img/Royalty.webp);
     background-size: cover;
 }
 
 #socialscara {
-    background-image: url(img/Royalty.png);
+    background-image: url(img/Royalty.webp);
     background-size: cover;
 }
 
@@ -54,7 +54,7 @@
 #introduction-container {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    background-image: linear-gradient(100deg, #31465B 65%, #31465b00 80%), url("img/Peak of Dawn.png");
+    background-image: linear-gradient(100deg, #31465B 65%, #31465b00 80%), url("img/Peak of Dawn.webp");
     background-color: #a13b20; /* Fallback color */
     align-items: flex-start;
     flex-direction: column;
@@ -175,7 +175,7 @@
 #commissions-container {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background-image: linear-gradient(70deg, #31465b00 35%, #31465B 40%), url("img/Royalty.png");
+    background-image: linear-gradient(70deg, #31465b00 35%, #31465B 40%), url("img/Royalty.webp");
     background-color: #471302; /* Fallback color */
     background-position: 0 0, 0 -40px;
     align-items: flex-end;

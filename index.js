@@ -14,7 +14,6 @@ window.onresize = function() {
 }
 
 window.onload = function() {
-    animateElements();
     loadingScreenAnimation();
 
     let navbaraboutme = document.getElementById("navbaraboutme");
@@ -73,9 +72,15 @@ function loadingScreenAnimation() {
         let loadingscreen = document.getElementById("loading");
         loadingscreen.id = "loadingscreen-animated";
         loadingIsActivated = true;
+        loadingscreen.onanimationstart = function() {
+            animateElements();
+        }
     } else {
         let loadingscreen = document.getElementById("loadingscreen-animated");
         loadingscreen.id = "loadingscreen-animated-reverse";
+        loadingscreen.onanimationstart = function() {
+            animateElements();
+        }
     }
 }
 
@@ -173,6 +178,7 @@ function animateAboutMe() {
     //------------IDs---------------
     //title
     let titleh1 = document.getElementById("titleh1");
+    let dividertitle = document.getElementById("dividertitle");
     //aboutme
     let aboutmeh2 = document.getElementById("aboutmeh2");
     let headerdivideraboutme = document.getElementById("headerdivideraboutme");
@@ -189,6 +195,7 @@ function animateAboutMe() {
     let aboutmeContainerPos = aboutmeContainer.getBoundingClientRect().y + (aboutmeContainer.getBoundingClientRect().height / 3);
     if ((titleContainerPos >= topBounds) && (titleContainerPos <= bottomBounds) && !titleIsActivated) {
         titleh1.id = "titleh1-animated";
+        dividertitle.id = "dividertitle-animated";
         titleIsActivated = true;
     }
     if ((aboutmeContainerPos >= topBounds) && (aboutmeContainerPos <= bottomBounds) && !aboutmeIsActivated) {
