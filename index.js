@@ -7,7 +7,7 @@ let commissionsIsActivated = false;
 
 let aboutmeIsActivated = false;
 //constants 
-
+const POSITIONADJUST = 4;
 // On starts
 window.onresize = function() {
     // possible realign of elements with this.
@@ -37,7 +37,7 @@ window.onload = function() {
 
     let currentHTML = window.location.href;
     if (currentHTML.includes("index.html")) {
-        let introductionbutton = document.getElementById("introductionbutton-animated");
+        let introductionbutton = document.getElementById("introductionbutton");
         if(introductionbutton != null) {
             introductionbutton.onclick = function(event) {
                 linkDelay("aboutme.html", event);
@@ -128,10 +128,10 @@ function animateIndex() {
     //|----------------------- Values -----------------------|
     let topBounds = 0;
     let bottomBounds = document.documentElement.clientHeight;
-    let titleContainerPos = titleContainer.getBoundingClientRect().y + (titleContainer.getBoundingClientRect().height / 3);
-    let introductionContainerPos = introductionContainer.getBoundingClientRect().y + (introductionContainer.getBoundingClientRect().height / 3);
-    let galleryContainerPos = galleryContainer.getBoundingClientRect().y + (galleryContainer.getBoundingClientRect().height / 3);
-    let commissionsContainerPos = commissionsContainer.getBoundingClientRect().y + (commissionsContainer.getBoundingClientRect().height / 3);
+    let titleContainerPos = titleContainer.getBoundingClientRect().y + (titleContainer.getBoundingClientRect().height / POSITIONADJUST);
+    let introductionContainerPos = introductionContainer.getBoundingClientRect().y + (introductionContainer.getBoundingClientRect().height / POSITIONADJUST);
+    let galleryContainerPos = galleryContainer.getBoundingClientRect().y + (galleryContainer.getBoundingClientRect().height / POSITIONADJUST);
+    let commissionsContainerPos = commissionsContainer.getBoundingClientRect().y + (commissionsContainer.getBoundingClientRect().height / POSITIONADJUST);
 
     // This section allows the animation to be swapped once in bound. Then will activate a revert to keep elements visible
     if ((titleContainerPos >= topBounds) && (titleContainerPos <= bottomBounds) && !titleIsActivated) {
@@ -191,8 +191,8 @@ function animateAboutMe() {
     //|----------------------- Values -----------------------|
     let topBounds = 0;
     let bottomBounds = document.documentElement.clientHeight;
-    let titleContainerPos = titleContainer.getBoundingClientRect().y + (titleContainer.getBoundingClientRect().height / 3);
-    let aboutmeContainerPos = aboutmeContainer.getBoundingClientRect().y + (aboutmeContainer.getBoundingClientRect().height / 3);
+    let titleContainerPos = titleContainer.getBoundingClientRect().y + (titleContainer.getBoundingClientRect().height / POSITIONADJUST);
+    let aboutmeContainerPos = aboutmeContainer.getBoundingClientRect().y + (aboutmeContainer.getBoundingClientRect().height / POSITIONADJUST);
     if ((titleContainerPos >= topBounds) && (titleContainerPos <= bottomBounds) && !titleIsActivated) {
         titleh1.id = "titleh1-animated";
         dividertitle.id = "dividertitle-animated";
