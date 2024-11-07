@@ -28,16 +28,26 @@ footer,
 #commissionbutton-animated, 
 #aboutmeimagecontainer,
 #funfactdivider,
-#funfactheader {
+#funfactheader,
+.subcontainer-aboutme,
+.subsectionheader  {
     display: flex;
 }
 
-h1, h2, h3, p, a {
+h1, h2, h3, h4, p, a {
     color: aliceblue;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 25px
 }
 
 p {
@@ -356,6 +366,10 @@ footer {
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.footerheaders {
+    font-size: unset;
 }
 
 .footer-a {
