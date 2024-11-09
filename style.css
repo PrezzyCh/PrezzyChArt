@@ -135,7 +135,21 @@ footer {
 #aboutmepronouns-animated,
 #divideraboutme2,
 #divideraboutme-animated,
-#aboutmeparagraph-animated {
+#aboutmeparagraph-animated,
+#funfacth2-animated,
+#headerdividerfunfact-animated,
+#subsectionheader-1-animated,
+#subsectionheader-3-animated,
+#subsectionheader-5-animated,
+#subsectionheader-2-animated,
+#subsectionheader-4-animated,
+#subsectionheader-6-animated,
+#subsectionarticle-1-animated,
+#subsectionarticle-3-animated,
+#subsectionarticle-5-animated,
+#subsectionarticle-2-animated,
+#subsectionarticle-4-animated,
+#subsectionarticle-6-animated {
     opacity: 0%;
     animation-timing-function: cubic-bezier(0.1, 0.3, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 0.97);
     /* animation-delay: 0.1s; */
@@ -171,7 +185,21 @@ footer {
 #divideraboutme,
 #divideraboutme2,
 #aboutmeparagraph,
-#aboutmeparagraph2 {
+#aboutmeparagraph2, 
+#funfacth2, 
+#headerdividerfunfact,
+#subsectionheader-1,
+#subsectionheader-3,
+#subsectionheader-5,
+#subsectionheader-2,
+#subsectionheader-4,
+#subsectionheader-6,
+#subsectionarticle-1,
+#subsectionarticle-3,
+#subsectionarticle-5,
+#subsectionarticle-2,
+#subsectionarticle-4,
+#subsectionarticle-6 {
     opacity: 0%;
 }
 
@@ -500,11 +528,3 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-
-
-
-
-
-
-
-

@@ -177,14 +177,24 @@ h4 {
     margin-bottom: 40px;
 }
 
-#funfacth2 {
+#funfacth2,
+#funfacth2-animated {
     text-shadow: 0px 5px #395d77;
     text-align: center;
 }
+#funfacth2-animated {
+    animation: animation-fadeinTTB;
+    animation-duration: 1.2s;
+}
 
-#headerdividerfunfact {
+#headerdividerfunfact,
+#headerdividerfunfact-animated {
     box-shadow: 0px 5px #395d77;
     width: 500px;
+}
+#headerdividerfunfact-animated {
+    animation: animation-fadeinTTB;
+    animation-duration: 1.5s;
 }
 
 
@@ -222,11 +232,60 @@ h4 {
     SSH 1,2,5 removed 
 */
 
+#subsectionheader-1-animated,
+#subsectionheader-3-animated,
+#subsectionheader-5-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1.2s;
+}
+
 #subsectionheader-2,
 #subsectionheader-4,
-#subsectionheader-6 {
+#subsectionheader-6,
+#subsectionheader-2-animated,
+#subsectionheader-4-animated,
+#subsectionheader-6-animated  {
     flex-direction: row-reverse;
     justify-content: end;
+}
+#subsectionheader-2-animated,
+#subsectionheader-4-animated,
+#subsectionheader-6-animated {
+    animation: animation-fadeinRTL;
+    animation-duration: 1.2s;
+}
+
+#subsectionarticle-1,
+#subsectionarticle-3,
+#subsectionarticle-5, 
+#subsectionarticle-1-animated,
+#subsectionarticle-3-animated,
+#subsectionarticle-5-animated {
+    margin-left: 30px;
+}
+#subsectionarticle-1-animated,
+#subsectionarticle-3-animated,
+#subsectionarticle-5-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1s;
+}
+
+
+#subsectionarticle-2,
+#subsectionarticle-4,
+#subsectionarticle-6, 
+#subsectionarticle-2-animated,
+#subsectionarticle-4-animated,
+#subsectionarticle-6-animated {
+    text-align: end;
+    justify-items: end;
+    margin-right: 30px;
+}
+#subsectionarticle-2-animated,
+#subsectionarticle-4-animated,
+#subsectionarticle-6-animated {
+    animation: animation-fadeinRTL;
+    animation-duration: 1s;
 }
 
 #subsectionh3-1,
@@ -241,21 +300,6 @@ h4 {
     text-align: end;
     text-shadow: -5px 5px #31465b;
 }
-
-#subsectionarticle-1,
-#subsectionarticle-3,
-#subsectionarticle-5 {
-    margin-left: 30px;
-}
-
-#subsectionarticle-2,
-#subsectionarticle-4,
-#subsectionarticle-6 {
-    text-align: end;
-    justify-items: end;
-    margin-right: 30px;
-}
-
 
 /* Subdividers */
 #subdivider-1,

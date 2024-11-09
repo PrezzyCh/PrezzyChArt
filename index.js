@@ -6,6 +6,8 @@ let galleryIsActivated = false;
 let commissionsIsActivated = false;
 
 let aboutmeIsActivated = false;
+let funfactIsActivated = false;
+let funfactSubIsActivated = [false, false, false, false, false, false]
 //constants 
 const POSITIONADJUST = 4;
 // On starts
@@ -174,7 +176,7 @@ function animateAboutMe() {
     //|-----------------------containers -----------------------|
     let titleContainer = document.getElementById("titlecontainer-centered");
     let aboutmeContainer = document.getElementById("aboutme-container");
-
+    let funfactdivider = document.getElementById("funfactdivider");
     //------------IDs---------------
     //title
     let titleh1 = document.getElementById("titleh1");
@@ -188,11 +190,16 @@ function animateAboutMe() {
     let aboutmeparagraph2 = document.getElementById("aboutmeparagraph2");
     let divideraboutme = document.getElementById("divideraboutme");
     let divideraboutme2 = document.getElementById("divideraboutme2");
+    //funfact
+    let funfacth2 = document.getElementById("funfacth2");
+    let headerdividerfunfact = document.getElementById("headerdividerfunfact");
+
     //|----------------------- Values -----------------------|
     let topBounds = 0;
     let bottomBounds = document.documentElement.clientHeight;
     let titleContainerPos = titleContainer.getBoundingClientRect().y + (titleContainer.getBoundingClientRect().height / POSITIONADJUST);
     let aboutmeContainerPos = aboutmeContainer.getBoundingClientRect().y + (aboutmeContainer.getBoundingClientRect().height / POSITIONADJUST);
+    let funfactdividerPos = funfactdivider.getBoundingClientRect().y + (funfactdivider.getBoundingClientRect().height / POSITIONADJUST);
     if ((titleContainerPos >= topBounds) && (titleContainerPos <= bottomBounds) && !titleIsActivated) {
         titleh1.id = "titleh1-animated";
         dividertitle.id = "dividertitle-animated";
@@ -208,6 +215,24 @@ function animateAboutMe() {
         divideraboutme.id = "divideraboutme-animated";
         divideraboutme2.id = "divideraboutme-animated";
         aboutmeIsActivated = true;
+    }
+
+    if ((funfactdividerPos >= topBounds) && (funfactdividerPos <= bottomBounds) && !funfactIsActivated) {
+        funfacth2.id = "funfacth2-animated";
+        headerdividerfunfact.id = "headerdividerfunfact-animated";
+        funfactIsActivated = true;
+    }
+
+    for (let i = 1; i <= 6; i++) {
+        let container = document.getElementById("subcontainerfunfact-" + i);
+        let containerPos = container.getBoundingClientRect().y + (container.getBoundingClientRect().height / POSITIONADJUST);
+        let header = document.getElementById("subsectionheader-" + i);
+        let article = document.getElementById("subsectionarticle-" + i);
+        if ((containerPos >= topBounds) && (containerPos <= bottomBounds) && !(funfactSubIsActivated[i - 1])) {
+            header.id = "subsectionheader-" + i + "-animated";
+            article.id = "subsectionarticle-" + i + "-animated";
+            funfactSubIsActivated[i - 1] = true;
+        }
     }
 
 }
