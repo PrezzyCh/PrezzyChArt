@@ -350,7 +350,7 @@ footer {
 }
 
 .contentcontainer {
-    width: 70%;
+    width: min(70%, 1344px);
     min-width: 300px;
     height: fit-content;
     border-radius: 30px;
@@ -397,11 +397,10 @@ footer {
 .footerlinks-container {
     align-items: center;
     flex-direction: column;
-    justify-content: space-around;
 }
 
 .footerheaders {
-    font-size: unset;
+    font-size: 20px;
 }
 
 .footer-a {

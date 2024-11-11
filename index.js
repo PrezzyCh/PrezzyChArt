@@ -20,8 +20,10 @@ window.onload = function() {
 
     let navbaraboutme = document.getElementById("navbaraboutme");
     let navbarhome = document.getElementById("navbarhome");
+    let navbargallery = document.getElementById("navbargallery");
     let footerhome = document.getElementById("footerhome");
     let footeraboutme = document.getElementById("footeraboutme");
+    let footergallery = document.getElementById("footergallery");
 
     //General buttons for nav bar and footer
     navbaraboutme.onclick = function(event) {
@@ -30,25 +32,35 @@ window.onload = function() {
     navbarhome.onclick = function(event) {
         linkDelay("index.html", event);
     }
+    navbargallery.onclick = function(event) {
+        linkDelay("gallery.html", event);
+    }
     footerhome.onclick = function(event) {
         linkDelay("index.html", event);
     }
     footeraboutme.onclick = function(event) {
         linkDelay("aboutme.html", event);
     }
+    footergallery.onclick = function(event) {
+        linkDelay("gallery.html", event);
+    }
+
 
     let currentHTML = window.location.href;
     if (currentHTML.includes("index.html")) {
         let introductionbutton = document.getElementById("introductionbutton");
-        if(introductionbutton != null) {
+        let gallerybutton = document.getElementById("gallerybutton");
+        if (introductionbutton != null) {
             introductionbutton.onclick = function(event) {
                 linkDelay("aboutme.html", event);
             }
         }
+        if (gallerybutton != null) {
+            gallerybutton.onclick = function(event) {
+                linkDelay("gallery.html", event);
+            }
+        }
     }
-    if (currentHTML.includes("aboutme.html")) {
-
-    } 
 }
 
 window.onscroll = function() {
