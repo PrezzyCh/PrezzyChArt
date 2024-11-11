@@ -49,7 +49,6 @@ window.onload = function() {
     if (currentHTML.includes("aboutme.html")) {
 
     } 
-
 }
 
 window.onscroll = function() {
@@ -105,68 +104,34 @@ function animateIndex() {
     let galleryContainer = document.getElementById("gallerycontainer");
     let commissionsContainer = document.getElementById("commissions-container");
     // ------------IDs-----------
-    //title
-    let titleh1 = document.getElementById("titleh1-index");
-    let titlesubheadingscontainer = document.getElementById("titlesubheadings-container");
-    let socials = document.getElementById("socials");
-    //introductions 
-    let introductionh2 = document.getElementById("introductionh2");
-    let headerdividerintroduction = document.getElementById("headerdividerintroduction");
-    let introductionparagraph = document.getElementById("introductionparagraph");
-    let introductionparagraph2 = document.getElementById("introductionparagraph2");
-    let dividerintroduction = document.getElementById("dividerintroduction");
-    let introductionbutton = document.getElementById("introductionbutton");
-    //gallery
-    let galleryh2 = document.getElementById("galleryh2");
-    let headerdividergallery = document.getElementById("headerdividergallery");
-    let galleryparagraph = document.getElementById("galleryparagraph");
-    let gallerybutton = document.getElementById("gallerybutton");
-    //commissions
-    let commissionsh2 = document.getElementById("commissionsh2");
-    let headerdividercommissions = document.getElementById("headerdividercommissions");
-    let commissionsparagraph = document.getElementById("commissionsparagraph");
-    let dividercommissions = document.getElementById("dividercommissions");
-    let commissionbutton = document.getElementById("commissionbutton");
+    let title = ["titleh1-index", "titlesubheadings-container", "socials"];
+    let introduction = ["introductionh2", "headerdividerintroduction", "introductionparagraph", 
+        "introductionparagraph2", "dividerintroduction", "introductionbutton"]
+    let gallery = ["galleryh2", "headerdividergallery", "galleryparagraph", "gallerybutton"];
+    let commissions = ["commissionsh2", "headerdividercommissions", "commissionsparagraph", 
+        "dividercommissions", "commissionbutton"];
     //|----------------------- Values -----------------------|
     let topBounds = 0;
     let bottomBounds = document.documentElement.clientHeight;
-    let titleContainerPos = titleContainer.getBoundingClientRect().y + (titleContainer.getBoundingClientRect().height / POSITIONADJUST);
-    let introductionContainerPos = introductionContainer.getBoundingClientRect().y + (introductionContainer.getBoundingClientRect().height / POSITIONADJUST);
-    let galleryContainerPos = galleryContainer.getBoundingClientRect().y + (galleryContainer.getBoundingClientRect().height / POSITIONADJUST);
-    let commissionsContainerPos = commissionsContainer.getBoundingClientRect().y + (commissionsContainer.getBoundingClientRect().height / POSITIONADJUST);
 
     // This section allows the animation to be swapped once in bound. Then will activate a revert to keep elements visible
-    if ((titleContainerPos >= topBounds) && (titleContainerPos <= bottomBounds) && !titleIsActivated) {
-        titleh1.id = "titleh1-animated-index";
-        titlesubheadingscontainer.id = "titlesubheadings-container-animated";
-        socials.id = "socials-animated";
+    if (boundingBoxCheck(topBounds, bottomBounds, titleContainer) && !titleIsActivated) {
+        setAnimated(title);
 
         titleIsActivated = true;
     }
-    if ((introductionContainerPos >= topBounds) && (introductionContainerPos <= bottomBounds) && !introductionIsActivated) {
-        introductionh2.id = "introductionh2-animated";
-        headerdividerintroduction.id = "headerdividerintroduction-animated";
-        introductionparagraph.id = "introductionparagraph-animated";
-        introductionparagraph2.id = "introductionparagraph-animated";
-        dividerintroduction.id = "dividerintroduction-animated";
-        introductionbutton.id = "introductionbutton-animated";
+    if (boundingBoxCheck(topBounds, bottomBounds, introductionContainer) && !introductionIsActivated) {
+        setAnimated(introduction);
 
         introductionIsActivated = true;
     }
-    if ((galleryContainerPos >= topBounds) && (galleryContainerPos <= bottomBounds) && !galleryIsActivated) {
-        galleryh2.id = "galleryh2-animated";
-        headerdividergallery.id = "headerdividergallery-animated";
-        galleryparagraph.id = "galleryparagraph-animated";
-        gallerybutton.id = "gallerybutton-animated";
+    if (boundingBoxCheck(topBounds, bottomBounds, galleryContainer) && !galleryIsActivated) {
+        setAnimated(gallery);
 
         galleryIsActivated = true;
     }
-    if ((commissionsContainerPos >= topBounds) && (commissionsContainerPos <= bottomBounds) && !commissionsIsActivated) {
-        commissionsh2.id = "commissionsh2-animated";
-        headerdividercommissions.id = "headerdividercommissions-animated";
-        commissionsparagraph.id = "commissionsparagraph-animated";
-        dividercommissions.id = "dividercommissions-animated";
-        commissionbutton.id = "commissionbutton-animated";
+    if (boundingBoxCheck(topBounds, bottomBounds, commissionsContainer) && !commissionsIsActivated) {
+        setAnimated(commissions);
 
         commissionsIsActivated = true;
     }  
@@ -178,61 +143,46 @@ function animateAboutMe() {
     let aboutmeContainer = document.getElementById("aboutme-container");
     let funfactdivider = document.getElementById("funfactdivider");
     //------------IDs---------------
-    //title
-    let titleh1 = document.getElementById("titleh1");
-    let dividertitle = document.getElementById("dividertitle");
-    //aboutme
-    let aboutmeh2 = document.getElementById("aboutmeh2");
-    let headerdivideraboutme = document.getElementById("headerdivideraboutme");
-    let aboutmeh3 = document.getElementById("aboutmeh3");
-    let aboutmepronouns = document.getElementById("aboutmepronouns");
-    let aboutmeparagraph = document.getElementById("aboutmeparagraph");
-    let aboutmeparagraph2 = document.getElementById("aboutmeparagraph2");
-    let divideraboutme = document.getElementById("divideraboutme");
-    let divideraboutme2 = document.getElementById("divideraboutme2");
-    //funfact
-    let funfacth2 = document.getElementById("funfacth2");
-    let headerdividerfunfact = document.getElementById("headerdividerfunfact");
-
+    let title = ["titleh1", "dividertitle"];
+    let aboutme = ["aboutmeh2", "headerdivideraboutme", "aboutmeh3", "aboutmepronouns", 
+        "aboutmeparagraph", "aboutmeparagraph2", "divideraboutme", "divideraboutme2"];
+    let funfact = ["funfacth2", "headerdividerfunfact"];
     //|----------------------- Values -----------------------|
     let topBounds = 0;
     let bottomBounds = document.documentElement.clientHeight;
-    let titleContainerPos = titleContainer.getBoundingClientRect().y + (titleContainer.getBoundingClientRect().height / POSITIONADJUST);
-    let aboutmeContainerPos = aboutmeContainer.getBoundingClientRect().y + (aboutmeContainer.getBoundingClientRect().height / POSITIONADJUST);
-    let funfactdividerPos = funfactdivider.getBoundingClientRect().y + (funfactdivider.getBoundingClientRect().height / POSITIONADJUST);
-    if ((titleContainerPos >= topBounds) && (titleContainerPos <= bottomBounds) && !titleIsActivated) {
-        titleh1.id = "titleh1-animated";
-        dividertitle.id = "dividertitle-animated";
+    if (boundingBoxCheck(topBounds, bottomBounds, titleContainer) && !titleIsActivated) {
+        setAnimated(title);
         titleIsActivated = true;
     }
-    if ((aboutmeContainerPos >= topBounds) && (aboutmeContainerPos <= bottomBounds) && !aboutmeIsActivated) {
-        aboutmeh2.id = "aboutmeh2-animated";
-        headerdivideraboutme.id = "headerdivideraboutme-animated";
-        aboutmeh3.id = "aboutmeh3-animated";
-        aboutmepronouns.id = "aboutmepronouns-animated";
-        aboutmeparagraph.id = "aboutmeparagraph-animated";
-        aboutmeparagraph2.id = "aboutmeparagraph-animated";
-        divideraboutme.id = "divideraboutme-animated";
-        divideraboutme2.id = "divideraboutme-animated";
+    if (boundingBoxCheck(topBounds, bottomBounds, aboutmeContainer) && !aboutmeIsActivated) {
+        setAnimated(aboutme);
         aboutmeIsActivated = true;
     }
-
-    if ((funfactdividerPos >= topBounds) && (funfactdividerPos <= bottomBounds) && !funfactIsActivated) {
-        funfacth2.id = "funfacth2-animated";
-        headerdividerfunfact.id = "headerdividerfunfact-animated";
+    if (boundingBoxCheck(topBounds, bottomBounds, funfactdivider) && !funfactIsActivated) {
+        setAnimated(funfact);
         funfactIsActivated = true;
     }
 
     for (let i = 1; i <= 6; i++) {
         let container = document.getElementById("subcontainerfunfact-" + i);
-        let containerPos = container.getBoundingClientRect().y + (container.getBoundingClientRect().height / POSITIONADJUST);
         let header = document.getElementById("subsectionheader-" + i);
         let article = document.getElementById("subsectionarticle-" + i);
-        if ((containerPos >= topBounds) && (containerPos <= bottomBounds) && !(funfactSubIsActivated[i - 1])) {
+        if (boundingBoxCheck(topBounds, bottomBounds, container) && !(funfactSubIsActivated[i - 1])) {
             header.id = "subsectionheader-" + i + "-animated";
             article.id = "subsectionarticle-" + i + "-animated";
             funfactSubIsActivated[i - 1] = true;
         }
     }
+}
 
+function setAnimated(elements) { //Elements should be array
+    for (let i = 0; i < elements.length; i++) {
+        let elementid = document.getElementById(elements[i]);
+        elementid.id = elements[i] + "-animated";
+    }
+}
+
+function boundingBoxCheck (topBounds, bottomBounds, container) {
+    let elementPos = container.getBoundingClientRect().y + (container.getBoundingClientRect().height / POSITIONADJUST);
+    return (elementPos >= topBounds) && (elementPos <= bottomBounds);
 }

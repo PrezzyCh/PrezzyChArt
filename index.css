@@ -4,10 +4,10 @@
 */
 
 /*- Title -*/
-#titleh1-index, #titleh1-animated-index {
+#titleh1-index, #titleh1-index-animated {
     font-size: 150px;
 }
-#titleh1-animated-index {
+#titleh1-index-animated {
     animation-name: animation-fadeinLTR;
     animation-duration: 1s;
 }
@@ -84,7 +84,7 @@
     animation-duration: 1.2s;
 }
 
-#introductionparagraph-animated {
+#introductionparagraph-animated, #introductionparagraph2-animated {
     animation: animation-fadeinLTR;
     animation-duration: 1.5s;
 }

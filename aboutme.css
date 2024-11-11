@@ -132,15 +132,15 @@ h4 {
     animation-duration: 1.4s;
 }
 
-#divideraboutme, #divideraboutme2 , #divideraboutme-animated {
+#divideraboutme, #divideraboutme2 , #divideraboutme-animated, #divideraboutme2-animated {
     width: 200px;
 }
-#divideraboutme-animated {
+#divideraboutme-animated, #divideraboutme2-animated {
     animation: animation-fadeinLTR;
     animation-duration: 1.3s;
 }
 
-#aboutmeparagraph-animated {
+#aboutmeparagraph-animated, #aboutmeparagraph2-animated {
     animation: animation-fadeinLTR;
     animation-duration: 1.5s;
 }

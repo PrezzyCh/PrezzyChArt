@@ -116,7 +116,8 @@ footer {
 /* Index */
 #introductionh2-animated, 
 #headerdividerintroduction-animated,
-#introductionparagraph-animated, 
+#introductionparagraph-animated,
+#introductionparagraph2-animated, 
 #dividerintroduction-animated,
 #introductionbutton-animated, 
 #galleryh2-animated,
@@ -136,7 +137,9 @@ footer {
 #aboutmepronouns-animated,
 #divideraboutme2,
 #divideraboutme-animated,
+#divideraboutme2-animated,
 #aboutmeparagraph-animated,
+#aboutmeparagraph2-animated,
 #funfacth2-animated,
 #headerdividerfunfact-animated,
 #subsectionheader-1-animated,
@@ -492,7 +495,7 @@ footer {
     position: fixed;
 }
 
-#titleh1-index, #titleh1-animated-index, #titleh1, #titleh1-animated {
+#titleh1-index, #titleh1-index-animated, #titleh1, #titleh1-animated {
     margin-bottom: 0;
     margin-top: 0;
     background-image: linear-gradient(90deg, rgb(255, 255, 255), rgb(67, 86, 135));
