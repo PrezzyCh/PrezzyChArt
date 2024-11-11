@@ -43,6 +43,14 @@ h4 {
     text-wrap-mode: nowrap;
 }
 
+.subsectionimage {
+    width: 20%;
+}
+
+.subsectionimage > img {
+    width: 150%;
+}
+
 /*===============================================*/
 /*----------------------IDs----------------------*/
 /*===============================================*/
@@ -213,6 +221,7 @@ h4 {
     align-self: end;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    flex-direction: row-reverse;
 }
 
 /* subsections */
@@ -334,3 +343,6 @@ h4 {
     width: 50px;
 }
 
+#subsectionimage-2 {
+    justify-content: end;
+}
