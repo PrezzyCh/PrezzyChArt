@@ -7,7 +7,6 @@
     height: 300px;
     border-radius: 20px;
     clip-path: fill-box;
-    display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
@@ -43,6 +42,8 @@
 
 #exibitcontainerinner {
     margin: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
     flex-direction: column;
     width: 100%;
 }
@@ -70,19 +71,21 @@
 
 .gallerylistelement > img {
     object-fit: cover;
-    image-rendering: smooth;
     height: 100%;
 }
 
 #exibitgallerybuttons {
+    margin-top: 40px;
     flex-direction: row;
     justify-content: center;
 }
 
 #gallerybuttonslist {
+    list-style: none;
     flex-direction: row;
     justify-content: center;
     margin: 0;
+    gap: 5px;
 }
 #gallerybuttonslist > a {
     margin-left: 10px;

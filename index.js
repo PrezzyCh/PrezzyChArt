@@ -198,3 +198,4 @@ function boundingBoxCheck (topBounds, bottomBounds, container) {
     let elementPos = container.getBoundingClientRect().y + (container.getBoundingClientRect().height / POSITIONADJUST);
     return (elementPos >= topBounds) && (elementPos <= bottomBounds);
 }
+
