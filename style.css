@@ -12,12 +12,14 @@
 #titlesubheadings-container-animated,
 #socials,
 #header-container,
-#navbar,
 .maindecor-container,
 #mainsection, 
 .contentcontainer, 
 .contentarticlecontainer,
 .transitionlock,
+nav,
+ul,
+/* Index */
 #galleryheader,
 #gallerywindow,
 #commissionheader,
@@ -26,12 +28,16 @@ footer,
 .footerlinks-container, 
 #commissionbutton, 
 #commissionbutton-animated, 
+/* aboutme */
 #aboutmeimagecontainer,
 #funfactdivider,
 #funfactheader,
 .subcontainer-aboutme,
 .subsectionheader,
-.subsectionimage  {
+.subsectionimage,
+/* gallery */
+#exibitcontainerinner,
+#exibitgallerybuttons  {
     display: flex;
 }
 
@@ -63,12 +69,10 @@ a {
     font-size: 20px;
     font-family: "REM", sans-serif;
     border-radius: 10px;
+    transition: color 0.5s, background-color 0.5s, font-size 0.5s;
 }
 
-.navbarlinks:active,
-.navbarlinks:hover,
-.mainbuttons:active,
-.mainbuttons:hover {
+a:active, a:hover {
     background-color: aliceblue;
     transition: color 0.5s, background-color 0.5s, font-size 0.5s;
     transition-timing-function: ease-out;
@@ -76,9 +80,8 @@ a {
     text-decoration: underline;
 }
 
-.navbarlinks, .mainbuttons {
-    transition: color 0.5s, background-color 0.5s, font-size 0.5s;
-    
+ul {
+    padding: 0;
 }
 
 body {
