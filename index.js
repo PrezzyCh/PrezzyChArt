@@ -1,3 +1,6 @@
+// This is the master JS file for decorative elements
+
+
 // Animations is activated
 let loadingIsActivated = false;
 let titleIsActivated = false;
@@ -7,7 +10,9 @@ let commissionsIsActivated = false;
 
 let aboutmeIsActivated = false;
 let funfactIsActivated = false;
-let funfactSubIsActivated = [false, false, false, false, false, false]
+let funfactSubIsActivated = [false, false, false, false, false, false];
+
+
 //constants 
 const POSITIONADJUST = 4;
 // On starts
@@ -198,4 +203,5 @@ function boundingBoxCheck (topBounds, bottomBounds, container) {
     let elementPos = container.getBoundingClientRect().y + (container.getBoundingClientRect().height / POSITIONADJUST);
     return (elementPos >= topBounds) && (elementPos <= bottomBounds);
 }
+
 

@@ -42,7 +42,7 @@ footer,
     display: flex;
 }
 
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, p, a, button {
     color: aliceblue;
 }
 
@@ -64,7 +64,7 @@ p {
     font-size: 20px;
 }
 
-a {
+a, button {
     padding: 5px;
     text-decoration: none;
     font-size: 20px;
@@ -73,12 +73,17 @@ a {
     transition: color 0.5s, background-color 0.5s, font-size 0.5s;
 }
 
-a:active, a:hover {
+a:active, a:hover, button:active, button:hover {
     background-color: aliceblue;
     transition: color 0.5s, background-color 0.5s, font-size 0.5s;
     transition-timing-function: ease-out;
     color: #3c4955;
     text-decoration: underline;
+}
+
+button {
+    background-color: #03080c00;
+    border-width: 0px;
 }
 
 ul {
@@ -354,7 +359,7 @@ footer {
 }
 
 .contentcontainer {
-    width: min(70%, 1344px);
+    width: min(70%, 1000px);
     min-width: 300px;
     height: fit-content;
     border-radius: 30px;
