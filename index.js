@@ -4,6 +4,7 @@
 // Animations is activated
 let loadingIsActivated = false;
 let titleIsActivated = false;
+
 let introductionIsActivated = false;
 let galleryIsActivated = false;
 let commissionsIsActivated = false;
@@ -12,7 +13,7 @@ let aboutmeIsActivated = false;
 let funfactIsActivated = false;
 let funfactSubIsActivated = [false, false, false, false, false, false];
 
-
+let exibitIsActivated = false;
 //constants 
 const POSITIONADJUST = 4;
 // On starts
@@ -112,6 +113,9 @@ function animateElements() {
     if (currentHTML.includes("aboutme.html")) {
         animateAboutMe();
     } 
+    if (currentHTML.includes("gallery.html")) {
+        animateGallery();
+    }
 }
 
 function animateIndex() {
@@ -189,6 +193,26 @@ function animateAboutMe() {
             article.id = "subsectionarticle-" + i + "-animated";
             funfactSubIsActivated[i - 1] = true;
         }
+    }
+}
+
+function animateGallery() {
+    //|-----------------------containers -----------------------|
+    let titleContainer = document.getElementById("titlecontainer-centered");
+    let exibitContainer = document.getElementById("exibitcontainer");
+    //------------IDs---------------
+    let title = ["titleh1", "dividertitle"]; 
+    let gallery = ["exibith2", "headerdividerexibit"];
+    //|----------------------- Values -----------------------|
+    let topBounds = 0;
+    let bottomBounds = document.documentElement.clientHeight;
+    if (boundingBoxCheck(topBounds, bottomBounds, titleContainer) && !titleIsActivated) {
+        setAnimated(title);
+        titleIsActivated = true;
+    }
+    if (boundingBoxCheck(topBounds, bottomBounds, exibitContainer) && !exibitIsActivated) {
+        setAnimated(gallery);
+        exibitIsActivated = true;
     }
 }
 

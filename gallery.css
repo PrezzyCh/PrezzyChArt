@@ -3,12 +3,34 @@
     THESE IDS ARE ONLY USED FOR gallery
 */
 
+/* gallery specific animations */
+
+@keyframes animation-fadein {
+    from {
+        opacity: 0%;
+    } to {
+        opacity: 100%;
+    }
+}
+
+@keyframes animation-fadeout {
+    from {
+        opacity: 100%;
+    } to {
+        opacity: 0%;
+    }
+}
+
+/*===============================================*/
+/*--------------------CLASSES--------------------*/
+/*===============================================*/
+
 .gallerylistelement {
     height: 300px;
     border-radius: 20px;
     clip-path: fill-box;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 1; 
 }
 
 .gallerylist {
@@ -23,7 +45,24 @@
     text-decoration: none;
     color: #3c4955;
     transition: none;
-} 
+}
+
+/* utility classes */
+.unhidden {
+    animation: animation-fadein;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.hidden {
+    animation: animation-fadeout;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
 
 /* Title */
 #title {
@@ -59,13 +98,22 @@
     width: 100%;
 }
 
-#exibith2 {
+#exibith2, #exibith2-animated {
     text-shadow: 5px 5px #395d77;
 }
+#exibith2-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1s;
+}
 
-#headerdividerexibit {
+#headerdividerexibit, #headerdividerexibit-animated {
     box-shadow: 5px 5px #395d77;
     width: 200px;
+}
+
+#headerdividerexibit-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1.3s;
 }
 
 #exibitgallery {
@@ -76,6 +124,14 @@
 .gallerylistelement > img {
     object-fit: cover;
     height: 100%;
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.gallerylistelement > img:hover, 
+.gallerylistelement > img:active {
+    transform: scale(1.1, 1.1);
+    filter: brightness(80%);
+    transition: transform 0.5s, filter 0.5s;
 }
 
 #exibitgallerybuttons {

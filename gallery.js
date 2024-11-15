@@ -12,19 +12,37 @@ window.addEventListener('load' , function() {
     let buttonleft = document.getElementById("buttonleft");
     let buttonright = document.getElementById("buttonright");
 
+    let exibitheader = document.getElementById("exibitheader");
+
     button2025.onclick = function() {
-        loadActive(2025);
+        exibitheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+        fadeGalleryOut();
+        setTimeout(() => {
+            loadActive(2025);
+        }, 500);
     }
 
     button2024.onclick = function() {
-        loadActive(2024);
+        exibitheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+        fadeGalleryOut();
+        setTimeout(() => {
+            loadActive(2024);
+        }, 500);
     }
 
     buttonleft.onclick = function() {
-        changeDirection(1);
+        exibitheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+        fadeGalleryOut();
+        setTimeout(() => {
+            changeDirection(1);
+        }, 500);
     }
     buttonright.onclick = function() {
-        changeDirection(-1);
+        exibitheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+        fadeGalleryOut();
+        setTimeout(() => {
+            changeDirection(-1);
+        }, 500);
     }
 
 
@@ -33,6 +51,10 @@ window.addEventListener('load' , function() {
 function loadActive(active) {
     directionCheck(active);
     let exibith2 = document.getElementById("exibith2");
+    if (exibith2 === null) { //corrector
+        exibith2 = document.getElementById("exibith2-animated");
+    }
+
     let button;
     let gallery;
 
@@ -46,13 +68,14 @@ function loadActive(active) {
     }
 
     button = document.getElementById("button" + active);
-    gallery = document.getElementById("list" + active);
-
+    gallery = document.getElementById("list" + active); 
+    console.log()
     exibith2.innerHTML = active;
     button.className = "inactive";
     button.disabled = true;
     gallery.style.display = "flex";
     activeGalleryYear = active;
+    fadeGalleryIn();
 }
 
 function changeDirection(direction) {
@@ -75,4 +98,14 @@ function directionCheck(active) {
         buttonright.className = "inactive";
         buttonright.disabled = true;
     }
+}
+
+function fadeGalleryIn() {
+    let exibitcontainerinner = document.getElementById("exibitcontainerinner");
+    exibitcontainerinner.className = "unhidden";
+}
+
+function fadeGalleryOut() {
+    let exibitcontainerinner = document.getElementById("exibitcontainerinner");
+    exibitcontainerinner.className = "hidden";
 }

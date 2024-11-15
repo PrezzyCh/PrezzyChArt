@@ -92,6 +92,7 @@ ul {
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 header {
@@ -105,8 +106,6 @@ main {
     background-color: #071330;
     position: absolute; /*dear lord hope this works */
     z-index: 1;
-
-    overflow: hidden;
 }
 
 footer {
@@ -162,7 +161,10 @@ footer {
 #subsectionarticle-5-animated,
 #subsectionarticle-2-animated,
 #subsectionarticle-4-animated,
-#subsectionarticle-6-animated {
+#subsectionarticle-6-animated,
+/* Gallery */
+#exibith2-animated,
+#headerdividerexibit-animated {
     opacity: 0%;
     animation-timing-function: cubic-bezier(0.1, 0.3, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 0.97);
     /* animation-delay: 0.1s; */
@@ -212,7 +214,10 @@ footer {
 #subsectionarticle-5,
 #subsectionarticle-2,
 #subsectionarticle-4,
-#subsectionarticle-6 {
+#subsectionarticle-6,
+/* Gallery */
+#exibith2,
+#headerdividerexibit {
     opacity: 0%;
 }
 
@@ -302,7 +307,6 @@ footer {
     width: 100%;
     height: fit-content;
     align-items: center;
-    overflow: hidden;
 }
 
 .titleimage {
