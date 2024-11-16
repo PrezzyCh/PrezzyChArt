@@ -38,7 +38,7 @@ footer,
 .subsectionimage,
 /* gallery */
 #exibitcontainerinner,
-#exibitgallerybuttons  {
+#exibitgallerybuttons {
     display: flex;
 }
 
@@ -164,7 +164,8 @@ footer {
 #subsectionarticle-6-animated,
 /* Gallery */
 #exibith2-animated,
-#headerdividerexibit-animated {
+#headerdividerexibit-animated,
+.activemodal {
     opacity: 0%;
     animation-timing-function: cubic-bezier(0.1, 0.3, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 0.97);
     /* animation-delay: 0.1s; */
@@ -217,7 +218,8 @@ footer {
 #subsectionarticle-6,
 /* Gallery */
 #exibith2,
-#headerdividerexibit {
+#headerdividerexibit,
+.inactivemodal {
     opacity: 0%;
 }
 

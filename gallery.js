@@ -5,7 +5,8 @@ let minYear = 2024;
 window.addEventListener('load' , function() {
     loadActive(activeGalleryYear);
     directionCheck(activeGalleryYear);
-
+    imgButtonInitialization();
+    modalButtonInitialization();
     // buttons (add more for the specific buttons)
     let button2025 = document.getElementById("button2025");
     let button2024 = document.getElementById("button2024");
@@ -109,3 +110,25 @@ function fadeGalleryOut() {
     let exibitcontainerinner = document.getElementById("exibitcontainerinner");
     exibitcontainerinner.className = "hidden";
 }
+
+function imgButtonInitialization() {
+    let elements = document.getElementsByClassName("galleryimages");
+    let modal = document.getElementById("gallerymodal");
+    let modalimage = document.getElementById("modalimage");
+    for (let i = 0; i < elements.length; i++) {
+        let item = elements[i];
+        item.onclick = function() {
+            modal.className = "activemodal";
+            modalimage.src = item.src;
+        }
+    }
+}
+
+function modalButtonInitialization() {
+    let element = document.getElementById("modalclosebutton");
+    let modal = document.getElementById("gallerymodal");
+    element.onclick = function() {
+        modal.className = "inactivemodal";
+    }
+}
+
