@@ -38,7 +38,10 @@ footer,
 .subsectionimage,
 /* gallery */
 #exibitcontainerinner,
-#exibitgallerybuttons {
+#exibitgallerybuttons,
+#modalcontainer,
+#modalparagraphcontainer,
+#modalimagecontainer {
     display: flex;
 }
 
@@ -420,6 +423,8 @@ footer {
 
 .footer-a {
     color: #596369;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .footer-a:active,

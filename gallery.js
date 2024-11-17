@@ -115,11 +115,13 @@ function imgButtonInitialization() {
     let elements = document.getElementsByClassName("galleryimages");
     let modal = document.getElementById("gallerymodal");
     let modalimage = document.getElementById("modalimage");
+    let modalheader = document.getElementById("modalheader");
     for (let i = 0; i < elements.length; i++) {
         let item = elements[i];
         item.onclick = function() {
             modal.className = "activemodal";
             modalimage.src = item.src;
+            modalheader.innerHTML = item.alt
         }
     }
 }
