@@ -96,7 +96,7 @@ function directionCheck(active) {
         buttonleft.className = "inactive";
         buttonleft.disabled = true;
     } 
-    if (maxYear <= active) {
+    if (maxYear >= active) {
         buttonright.className = "inactive";
         buttonright.disabled = true;
     }
