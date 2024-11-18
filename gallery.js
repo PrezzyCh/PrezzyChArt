@@ -96,7 +96,7 @@ function directionCheck(active) {
         buttonleft.className = "inactive";
         buttonleft.disabled = true;
     } 
-    if (maxYear >= active) {
+    if (minYear >= active) {
         buttonright.className = "inactive";
         buttonright.disabled = true;
     }
@@ -121,8 +121,8 @@ function imgButtonInitialization() {
         let item = elements[i];
         item.onclick = function() {
             modal.className = "activemodal";
-            modalimage.src = item.src;
-            modalheader.innerHTML = item.alt
+            modalimage.src = item.src.replaceAll("compressed", "uncompressed");
+            modalheader.innerHTML = item.alt;
         }
     }
 }

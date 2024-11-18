@@ -48,7 +48,7 @@ h4 {
 }
 
 .subsectionimage > img {
-    width: 150%;
+    width: 175%;
 }
 
 /*===============================================*/
@@ -343,6 +343,7 @@ h4 {
     width: 50px;
 }
 
-#subsectionimage-2 {
+#subsectionimage-2,
+#subsectionimage-4 {
     justify-content: end;
 }
