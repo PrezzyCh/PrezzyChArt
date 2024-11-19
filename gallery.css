@@ -197,7 +197,9 @@
     border-radius: 30px;
     object-fit: contain;
     box-shadow: 10px 15px 20px #31465B;
+    /* transition: width 0.5s, height 0.5s; attempted with transition */
 }
+
 
 #modalclosebutton {
     position: absolute;

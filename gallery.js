@@ -7,6 +7,7 @@ window.addEventListener('load' , function() {
     directionCheck(activeGalleryYear);
     imgButtonInitialization();
     modalButtonInitialization();
+
     // buttons (add more for the specific buttons)
     let button2025 = document.getElementById("button2025");
     let button2024 = document.getElementById("button2024");
@@ -120,10 +121,21 @@ function imgButtonInitialization() {
     for (let i = 0; i < elements.length; i++) {
         let item = elements[i];
         item.onclick = function() {
+            modalimage.src = "img/galleryimages/placeholder.webp";
+            modalimage.className = "unloaded";
             modal.className = "activemodal";
-            modalimage.src = item.src.replaceAll("compressed", "uncompressed");
             modalheader.innerHTML = item.alt;
+            modal.addEventListener("animationend", function() {
+                if (modal.className !== "inactivemodal") {
+                    modalimage.className = "loaded";
+                    modalimage.src = item.src.replaceAll("compressed", "uncompressed");
+                }
+            });
         }
+        item.addEventListener("mouseover", function() {
+            const IMG = new Image();
+            IMG.src = item.src.replaceAll("compressed", "uncompressed");
+        });
     }
 }
 
@@ -134,4 +146,5 @@ function modalButtonInitialization() {
         modal.className = "inactivemodal";
     }
 }
+
 
