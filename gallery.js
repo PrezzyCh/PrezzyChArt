@@ -118,24 +118,21 @@ function imgButtonInitialization() {
     let modal = document.getElementById("gallerymodal");
     let modalimage = document.getElementById("modalimage");
     let modalheader = document.getElementById("modalheader");
+
     for (let i = 0; i < elements.length; i++) {
         let item = elements[i];
         item.onclick = function() {
-            modalimage.src = "img/galleryimages/placeholder.webp";
-            modalimage.className = "unloaded";
             modal.className = "activemodal";
             modalheader.innerHTML = item.alt;
+            modalimage.src = item.src;
+            let active = false;
             modal.addEventListener("animationend", function() {
-                if (modal.className !== "inactivemodal") {
-                    modalimage.className = "loaded";
+                if (!active) {
                     modalimage.src = item.src.replaceAll("compressed", "uncompressed");
+                    active = true;
                 }
             });
         }
-        item.addEventListener("mouseover", function() {
-            const IMG = new Image();
-            IMG.src = item.src.replaceAll("compressed", "uncompressed");
-        });
     }
 }
 
