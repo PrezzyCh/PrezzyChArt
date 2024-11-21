@@ -3,6 +3,32 @@
     THESE IDS ARE ONLY USED FOR INDEX
 */
 
+/*===============================================*/
+/*--------------------CLASSES--------------------*/
+/*===============================================*/
+
+.socialsbuttons {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-position: center;
+    background-size: 100% !important;
+    transition: border-radius 0.5s, background-size 0.5s;
+}
+
+.socialsbuttons:hover,
+.socialsbuttons:active {
+    border-radius: 30px;
+    background-size: 110% !important;
+    transition: border-radius 0.5s, background-size 0.5s;
+}
+
+
+
+/*===============================================*/
+/*----------------------IDs----------------------*/
+/*===============================================*/
 /*- Title -*/
 #titleh1-index, #titleh1-index-animated {
     font-size: 150px;
@@ -102,8 +128,9 @@
 }
 
 #introductionbutton-transitionlock {
-    width: initial;
-    height: 75px;
+    width: fit-content;
+    height: 100px;
+    align-items: center;
 }
 
 #introductionbutton-animated {
@@ -162,7 +189,7 @@
 }
 
 #gallerybutton, #gallerybutton-animated {
-    box-shadow: 10px 15px 20px #03080C;
+    box-shadow: 0px 5px #395d77;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -227,6 +254,7 @@
 
 #commissionbutton, #commissionbutton-animated {
     background-color: #494e53;
+    box-shadow: -5px 5px #395d77;
     color: rgb(188, 189, 190);
 }
 #commissionbutton-animated {
@@ -236,5 +264,7 @@
 
 #commissionbutton-transitionlock { /*Disabled button*/
     margin-top: 20px;
-    height: 75px;
+    height: 100px;
+    align-items: center;
 }
+

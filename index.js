@@ -18,7 +18,7 @@ let exibitIsActivated = false;
 const POSITIONADJUST = 4;
 // On starts
 window.onresize = function() {
-    // possible realign of elements with this.
+    
 }
 
 window.onload = function() {
