@@ -4,6 +4,31 @@
 */
 
 /*===============================================*/
+/*------------------GENERAL TAGS-----------------*/
+/*===============================================*/
+
+/* MODULAR VIEW - Index*/
+
+@media screen and (max-width: 820px){
+    /* Header corrector for screens under 1300px */
+    #titleframe {
+        display: none;
+    }
+    #title {
+        align-items: center;
+    } 
+    #titlecontainer-index {
+        justify-content: center;
+    }
+    #introduction-container,
+    #introductioncontentarticlecontainer,
+    #commissions-container,
+    #commissionscontentarticlecontainer {
+        align-items: center !important;
+    }
+}
+
+/*===============================================*/
 /*--------------------CLASSES--------------------*/
 /*===============================================*/
 
@@ -30,6 +55,16 @@
 /*----------------------IDs----------------------*/
 /*===============================================*/
 /*- Title -*/
+
+#titleframe {
+    height: 0;
+	width: min(450px, 30%);
+    border-bottom: 700px solid #31465B;
+    border-left: 0px solid transparent;
+	border-right: 150px solid transparent;
+    position: fixed;
+}
+
 #titleh1-index, #titleh1-index-animated {
     font-size: 150px;
 }
@@ -80,12 +115,12 @@
 #introduction-container {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    background-image: linear-gradient(100deg, #31465B 65%, #31465b00 80%), url("img/websiteimages/Peak of Dawn.webp");
+    background-image: linear-gradient(100deg, #31465B 50%, #31465b00 60%), url("img/websiteimages/Peak of Dawn.webp");
     background-color: #a13b20; /* Fallback color */
     align-items: flex-start;
     flex-direction: column;
     background-position: right;
-    background-size: cover, auto 100%;
+    background-size: cover, auto 120%;
     background-repeat: no-repeat;
 } 
 
@@ -173,14 +208,16 @@
 }
 
 #gallerywindow {
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    flex-direction: column;
     margin: 0;
+    padding-bottom: 20px;
+
     background-image: url("img/websiteimages/GalleryPreview.png");
     background-size: cover;
     background-position-x: center;
-    width: 100%;
-    height: 200px;
-    align-items: center;
-    flex-direction: column;
 }
 
 #galleryparagraph-animated {
@@ -202,11 +239,11 @@
 #commissions-container {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background-image: linear-gradient(70deg, #31465b00 35%, #31465B 40%), url("img/websiteimages/Royalty.webp");
+    background-image: linear-gradient(70deg, #31465b00 40%, #31465B 50%), url("img/websiteimages/Royalty.webp");
     background-color: #471302; /* Fallback color */
     align-items: flex-end;
     flex-direction: column;
-    background-size: cover, auto 100%;
+    background-size: cover, auto 120%;
     background-repeat: no-repeat;
 }
 

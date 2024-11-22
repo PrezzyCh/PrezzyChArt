@@ -95,6 +95,7 @@ ul {
 body {
     margin: 0;
     overflow-x: hidden;
+    background-color: #071330;
 }
 
 header {
@@ -112,9 +113,64 @@ main {
 
 footer {
     width: 100%;
+    padding-bottom: 20px;
     height: fit-content;
     background-image: linear-gradient(270deg, #0C4160, #03080C);
     justify-content: space-between;
+}
+
+/* MODULAR VIEW - Global*/
+
+@media screen and (max-width: 1300px){
+    /* Header corrector for screens under 1300px */
+    #commissionsheader,
+    #introductionheader,
+    #aboutmeheader {
+        margin-left: 10px;
+        margin-right: 10px;
+        left: 0px !important;
+        right: 0px !important;
+    }
+    .sectionheader {
+        font-size: 50px !important;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .linedivider {
+        justify-self: center;
+    }
+    .contentarticlecontainer {
+        max-width: 100% !important;
+    }
+    .sectionparagraph {
+        text-align: center !important;
+    }
+    .navbarlinks {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    #loadingtext {
+        font-size: 60px !important;
+    }
+    #header-container {
+        justify-content: center !important;
+    }
+    #navbar {
+        margin-right: 0px !important;
+    }
+    #title > h1 {
+        text-align: center;
+        font-size: 120px !important; 
+    }
+}
+/* individual modifications */
+
+@media screen and (max-width: 420px) {
+    #title > h1 {
+        text-align: center;
+        font-size: 100px !important; 
+    }
 }
 
 /*------------- ANIMATIONS ---------------*/
@@ -297,6 +353,7 @@ footer {
     border-radius: 100%;
     background-color: aliceblue;
     width: 10px;
+    min-width: 10px;
     height: 10px;
 }
 
@@ -311,6 +368,7 @@ footer {
     width: 100%;
     height: fit-content;
     align-items: center;
+    overflow: hidden;
 }
 
 .titleimage {
@@ -362,14 +420,13 @@ footer {
 }
 
 .linedivider {
-    width: 500px;
+    width: 50%;
     height: 5px;
     background-color: #FFFFFF;
 }
 
 .contentcontainer {
-    width: min(70%, 1000px);
-    min-width: 700px;
+    width: min(90%, 1000px);
     height: fit-content;
     border-radius: 30px;
     box-shadow: 10px 15px 20px #03080C;
@@ -399,7 +456,6 @@ footer {
 
 .footer-container {
     margin: 20px;
-    margin-bottom: 40px;
     width: 50%;
     justify-content: space-evenly;
 }
@@ -493,15 +549,6 @@ footer {
 #title {
     flex-direction: column;
     align-items: flex-start;
-    position: fixed;
-}
-
-#titleframe {
-    border-bottom: 700px solid #31465B;
-    border-left: 0px solid transparent;
-	border-right: 150px solid transparent;
-	height: 0;
-	width: 450px;
     position: fixed;
 }
 
