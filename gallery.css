@@ -7,6 +7,14 @@
 /*===============================================*/
 
 /* MODULAR VIEW - Gallery*/
+
+@media screen and (max-width: 900px) {
+    #title > h1 { /*Override*/
+        text-align: center;
+        font-size: 100px !important;
+    }
+}
+
 @media screen and (max-width: 820px) {
     .sectionheader {
         text-align: center;

@@ -13,15 +13,29 @@ h4 {
 }
 
 @media screen and (max-width: 900px) {
+    .subsectioncontent {
+        width: 60% !important;
+    }
     .subsectionimage > img {
-        width: 100% !important;
+        width: 120% !important;
         height: fit-content;
     }
     .subsectionimage {
         width: 40% !important;
     }
-    .subsectioncontent {
-        width: 60% !important;
+    #subsectionimage-2,
+    #subsectionimage-4,
+    #subsectionimage-6 {
+        justify-content: flex-start !important;
+    }
+    #subsectionimage-1,
+    #subsectionimage-3,
+    #subsectionimage-5 {
+        justify-content: flex-end !important;
+    }
+    #title > h1 { /*Override*/
+        text-align: center;
+        font-size: 100px !important;
     }
 }
 
@@ -31,6 +45,22 @@ h4 {
     }
     .linedivider {
         justify-self: initial;
+    }
+    .subsectionarticle > p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .subsectioncontent {
+        width: 50% !important;
+    }
+    .subsectionimage {
+        width: 50% !important;
+    }
+    .subsectionimage > img {
+        width: 150% !important;
+        height: fit-content;
     }
 }
 

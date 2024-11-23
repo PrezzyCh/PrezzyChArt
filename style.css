@@ -109,6 +109,7 @@ main {
     background-color: #071330;
     position: absolute; /*dear lord hope this works */
     z-index: 1;
+    overflow-x: hidden;
 }
 
 footer {
@@ -142,6 +143,11 @@ footer {
     }
     .contentarticlecontainer {
         max-width: 100% !important;
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+    .contentarticlecontainer > p {
+        font-size: 18px;
     }
     .sectionparagraph {
         text-align: center !important;
