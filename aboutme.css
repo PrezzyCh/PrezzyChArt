@@ -49,6 +49,27 @@ h4 {
     .subsectionarticle > p {
         font-size: 18px;
     }
+    #aboutme-container{
+        flex-direction: column-reverse !important;
+    }
+    #aboutmedivider {
+        width: 100% !important;
+    }
+    #aboutmeimagecontainer {
+        margin-right: 0px !important;
+        margin-top: 20px;
+        width: 100% !important;
+    }
+    #aboutmeimageclipping {
+        max-width: none !important;
+        height: 400px !important;
+    }
+    #aboutmeheader {
+        justify-items: center;
+    }
+    #aboutmecontentarticlecontainer {
+        align-items: center !important;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -61,6 +82,13 @@ h4 {
     .subsectionimage > img {
         width: 150% !important;
         height: fit-content;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #title > h1 {
+        text-align: center;
+        font-size: 85px !important; 
     }
 }
 

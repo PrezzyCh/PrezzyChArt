@@ -28,6 +28,12 @@
     }
 }
 
+@media screen and (max-width: 420px){
+    #title h2 {
+        font-size: 20px;
+    }
+}
+
 /*===============================================*/
 /*--------------------CLASSES--------------------*/
 /*===============================================*/
@@ -49,7 +55,11 @@
     transition: border-radius 0.5s, background-size 0.5s;
 }
 
-
+.transitionlock {
+    width: fit-content;
+    height: 100px;
+    align-items: center;
+}
 
 /*===============================================*/
 /*----------------------IDs----------------------*/
@@ -86,8 +96,9 @@
     animation-duration: 1.4s;
 }
 
-#titlesubheadings-container > h2 {
+#title h2 {
     text-shadow: 3px 3px #395d77;
+    text-wrap-mode: nowrap;
 }
 
 #socials-animated {
@@ -162,12 +173,6 @@
     align-items: start;
 }
 
-#introductionbutton-transitionlock {
-    width: fit-content;
-    height: 100px;
-    align-items: center;
-}
-
 #introductionbutton-animated {
     animation: animation-fadeinLTR;
     animation-duration: 1s;
@@ -214,6 +219,8 @@
     flex-direction: column;
     margin: 0;
     padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 
     background-image: url("img/websiteimages/GalleryPreview.png");
     background-size: cover;
@@ -301,7 +308,5 @@
 
 #commissionbutton-transitionlock { /*Disabled button*/
     margin-top: 20px;
-    height: 100px;
-    align-items: center;
 }
 
