@@ -160,7 +160,7 @@ function animateIndex() {
 
 function animateAboutMe() {
     //|-----------------------containers -----------------------|
-    let titleContainer = document.getElementById("titlecontainer-centered");
+    let titleContainer = document.getElementById("titlecontainer-end");
     let aboutmeContainer = document.getElementById("aboutme-container");
     let funfactdivider = document.getElementById("funfactdivider");
     //------------IDs---------------
@@ -198,7 +198,7 @@ function animateAboutMe() {
 
 function animateGallery() {
     //|-----------------------containers -----------------------|
-    let titleContainer = document.getElementById("titlecontainer-centered");
+    let titleContainer = document.getElementById("titlecontainer-end");
     let exibitContainer = document.getElementById("exibitcontainer");
     //------------IDs---------------
     let title = ["titleh1", "dividertitle"]; 

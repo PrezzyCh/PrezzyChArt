@@ -12,6 +12,12 @@ h4 {
     margin-bottom: 10px;
 }
 
+@media screen and (max-width: 1300px) {
+    #aboutmecontentarticlecontainer > h3 {
+        font-size: 40px;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .subsectioncontent {
         width: 60% !important;
@@ -40,6 +46,13 @@ h4 {
 }
 
 @media screen and (max-width: 820px) {
+    .title-container {
+        justify-content: center !important;
+    }
+    #title {
+        align-items: center !important;
+    }
+
     .subsectionh3 {
         text-wrap: wrap !important;
     }
@@ -66,6 +79,9 @@ h4 {
     }
     #aboutmeheader {
         justify-items: center;
+    }
+    #aboutmeheader > h2 {
+        text-align: center;
     }
     #aboutmecontentarticlecontainer {
         align-items: center !important;
@@ -138,7 +154,8 @@ h4 {
 /* - title -*/
 
 #title {
-    align-items: center;
+    align-items: flex-end;
+    margin-right: 50px;
 }
 
 #titleimage-aboutme {
