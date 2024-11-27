@@ -73,6 +73,7 @@
     border-left: 0px solid transparent;
 	border-right: 150px solid transparent;
     position: fixed;
+    z-index: -1;
 }
 
 #titleh1-index, #titleh1-index-animated {
@@ -108,17 +109,17 @@
 }
 
 #socialsinsta {
-    background-image: url("img/websiteimages/Royalty.webp");
+    background-image: url("img/websiteimages/Instagram.webp");
     background-size: cover;
 }
 
 #socialsdevi {
-    background-image: url("img/websiteimages/Royalty.webp");
+    background-image: url("img/websiteimages/Deviantart.webp");
     background-size: cover;
 }
 
 #socialscara {
-    background-image: url("img/websiteimages/Royalty.webp");
+    background-image: url("img/websiteimages/Cara.webp");
     background-size: cover;
 }
 
