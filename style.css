@@ -140,6 +140,10 @@ footer {
 }
 
 @media screen and (max-width: 820px) {
+    #titleframe,
+    #titleframegradient {
+        display: none;
+    }
     .linedivider {
         justify-self: center;
     }
@@ -193,55 +197,8 @@ footer {
 }
 
 /*------------- ANIMATIONS ---------------*/
-#loadingscreen-animated,
+*[id$="animated"],
 #loadingscreen-animated-reverse,
-#titleh1-animated, 
-#titlesubheadings-container-animated, 
-#socials-animated, 
-/* Index */
-#introductionh2-animated, 
-#headerdividerintroduction-animated,
-#introductionparagraph-animated,
-#introductionparagraph2-animated, 
-#dividerintroduction-animated,
-#introductionbutton-animated, 
-#galleryh2-animated,
-#headerdividergallery-animated,
-#galleryparagraph-animated,
-#gallerybutton-animated,
-#commissionsh2-animated,
-#headerdividercommissions-animated,
-#commissionsparagraph-animated, 
-#dividercommissions-animated, 
-#commissionbutton-animated,
-/* about me */
-#dividertitle-animated,
-#aboutmeh2-animated,
-#headerdivideraboutme-animated,
-#aboutmeh3-animated,
-#aboutmepronouns-animated,
-#divideraboutme2,
-#divideraboutme-animated,
-#divideraboutme2-animated,
-#aboutmeparagraph-animated,
-#aboutmeparagraph2-animated,
-#funfacth2-animated,
-#headerdividerfunfact-animated,
-#subsectionheader-1-animated,
-#subsectionheader-3-animated,
-#subsectionheader-5-animated,
-#subsectionheader-2-animated,
-#subsectionheader-4-animated,
-#subsectionheader-6-animated,
-#subsectionarticle-1-animated,
-#subsectionarticle-3-animated,
-#subsectionarticle-5-animated,
-#subsectionarticle-2-animated,
-#subsectionarticle-4-animated,
-#subsectionarticle-6-animated,
-/* Gallery */
-#exibith2-animated,
-#headerdividerexibit-animated,
 .activemodal {
     opacity: 0%;
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -293,6 +250,12 @@ footer {
 #subsectionarticle-2,
 #subsectionarticle-4,
 #subsectionarticle-6,
+#subsectionimage-1,
+#subsectionimage-3,
+#subsectionimage-5,
+#subsectionimage-2,
+#subsectionimage-4,
+#subsectionimage-6,
 /* Gallery */
 #exibith2,
 #headerdividerexibit,
@@ -363,7 +326,9 @@ footer {
     background-color: #071330;
     height: 100%;
     width: 100%;
-
+    background-image: url("img/websiteimages/decorations/LoadingBG.webp");
+    background-size: cover;
+    background-position: center;
 }
 
 .dividerdot {
@@ -574,6 +539,14 @@ footer {
     min-height: 500px;
 }
 
+#titleframegradient {
+    height: 100%;
+	width: min(450px, 40%);
+    background-image: linear-gradient(-90deg, #0C4160 50%, #03080c00);
+    position: fixed;
+    z-index: -1;
+}
+
 #title {
     flex-direction: column;
     align-items: flex-start;
@@ -592,7 +565,7 @@ footer {
     font-size: 100px;
 }
 #titleh1-animated {
-    animation-name: animation-fadeinTTB;
+    animation-name: animation-fadeinRTL;
     animation-duration: 1s;
 }
 

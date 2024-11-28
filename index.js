@@ -188,9 +188,11 @@ function animateAboutMe() {
         let container = document.getElementById("subcontainerfunfact-" + i);
         let header = document.getElementById("subsectionheader-" + i);
         let article = document.getElementById("subsectionarticle-" + i);
+        let image = document.getElementById("subsectionimage-" + i);
         if (boundingBoxCheck(topBounds, bottomBounds, container) && !(funfactSubIsActivated[i - 1])) {
             header.id = "subsectionheader-" + i + "-animated";
             article.id = "subsectionarticle-" + i + "-animated";
+            image.id = "subsectionimage-" + i + "-animated";
             funfactSubIsActivated[i - 1] = true;
         }
     }
