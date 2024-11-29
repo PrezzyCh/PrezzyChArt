@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 420px){
     #title h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
@@ -64,11 +64,12 @@
 /*- Title -*/
 
 #titleframe {
-    height: 0;
-	width: min(450px, 30%);
-    border-bottom: 700px solid #31465B;
-    border-left: 0px solid transparent;
-	border-right: 150px solid transparent;
+	width: min(800px, 50%);
+    height: 800px;
+    background-image: url("img/websiteimages/decorations/decor1.webp") , linear-gradient(75deg ,#31465B 55%, #0000 50%);
+    background-size: 800px, auto;
+    background-position: min(0px, 50%), left;
+    background-repeat: no-repeat;
     position: fixed;
     z-index: -1;
 }

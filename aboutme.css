@@ -57,6 +57,7 @@ h4 {
     }
     #title {
         align-items: center !important;
+        margin-right: 40px !important; 
     }
 
     .subsectionh3 {
@@ -132,6 +133,7 @@ h4 {
 
 .subsectioncontent {
     width: 80%;
+    z-index: 1;
 }
 
 .subsectionheader {

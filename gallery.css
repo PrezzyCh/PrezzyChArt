@@ -29,6 +29,7 @@
     }
     #title {
         align-items: center !important;
+        margin-right: 40px !important; 
     }
     .sectionheader {
         text-align: center;
@@ -214,6 +215,8 @@
     animation-duration: 1s;
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 
+    background-image: url(img/websiteimages/decorations/decor1.webp);
+    background-size: cover;
     background-color: #31465B;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
