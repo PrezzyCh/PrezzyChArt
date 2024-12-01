@@ -181,7 +181,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 600px) {
     footer {
         flex-direction: column;
     }
@@ -190,6 +190,9 @@ footer {
         width: 100% !important;
         margin: 0px !important;
     }
+}
+
+@media screen and (max-width: 420px) {
     #title > h1 {
         font-size: 85px !important;
     }
@@ -439,7 +442,7 @@ footer {
 
 .footer-container {
     margin: 20px;
-    width: 50%;
+    width: 60%;
     justify-content: space-evenly;
 }
 
@@ -588,6 +591,7 @@ footer {
 #footerinfos {
     flex-direction: column;
     align-items: center;
+    width: 40%;
 }
 
 #footerinfos > .linedivider {
