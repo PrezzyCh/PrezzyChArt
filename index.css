@@ -1,13 +1,23 @@
-/* Behavior:
-    This is the CSS for the Index.html file.
+/*
+    CSS for the Index.html file.
     THESE IDS ARE ONLY USED FOR INDEX
+
+    Created by Prezzy Ch.
 */
 
 /*===============================================*/
 /*------------------GENERAL TAGS-----------------*/
 /*===============================================*/
 
-/* MODULAR VIEW - Index*/
+#galleryheader,
+#gallerywindow,
+#commissionheader, 
+#commissionbutton, 
+#commissionbutton-animated {
+    display: flex;
+}
+
+/*============== MODULAR VIEW - Index ==============*/
 
 @media screen and (max-width: 820px){
     /* Header corrector for screens under 1300px */
@@ -29,6 +39,25 @@
     #title h2 {
         font-size: 18px;
     }
+}
+
+/*============== Index specific animations ==============*/
+#introductionh2,
+#headerdividerintroduction,
+#introductionparagraph,
+#introductionparagraph2,
+#dividerintroduction,
+#introductionbutton,
+#galleryh2,
+#headerdividergallery,
+#galleryparagraph,
+#gallerybutton,
+#commissionsh2,
+#headerdividercommissions,
+#commissionsparagraph,
+#dividercommissions,  
+#commissionbutton {
+    opacity: 0%;
 }
 
 /*===============================================*/
@@ -61,12 +90,12 @@
 /*===============================================*/
 /*----------------------IDs----------------------*/
 /*===============================================*/
-/*- Title -*/
+/*============== Title ==============*/
 
 #titleframe {
 	width: min(800px, 50%);
     height: 800px;
-    background-image: url("img/websiteimages/decorations/decor1.webp") , linear-gradient(75deg ,#31465B 55%, #0000 50%);
+    background-image: url("img/websiteimages/decorations/decor0.webp") , linear-gradient(75deg ,#31465B 55%, #0000 50%);
     background-size: 800px, auto;
     background-position: min(0px, 50%), left;
     background-repeat: no-repeat;
@@ -121,7 +150,7 @@
     background-size: cover;
 }
 
-/* introduction */
+/*============== introduction ==============*/
 #introduction-container {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -179,7 +208,7 @@
 
 
 
-/*- gallery -*/
+/*============== gallery ==============*/
 #gallerycontainer {
     clip-path: fill-box;
     width: 100%;
@@ -241,7 +270,7 @@
     animation-duration: 1s;
 }
 
-/*- Commissions -*/
+/*============== Commissions ==============*/
 #commissions-container {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -299,7 +328,7 @@
 #commissionbutton, #commissionbutton-animated {
     background-color: #494e53;
     box-shadow: -5px 5px #395d77;
-    color: rgb(188, 189, 190);
+    color: #6a7883;
 }
 #commissionbutton-animated {
     animation: animation-fadeinRTL;

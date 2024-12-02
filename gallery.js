@@ -1,6 +1,10 @@
+// Controller for the gallery.html gallery
+// Created by Prezzy Ch.
+
 let activeGalleryYear = 2025;
 let maxYear = 2025;
 let minYear = 2024;
+let buttons = [2025, 2024];
 
 window.addEventListener('load' , function() {
     loadActive(activeGalleryYear);
@@ -8,53 +12,59 @@ window.addEventListener('load' , function() {
     imgButtonInitialization();
     modalButtonInitialization();
 
-    // buttons (add more for the specific buttons)
-    let button2025 = document.getElementById("button2025");
-    let button2024 = document.getElementById("button2024");
     let buttonleft = document.getElementById("buttonleft");
     let buttonright = document.getElementById("buttonright");
-
-    let exibitheader = document.getElementById("exibitheader");
+    let galleryheader = document.getElementById("galleryheader");
 
     button2025.onclick = function() {
-        exibitheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+        galleryheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
         fadeGalleryOut();
         setTimeout(() => {
             loadActive(2025);
         }, 500);
     }
 
-    button2024.onclick = function() {
-        exibitheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-        fadeGalleryOut();
-        setTimeout(() => {
-            loadActive(2024);
-        }, 500);
+    for (let i = 0; i < buttons.length; i++) {
+        let button = document.getElementById("button" + buttons[i]);
+        button.onclick = function() {
+            galleryheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+            fadeGalleryOut();
+            setTimeout(() => {
+                loadActive(Number(button.value));
+            }, 500);
+        }
     }
 
     buttonleft.onclick = function() {
-        exibitheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+        galleryheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
         fadeGalleryOut();
         setTimeout(() => {
             changeDirection(1);
         }, 500);
     }
+
     buttonright.onclick = function() {
-        exibitheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+        galleryheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
         fadeGalleryOut();
         setTimeout(() => {
             changeDirection(-1);
         }, 500);
     }
 
-
 });
 
+/*===============================================*/
+/*-------------------FUNCTIONS-------------------*/
+/*===============================================*/
+
+// Main function to load the active gallery when shown an input with the parameter as the active year
+// Parameter:
+//  active(Number) - active year to change elements to
 function loadActive(active) {
     directionCheck(active);
-    let exibith2 = document.getElementById("exibith2");
-    if (exibith2 === null) { //corrector
-        exibith2 = document.getElementById("exibith2-animated");
+    let galleryh2 = document.getElementById("galleryh2");
+    if (galleryh2 === null) { //corrector
+        galleryh2 = document.getElementById("galleryh2-animated");
     }
 
     let button;
@@ -71,8 +81,7 @@ function loadActive(active) {
 
     button = document.getElementById("button" + active);
     gallery = document.getElementById("list" + active); 
-    console.log()
-    exibith2.innerHTML = active;
+    galleryh2.innerHTML = active;
     button.className = "inactive";
     button.disabled = true;
     gallery.style.display = "flex";
@@ -80,10 +89,17 @@ function loadActive(active) {
     fadeGalleryIn();
 }
 
+// Links the arrow buttons with the the parameter direction as a +1 or -1 to change 
+// the active year.
+// Parameter:
+//  direction(Number) - direction in -1 or +1
 function changeDirection(direction) {
     loadActive(activeGalleryYear + direction);
 }
 
+// Checks if the direction is within bounds and deactivates the buttons if they will be out of bounds.
+// Parameter:
+//  active(Number) - active year of the currently element
 function directionCheck(active) {
     let buttonleft = document.getElementById("buttonleft");
     let buttonright = document.getElementById("buttonright");
@@ -103,16 +119,20 @@ function directionCheck(active) {
     }
 }
 
+// Sets the class name of the gallery container to unhidden which activates the animation upon load 
 function fadeGalleryIn() {
-    let exibitcontainerinner = document.getElementById("exibitcontainerinner");
-    exibitcontainerinner.className = "unhidden";
+    let gallerycontainerinner = document.getElementById("gallerycontainerinner");
+    gallerycontainerinner.className = "unhidden";
 }
 
+// Sets the class name of the gallery container to hidden which activates the animation upon load 
 function fadeGalleryOut() {
-    let exibitcontainerinner = document.getElementById("exibitcontainerinner");
-    exibitcontainerinner.className = "hidden";
+    let gallerycontainerinner = document.getElementById("gallerycontainerinner");
+    gallerycontainerinner.className = "hidden";
 }
 
+// Initializes all of the image buttons and when the image is clicked, the modal and the image will be loaded
+// along with the alt text.
 function imgButtonInitialization() {
     let elements = document.getElementsByClassName("galleryimages");
     let modal = document.getElementById("gallerymodal");
@@ -136,6 +156,8 @@ function imgButtonInitialization() {
     }
 }
 
+// Initializes the modal buttons so when the close button is clicked, it will set the modal to inactive and activate
+// it's animation.
 function modalButtonInitialization() {
     let element = document.getElementById("modalclosebutton");
     let modal = document.getElementById("gallerymodal");

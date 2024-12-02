@@ -1,12 +1,24 @@
-/* Behavior:
-    This is the CSS for the gallery.html file.
+/*
+    CSS for the gallery.html file.
     THESE IDS ARE ONLY USED FOR gallery
+
+    Created by Prezzy Ch.
 */
 /*===============================================*/
 /*------------------GENERAL TAGS-----------------*/
 /*===============================================*/
+#gallerycontainerinner,
+#gallerybuttons,
+#modalcontainer,
+#modalparagraphcontainer,
+#modalimagecontainer,
+#socialsbuttoncontainer,
+.modalsocialbuttons {
+    display: flex;
+}
 
-/* MODULAR VIEW - Gallery*/
+
+/*============== MODULAR VIEW - Gallery ==============*/
 @media screen and (max-width: 1000px) {
     #modalparagraphcontainer {
         display: none;
@@ -42,7 +54,12 @@
     }
 }
 
-/* gallery specific animations */
+/*============== gallery specific animations ==============*/
+#galleryh2,
+#headerdividergallery,
+.inactivemodal {
+    opacity: 0%;
+}
 
 @keyframes animation-fadein {
     from {
@@ -80,6 +97,7 @@
     }
 }
 
+
 /*===============================================*/
 /*--------------------CLASSES--------------------*/
 /*===============================================*/
@@ -103,7 +121,7 @@
 .inactive, .inactive:hover, .inactive:active {
     background-color: rgba(240, 248, 255, 0.103);
     text-decoration: none;
-    color: #3c4955;
+    color: #6a7883;
     transition: none;
 }
 
@@ -111,9 +129,17 @@
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
+    flex-direction: row;
+    align-items: center;
     background-color: #28394b;
     box-shadow: 5px 5px #395d77;
     padding: 10px;
+}
+
+.modalsocialbuttons > img {
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 15%;
 }
 
 /* utility classes */
@@ -148,7 +174,7 @@
 /*----------------------IDs----------------------*/
 /*===============================================*/
 
-/* Title */
+/*============== Title ==============*/
 #title {
     align-items: flex-end;
     margin-right: 5%;
@@ -168,7 +194,7 @@
     animation-duration: 1.2s;
 }
 
-/* modal */
+/*============== modal ==============*/
 
 #gallerymodal, #gallerymodal-animated {
     position: fixed;
@@ -273,14 +299,16 @@
     flex-direction: column;
 }
 
-/* Exibit */
 
-#exibitcontainer {
+
+/*============== gallery ==============*/
+
+#gallerycontainer {
     background-color: #31465b21;
     backdrop-filter: blur(5px);
 }
 
-#exibitcontainerinner {
+#gallerycontainerinner {
     margin: 30px;
     margin-left: 40px;
     margin-right: 40px;
@@ -288,25 +316,25 @@
     width: 100%;
 }
 
-#exibith2, #exibith2-animated {
+#galleryh2, #galleryh2-animated {
     text-shadow: 5px 5px #395d77;
 }
-#exibith2-animated {
+#galleryh2-animated {
     animation: animation-fadeinLTR;
     animation-duration: 1s;
 }
 
-#headerdividerexibit, #headerdividerexibit-animated {
+#headerdividergallery, #headerdividergallery-animated {
     box-shadow: 5px 5px #395d77;
     width: 200px;
 }
 
-#headerdividerexibit-animated {
+#headerdividergallery-animated {
     animation: animation-fadeinLTR;
     animation-duration: 1.3s;
 }
 
-#exibitgallery {
+#gallery {
     margin-top: 30px;
     width: 100%;
 }
@@ -325,7 +353,7 @@
     transition: transform 0.5s, filter 0.5s;
 }
 
-#exibitgallerybuttons {
+#gallerybuttons {
     margin-top: 40px;
     flex-direction: row;
     justify-content: center;
@@ -341,6 +369,12 @@
 #gallerybuttonslist > a {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+#buttonleft,
+#buttonright {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #list2024 {

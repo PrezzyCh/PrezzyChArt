@@ -1,7 +1,7 @@
-// This is the master JS file for decorative elements
+// Master JS file for decorative elements
+// Created by Prezzy Ch.
 
-
-// Animations is activated
+//Animation check variables for single use animations
 let loadingIsActivated = false;
 let titleIsActivated = false;
 
@@ -12,14 +12,9 @@ let commissionsIsActivated = false;
 let aboutmeIsActivated = false;
 let funfactIsActivated = false;
 let funfactSubIsActivated = [false, false, false, false, false, false];
-
-let exibitIsActivated = false;
 //constants 
 const POSITIONADJUST = 4;
-// On starts
-window.onresize = function() {
-    
-}
+
 
 window.onload = function() {
     loadingScreenAnimation();
@@ -73,10 +68,16 @@ window.onscroll = function() {
     animateElements();
 }
 
-// Functions
+/*===============================================*/
+/*-------------------FUNCTIONS-------------------*/
+/*===============================================*/
 
-//Link transitions
 
+// Takes in the link that is going to be set and activates the loading screen before the link is
+// pressed
+// Parameters:
+//  link(String) - the website URL to redirect
+//  event - the event to prevent
 function linkDelay(link, event) {
     event.preventDefault();
     loadingScreenAnimation();
@@ -85,7 +86,7 @@ function linkDelay(link, event) {
     }, 1000);
 }
 
-//These functions handles the loading animation for all HTML files globally
+// Handles the loading animation for all HTML files globally
 function loadingScreenAnimation() {
     if (!loadingIsActivated) {
         let loadingscreen = document.getElementById("loading");
@@ -103,7 +104,7 @@ function loadingScreenAnimation() {
     }
 }
 
-// These functions handles custom animation for each part, taking the load location in order to 
+// Handles custom animation for each part, taking the load location in order to 
 // initiate the animation.
 function animateElements() {
     let currentHTML = window.location.href;
@@ -118,6 +119,8 @@ function animateElements() {
     }
 }
 
+// Checks if the screen for index is in bound with the elements before changing their IDs to 
+// -animated to activate their animations.
 function animateIndex() {
     //|-----------------------containers -----------------------|
     let titleContainer = document.getElementById("titlecontainer-index");
@@ -158,6 +161,8 @@ function animateIndex() {
     }  
 }
 
+// Checks if the screen for about me is in bound with the elements before changing their IDs to 
+// -animated to activate their animations.
 function animateAboutMe() {
     //|-----------------------containers -----------------------|
     let titleContainer = document.getElementById("titlecontainer-end");
@@ -198,13 +203,15 @@ function animateAboutMe() {
     }
 }
 
+// Checks if the screen for gallery is in bound with the elements before changing their IDs to 
+// -animated to activate their animations.
 function animateGallery() {
     //|-----------------------containers -----------------------|
     let titleContainer = document.getElementById("titlecontainer-end");
-    let exibitContainer = document.getElementById("exibitcontainer");
+    let galleryContainer = document.getElementById("gallerycontainer");
     //------------IDs---------------
     let title = ["titleh1", "dividertitle"]; 
-    let gallery = ["exibith2", "headerdividerexibit"];
+    let gallery = ["galleryh2", "headerdividergallery"];
     //|----------------------- Values -----------------------|
     let topBounds = 0;
     let bottomBounds = document.documentElement.clientHeight;
@@ -212,19 +219,30 @@ function animateGallery() {
         setAnimated(title);
         titleIsActivated = true;
     }
-    if (boundingBoxCheck(topBounds, bottomBounds, exibitContainer) && !exibitIsActivated) {
+    if (boundingBoxCheck(topBounds, bottomBounds, galleryContainer) && !galleryIsActivated) {
         setAnimated(gallery);
-        exibitIsActivated = true;
+        galleryIsActivated = true;
     }
 }
 
-function setAnimated(elements) { //Elements should be array
+// Sets each element in an array to -animated by getting their ids and setting them to animate.
+// Parameters:
+//  elements(String[]) - Array of elements to be animated
+function setAnimated(elements) {
     for (let i = 0; i < elements.length; i++) {
         let elementid = document.getElementById(elements[i]);
         elementid.id = elements[i] + "-animated";
     }
 }
 
+// Takes in values of a top and bottom bound and checks if the container is in the bounding box 
+// and return true if it is.
+// Parameters:
+//  topBounds(Number) - top of the viewport screen
+//  bottomBounds(Number) - bottom of the viewport screen
+//  container(element) - the element to compare
+// Returns:
+//  bool - true if the container is in the bounding box and false if else.
 function boundingBoxCheck (topBounds, bottomBounds, container) {
     let elementPos = container.getBoundingClientRect().y + (container.getBoundingClientRect().height / POSITIONADJUST);
     return (elementPos >= topBounds) && (elementPos <= bottomBounds);

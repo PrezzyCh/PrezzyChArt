@@ -1,4 +1,4 @@
-/* Behavior: 
+/*
     This CSS is the primary CSS for all shared components of the site. 
 */
 
@@ -20,29 +20,9 @@
 nav,
 ul,
 li,
-/* Index */
-#galleryheader,
-#gallerywindow,
-#commissionheader,
 footer, 
 .footer-container,
-.footerlinks-container, 
-#commissionbutton, 
-#commissionbutton-animated, 
-/* aboutme */
-#aboutmeimagecontainer,
-#funfactdivider,
-#funfactheader,
-.subcontainer-aboutme,
-.subsectionheader,
-.subsectionimage,
-/* gallery */
-#exibitcontainerinner,
-#exibitgallerybuttons,
-#modalcontainer,
-#modalparagraphcontainer,
-#modalimagecontainer,
-#socialsbuttoncontainer {
+.footerlinks-container {
     display: flex;
 }
 
@@ -107,8 +87,10 @@ header {
 main {
     width: 100%;
     height: fit-content;
+    background-image: url("img/websiteimages/images/NebulaBg.webp");
+    background-size: cover;
     background-color: #071330;
-    position: absolute; /*dear lord hope this works */
+    position: absolute;
     z-index: 1;
     overflow-x: hidden;
 }
@@ -121,7 +103,7 @@ footer {
     justify-content: space-between;
 }
 
-/* MODULAR VIEW - Global*/
+/*============== MODULAR VIEW - Global ==============*/
 
 @media screen and (max-width: 1300px){
     /* Header corrector for screens under 1300px */
@@ -170,6 +152,7 @@ footer {
         flex-direction: column;
     }
     #navbar {
+        height: 50px;
         margin-right: 0px !important;
     }
     #title > h1 {
@@ -198,7 +181,7 @@ footer {
     }
 }
 
-/*------------- ANIMATIONS ---------------*/
+/*============== ANIMATIONS ==============*/
 *[id$="animated"],
 #loadingscreen-animated-reverse,
 .activemodal {
@@ -211,57 +194,7 @@ footer {
 #titleh1-index,
 #titleh1,
 #titlesubheadings-container,
-#socials,
-/* Index */
-#introductionh2,
-#headerdividerintroduction,
-#introductionparagraph,
-#introductionparagraph2,
-#dividerintroduction,
-#introductionbutton,
-#galleryh2,
-#headerdividergallery,
-#galleryparagraph,
-#gallerybutton,
-#commissionsh2,
-#headerdividercommissions,
-#commissionsparagraph,
-#dividercommissions,  
-#commissionbutton,
-/* about me */
-#dividertitle,
-#aboutmeh2, 
-#aboutmeh3, 
-#aboutmepronouns,
-#headerdivideraboutme,
-#divideraboutme,
-#divideraboutme2,
-#aboutmeparagraph,
-#aboutmeparagraph2, 
-#funfacth2, 
-#headerdividerfunfact,
-#subsectionheader-1,
-#subsectionheader-3,
-#subsectionheader-5,
-#subsectionheader-2,
-#subsectionheader-4,
-#subsectionheader-6,
-#subsectionarticle-1,
-#subsectionarticle-3,
-#subsectionarticle-5,
-#subsectionarticle-2,
-#subsectionarticle-4,
-#subsectionarticle-6,
-#subsectionimage-1,
-#subsectionimage-3,
-#subsectionimage-5,
-#subsectionimage-2,
-#subsectionimage-4,
-#subsectionimage-6,
-/* Gallery */
-#exibith2,
-#headerdividerexibit,
-.inactivemodal {
+#socials {
     opacity: 0%;
 }
 
@@ -451,6 +384,10 @@ footer {
     flex-direction: column;
 }
 
+.footerlinks-container > a {
+    text-align: center;
+}
+
 .footerheaders {
     font-size: 20px;
 }
@@ -475,7 +412,7 @@ footer {
 /*----------------------IDs----------------------*/
 /*===============================================*/
 
-/*- loading screen -*/
+/*============== loading screen ==============*/
 #loadingscreen-animated {
     animation-delay: 0.5s;
     animation: loadingscreen-out;
@@ -529,7 +466,7 @@ footer {
 }
 
 
-/*-Title-*/
+/*==============Title==============*/
 
 #titlecontainer-index {
     justify-content: flex-start;
@@ -578,7 +515,7 @@ footer {
     align-self: flex-end;
     z-index: 1;
 }
-/*- Main -*/
+/*============== Main ==============*/
 
 #mainsection {
     justify-content: flex-end;
@@ -586,7 +523,7 @@ footer {
     flex-direction: column;
 }
 
-/*- Footer -*/
+/*============== Footer ==============*/
 
 #footerinfos {
     flex-direction: column;
