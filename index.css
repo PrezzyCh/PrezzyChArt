@@ -135,12 +135,17 @@
     animation-duration: 1s;
 }
 
-#socialsinsta {
+/*Icon trademark belongs to their respective holders:
+    Instagram, https://about.meta.com/brand/resources/instagram/instagram-brand/ 
+    Deviantart, https://www.deviantart.com/about
+    Cara, https://blog.cara.app/blog/faq
+*/
+#socialsinsta { 
     background-image: url("img/websiteimages/symbols/Instagram.webp");
     background-size: cover;
 }
 
-#socialsdevi {
+#socialsdevi { 
     background-image: url("img/websiteimages/symbols/Deviantart.webp");
     background-size: cover;
 }
@@ -159,7 +164,7 @@
     align-items: flex-start;
     flex-direction: column;
     background-position: min(0px, 50%), center, right;
-    background-size: auto 100%, auto , auto 120%;
+    background-size: auto 100%, auto , auto 130%;
     background-repeat: no-repeat;
 } 
 
@@ -250,7 +255,7 @@
     padding-left: 10px;
     padding-right: 10px;
 
-    background-image: url("img/websiteimages/images/GalleryPreview.png");
+    background-image: url("img/websiteimages/images/GalleryPreview.webp");
     background-size: cover;
     background-position-x: center;
 }

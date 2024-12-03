@@ -1,10 +1,10 @@
 // Controller for the gallery.html gallery
 // Created by Prezzy Ch.
 
-let activeGalleryYear = 2025;
-let maxYear = 2025;
+let activeGalleryYear = 2024;
+let maxYear = 2024;
 let minYear = 2024;
-let buttons = [2025, 2024];
+let buttons = [2024];
 
 window.addEventListener('load' , function() {
     loadActive(activeGalleryYear);
@@ -15,14 +15,6 @@ window.addEventListener('load' , function() {
     let buttonleft = document.getElementById("buttonleft");
     let buttonright = document.getElementById("buttonright");
     let galleryheader = document.getElementById("galleryheader");
-
-    button2025.onclick = function() {
-        galleryheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-        fadeGalleryOut();
-        setTimeout(() => {
-            loadActive(2025);
-        }, 500);
-    }
 
     for (let i = 0; i < buttons.length; i++) {
         let button = document.getElementById("button" + buttons[i]);

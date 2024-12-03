@@ -336,6 +336,8 @@ footer {
 
 .decorsignature {
     text-wrap: nowrap;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .linedivider {
@@ -394,8 +396,7 @@ footer {
 
 .footer-a {
     color: #596369;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 6px;
 }
 
 .footer-a:active,

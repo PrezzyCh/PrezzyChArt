@@ -214,9 +214,8 @@
 }
 
 #modalheader {
-    font-size: 60px;
-    margin-top: 0px;
-    margin-bottom: 10px;
+    font-size: clamp(40px, 350%, 70px);
+    margin: 0px;
     text-shadow: 5px 5px #395d77;
 }
 
