@@ -57,7 +57,6 @@ h4 {
 
     *[class|= "subsectionimage"] > img {
         width: 120% !important;
-        height: fit-content;
     }
 }
 
@@ -125,7 +124,6 @@ h4 {
 
     *[class|= "subsectionimage"] > img {
         width: 150% !important;
-        height: fit-content;
     }
 }
 
