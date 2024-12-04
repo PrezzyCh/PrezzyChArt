@@ -219,7 +219,7 @@ h4 {
 
 *[class|= "subsectionh3"]{
     margin: 0;
-    text-wrap-mode: nowrap;
+    text-wrap: nowrap;
 }
 
 .subsectionh3-left {
@@ -382,6 +382,7 @@ h4 {
 /*============== funfacts section ==============*/
 #funfacts-container {
     background-image: linear-gradient(180deg, #31465B 20%, #00000021);
+    -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(1px);
     flex-direction: column;
     height: fit-content;
