@@ -108,14 +108,12 @@ function loadingScreenAnimation() {
 // initiate the animation.
 function animateElements() {
     let currentHTML = window.location.href;
-    if (currentHTML.includes("index.html")) {
-        animateIndex();
-    }
     if (currentHTML.includes("aboutme.html")) {
         animateAboutMe();
-    } 
-    if (currentHTML.includes("gallery.html")) {
+    } else if (currentHTML.includes("gallery.html")) {
         animateGallery();
+    } else {
+        animateIndex();
     }
 }
 
