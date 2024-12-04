@@ -206,7 +206,7 @@ function animateAboutMe() {
 function animateGallery() {
     //|-----------------------containers -----------------------|
     let titleContainer = document.getElementById("titlecontainer-end");
-    let galleryContainer = document.getElementById("gallerycontainer");
+    let galleryHeader = document.getElementById("galleryheader");
     //------------IDs---------------
     let title = ["titleh1", "dividertitle"]; 
     let gallery = ["galleryh2", "headerdividergallery"];
@@ -217,7 +217,7 @@ function animateGallery() {
         setAnimated(title);
         titleIsActivated = true;
     }
-    if (boundingBoxCheck(topBounds, bottomBounds, galleryContainer) && !galleryIsActivated) {
+    if (boundingBoxCheck(topBounds, bottomBounds, galleryHeader) && !galleryIsActivated) {
         setAnimated(gallery);
         galleryIsActivated = true;
     }
