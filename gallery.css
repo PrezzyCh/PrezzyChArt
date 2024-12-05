@@ -7,6 +7,7 @@
 /*===============================================*/
 /*------------------GENERAL TAGS-----------------*/
 /*===============================================*/
+#galleryheader,
 #gallerycontainerinner,
 #gallerybuttons,
 #modalcontainer,
@@ -45,6 +46,9 @@
     }
     .sectionheader {
         text-align: center;
+    }
+    #galleryheader {
+        align-items: center;
     }
 }
 
@@ -109,6 +113,7 @@
     clip-path: fill-box;
     flex-direction: column;
     flex-grow: 1; 
+    flex-shrink: 1;
 }
 
 .gallerylist {
@@ -271,7 +276,6 @@
     max-height: 100%;
     height: fit-content;
     border-radius: 30px;
-    object-fit: contain;
     box-shadow: 10px 15px 20px #31465B;
 }
 
@@ -315,6 +319,10 @@
     margin-right: 40px;
     flex-direction: column;
     width: 100%;
+}
+
+#galleryheader {
+    flex-direction: column;
 }
 
 #galleryh2, #galleryh2-animated {
