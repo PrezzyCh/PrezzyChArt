@@ -292,7 +292,7 @@
 
 #commissionsheader {
     position: relative;
-    justify-items: flex-end;
+    align-items: flex-end;
     left: 100px;
 }
 

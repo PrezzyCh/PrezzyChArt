@@ -137,7 +137,7 @@ footer {
         font-size: 18px;
     }
     .sectionheader {
-        align-items: center;
+        align-items: center !important;
     }
     .sectionparagraph {
         text-align: center !important;
