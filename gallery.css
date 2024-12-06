@@ -7,7 +7,7 @@
 /*===============================================*/
 /*------------------GENERAL TAGS-----------------*/
 /*===============================================*/
-#galleryheader,
+
 #gallerycontainerinner,
 #gallerybuttons,
 #modalcontainer,
@@ -46,9 +46,6 @@
     }
     .sectionheader {
         text-align: center;
-    }
-    #galleryheader {
-        align-items: center;
     }
 }
 
@@ -323,10 +320,6 @@
     margin-right: 40px;
     flex-direction: column;
     width: 100%;
-}
-
-#galleryheader {
-    flex-direction: column;
 }
 
 #galleryh2, #galleryh2-animated {

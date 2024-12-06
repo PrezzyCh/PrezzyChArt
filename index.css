@@ -9,7 +9,6 @@
 /*------------------GENERAL TAGS-----------------*/
 /*===============================================*/
 
-#galleryheader,
 #gallerywindow,
 #commissionheader, 
 #commissionbutton, 
@@ -34,6 +33,7 @@
         align-items: center !important;
     }
 }
+
 
 @media screen and (max-width: 420px){
     #title h2 {
@@ -258,6 +258,10 @@
     background-position-x: center;
 }
 
+#galleryparagraph, #galleryparagraph-animated {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 #galleryparagraph-animated {
     animation: animation-fadeinTTB;
     animation-duration: 1.3s;

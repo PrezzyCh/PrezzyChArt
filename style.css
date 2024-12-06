@@ -5,6 +5,8 @@
 /*===============================================*/
 /*------------------GENERAL TAGS-----------------*/
 /*===============================================*/
+
+.sectionheader,
 #loadingcontainer,
 .title-container, 
 #title, 
@@ -81,7 +83,7 @@ body {
 
 header {
     width: 100%;
-    height: fit-content;
+    height: auto;
 }
 
 main {
@@ -116,7 +118,7 @@ footer {
         left: 0px !important;
         right: 0px !important;
     }
-    .sectionheader {
+    .sectionh3 {
         font-size: 50px !important;
     }
 }
@@ -126,9 +128,6 @@ footer {
     #titleframegradient {
         display: none;
     }
-    .linedivider {
-        justify-self: center;
-    }
     .contentarticlecontainer {
         max-width: 100% !important;
         margin-left: 15px !important;
@@ -136,6 +135,9 @@ footer {
     }
     .contentarticlecontainer > p {
         font-size: 18px;
+    }
+    .sectionheader {
+        align-items: center;
     }
     .sectionparagraph {
         text-align: center !important;
@@ -366,6 +368,10 @@ footer {
 }
 
 .sectionheader {
+    flex-direction: column;
+}
+
+.sectionh3 {
     font-size: 60px;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -439,7 +445,7 @@ footer {
 /*- header -*/
 #header-container {
     width: 100%;
-    height: fit-content;
+    height: auto;
     padding-top: 10px;
     padding-bottom: 10px;
     background-image: linear-gradient(90deg, #0C4160, #03080C);

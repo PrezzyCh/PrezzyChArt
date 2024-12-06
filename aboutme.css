@@ -8,15 +8,14 @@
 /*===============================================*/
 /*------------------GENERAL TAGS-----------------*/
 /*===============================================*/
+
 #aboutmeimagecontainer,
 #funfactdivider,
 #funfactheader,
-.subcontainer-left,
-.subcontainer-right,
-.subsectionheader-left,
-.subsectionheader-right,
-.subsectionimage-left,
-.subsectionimage-right{
+*[class|= "subcontainer"],
+*[class|= "subsectionarticle"],
+*[id|= "subsectionheader"],
+*[class|= "subsectionimage"] {
     display: flex;
 }
 
@@ -61,9 +60,6 @@ h4 {
 }
 
 @media screen and (max-width: 820px) {
-    .linedivider {
-        justify-self: initial;
-    }
     
     .title-container {
         justify-content: center !important;
@@ -79,10 +75,6 @@ h4 {
 
     #aboutmedivider {
         width: 100% !important;
-    }
-
-    #aboutmeheader {
-        justify-items: center;
     }
 
     #aboutmeheader > h2 {
@@ -205,13 +197,17 @@ h4 {
     justify-content: end;
 }
 
+*[class|= "subsectionarticle"] {
+    flex-direction: column;
+}
+
 .subsectionarticle-left {
     margin-left: 30px;
 }
 
 .subsectionarticle-right {
     text-align: end;
-    justify-items: end;
+    align-items: end;
     margin-right: 30px;
 }
 
