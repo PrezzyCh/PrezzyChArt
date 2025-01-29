@@ -189,7 +189,6 @@ footer {
 .activemodal {
     opacity: 0%;
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    /* animation-delay: 0.1s; */
     animation-fill-mode: forwards !important; 
 }
 

@@ -69,6 +69,7 @@
     height: 50px;
     margin-left: 10px;
     margin-right: 10px;
+    background-size: cover;
     background-position: center;
     background-size: 100% !important;
     transition: border-radius 0.5s, background-size 0.5s;
@@ -142,17 +143,17 @@
 */
 #socialsinsta { 
     background-image: url("img/websiteimages/symbols/Instagram.webp");
-    background-size: cover;
 }
 
 #socialsdevi { 
     background-image: url("img/websiteimages/symbols/Deviantart.webp");
-    background-size: cover;
 }
 
 #socialscara {
     background-image: url("img/websiteimages/symbols/Cara.webp");
-    background-size: cover;
+}
+#socialsblsky {
+    background-image: url("img/websiteimages/symbols/Blsky.webp");
 }
 
 /*============== introduction ==============*/

@@ -169,7 +169,7 @@ function animateAboutMe() {
     //------------IDs---------------
     let title = ["titleh1", "dividertitle"];
     let aboutme = ["aboutmeh2", "headerdivideraboutme", "aboutmeh3", "aboutmepronouns", 
-        "aboutmeparagraph", "aboutmeparagraph2", "divideraboutme", "divideraboutme2"];
+        "aboutmeparagraph", "aboutmeparagraph2", "divideraboutme", "divideraboutme2", "aboutmeimage"];
     let funfact = ["funfacth2", "headerdividerfunfact"];
     //|----------------------- Values -----------------------|
     let topBounds = 0;
