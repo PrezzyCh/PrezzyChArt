@@ -7,6 +7,7 @@
 /*===============================================*/
 /*------------------GENERAL TAGS-----------------*/
 /*===============================================*/
+
 #gallerycontainerinner,
 #gallerybuttons,
 #modalcontainer,
@@ -104,11 +105,14 @@
 
 .gallerylistelement {
     height: 300px;
+    width: fit-content;
     max-width: 100%;
     border-radius: 20px;
     clip-path: fill-box;
+    -webkit-box-orient: horizontal;
     flex-direction: column;
     flex-grow: 1; 
+    flex-shrink: 1;
 }
 
 .gallerylist {
@@ -267,9 +271,10 @@
 }
 
 #modalimage {
-    width: 100%;
+    max-width: 100%;
+    width: auto;
     max-height: 100%;
-    height: fit-content;
+    height: auto;
     border-radius: 30px;
     object-fit: contain;
     box-shadow: 10px 15px 20px #31465B;
@@ -327,7 +332,7 @@
 
 #headerdividergallery, #headerdividergallery-animated {
     box-shadow: 5px 5px #395d77;
-    width: 200px;
+    width: 20%;
 }
 
 #headerdividergallery-animated {

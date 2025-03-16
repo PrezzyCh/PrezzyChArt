@@ -1,10 +1,10 @@
 // Controller for the gallery.html gallery
 // Created by Prezzy Ch.
 
-let activeGalleryYear = 2024;
-let maxYear = 2024;
+let activeGalleryYear = 2025;
+let maxYear = 2025;
 let minYear = 2024;
-let buttons = [2024];
+let buttons = [2025, 2024];
 
 window.addEventListener('load' , function() {
     loadActive(activeGalleryYear);

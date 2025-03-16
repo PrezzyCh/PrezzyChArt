@@ -9,7 +9,6 @@
 /*------------------GENERAL TAGS-----------------*/
 /*===============================================*/
 
-#galleryheader,
 #gallerywindow,
 #commissionheader, 
 #commissionbutton, 
@@ -34,6 +33,7 @@
         align-items: center !important;
     }
 }
+
 
 @media screen and (max-width: 420px){
     #title h2 {
@@ -69,6 +69,7 @@
     height: 50px;
     margin-left: 10px;
     margin-right: 10px;
+    background-size: cover;
     background-position: center;
     background-size: 100% !important;
     transition: border-radius 0.5s, background-size 0.5s;
@@ -142,17 +143,17 @@
 */
 #socialsinsta { 
     background-image: url("img/websiteimages/symbols/Instagram.webp");
-    background-size: cover;
 }
 
 #socialsdevi { 
     background-image: url("img/websiteimages/symbols/Deviantart.webp");
-    background-size: cover;
 }
 
 #socialscara {
     background-image: url("img/websiteimages/symbols/Cara.webp");
-    background-size: cover;
+}
+#socialsblsky {
+    background-image: url("img/websiteimages/symbols/Blsky.webp");
 }
 
 /*============== introduction ==============*/
@@ -252,14 +253,16 @@
     flex-direction: column;
     margin: 0;
     padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
 
     background-image: url("img/websiteimages/images/GalleryPreview.webp");
     background-size: cover;
     background-position-x: center;
 }
 
+#galleryparagraph, #galleryparagraph-animated {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 #galleryparagraph-animated {
     animation: animation-fadeinTTB;
     animation-duration: 1.3s;
@@ -290,7 +293,7 @@
 
 #commissionsheader {
     position: relative;
-    justify-items: flex-end;
+    align-items: flex-end;
     left: 100px;
 }
 

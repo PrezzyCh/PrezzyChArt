@@ -60,14 +60,12 @@ function loadingScreenAnimation() {
 // initiate the animation.
 function animateElements() {
     let currentHTML = window.location.href;
-    if (currentHTML.includes("index.html")) {
-        animateIndex();
-    }
     if (currentHTML.includes("aboutme.html")) {
         animateAboutMe();
-    } 
-    if (currentHTML.includes("gallery.html")) {
+    } else if (currentHTML.includes("gallery.html")) {
         animateGallery();
+    } else {
+        animateIndex();
     }
 }
 
@@ -94,7 +92,7 @@ function animateAboutMe() {
     //------------IDs---------------
     let title = ["titleh1", "dividertitle"];
     let aboutme = ["aboutmeh2", "headerdivideraboutme", "aboutmeh3", "aboutmepronouns", 
-        "aboutmeparagraph", "aboutmeparagraph2", "divideraboutme", "divideraboutme2"];
+        "aboutmeparagraph", "aboutmeparagraph2", "divideraboutme", "divideraboutme2", "aboutmeimage"];
     let funfact = ["funfacth2", "headerdividerfunfact"];
     let all = getAllIDs([document.querySelectorAll(".subsectionheader-left"), document.querySelectorAll(".subsectionarticle-left"), document.querySelectorAll(".subsectionimage-left"),
                         document.querySelectorAll(".subsectionheader-right"), document.querySelectorAll(".subsectionarticle-right"), document.querySelectorAll(".subsectionimage-right")]);
