@@ -60,6 +60,16 @@
     opacity: 0%;
 }
 
+@keyframes titleframe-in {
+    from {
+        width: 0%;
+        opacity: 100%;
+    } to {
+        width: min(800px, 50%);
+        opacity: 100%;
+    }
+}
+
 /*===============================================*/
 /*--------------------CLASSES--------------------*/
 /*===============================================*/
@@ -93,8 +103,7 @@
 /*===============================================*/
 /*============== Title ==============*/
 
-#titleframe {
-	width: min(800px, 50%);
+#titleframe, #titleframe-animated {
     height: 800px;
     background-image: url("img/websiteimages/decorations/decor0.webp") , linear-gradient(75deg ,#31465B 55%, #0000 50%);
     background-size: 800px, auto;
@@ -102,6 +111,15 @@
     background-repeat: no-repeat;
     position: fixed;
     z-index: -1;
+}
+
+#titleframe {
+    width: 200%;
+}
+
+#titleframe-animated {
+    animation-name: titleframe-in;
+    animation-duration: 1.5s;
 }
 
 #titleh1-index, #titleh1-index-animated {

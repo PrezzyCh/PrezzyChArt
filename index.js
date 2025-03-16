@@ -47,9 +47,7 @@ function loadingScreenAnimation() {
         let loadingscreen = document.getElementById("loading");
         loadingscreen.id = "loadingscreen-animated";
         loadingIsActivated = true;
-        loadingscreen.onanimationstart = function() {
-            animateElements();
-        }
+        animateElements();
     } else {
         let loadingscreen = document.getElementById("loadingscreen-animated");
         loadingscreen.id = "loadingscreen-animated-reverse";
@@ -73,7 +71,7 @@ function animateElements() {
 // -animated to activate their animations.
 function animateIndex() {
     // ------------IDs-----------
-    let title = ["titleh1-index", "titlesubheadings-container", "socials"];
+    let title = ["titleh1-index", "titlesubheadings-container", "socials", "titleframe"];
     let introduction = ["introductionh2", "headerdividerintroduction", "introductionparagraph", 
         "introductionparagraph2", "dividerintroduction", "introductionbutton"]
     let gallery = ["galleryh2", "headerdividergallery", "galleryparagraph", "gallerybutton"];

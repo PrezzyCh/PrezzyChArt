@@ -222,9 +222,11 @@ footer {
 @keyframes animation-fadeinTTB {
     from {
         opacity: 0%;
+        filter: blur(5px);
         transform: translateY(-200px);
     } to {
         opacity: 100%;
+        filter: blur(0);
         transform: translateY(0px);
     }
 }
@@ -232,10 +234,12 @@ footer {
 @keyframes animation-fadeinLTR {
     from {
         opacity: 0%;
+        filter: blur(5px);
         transform: translateX(-200px);
     }
     to {
         opacity: 100%;
+        filter: blur(0);
         transform: translateX(0);
     }
 }
@@ -243,10 +247,12 @@ footer {
 @keyframes animation-fadeinRTL {
     from {
         opacity: 0%;
+        filter: blur(5px);
         transform: translateX(200px);
     }
     to {
         opacity: 100%;
+        filter: blur(0);
         transform: translateX(0);
     }
 }
@@ -479,7 +485,7 @@ footer {
     min-height: 700px;
 }
 
-#titlecontainer-end { /*Made for all other sections ! index*/
+#titlecontainer { /*Made for all other sections ! index*/
     justify-content: flex-end;
     min-height: 500px;
 }
