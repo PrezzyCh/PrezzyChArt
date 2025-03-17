@@ -78,10 +78,7 @@ function animateIndex() {
     let commissions = ["commissions-container", "commissionsh2", "headerdividercommissions", "commissionsparagraph", 
         "dividercommissions", "commissionbutton"];
     let all = title.concat(introduction, gallery, commissions);
-    all.forEach((i) => {
-        let elementid = document.getElementById(i);
-        OBSERVER.observe(elementid);
-    });
+    forEachId(all);
 }
 
 // Checks if the screen for about me is in bound with the elements before changing their IDs to 
@@ -96,10 +93,7 @@ function animateAboutMe() {
                         document.querySelectorAll(".subsectionheader-right"), document.querySelectorAll(".subsectionarticle-right"), document.querySelectorAll(".subsectionimage-right"),
                         document.querySelectorAll(".subcontainer-left"), document.querySelectorAll(".subcontainer-right")]);
     all = all.concat(title, aboutme, funfact);
-    all.forEach((i) => {
-        let elementid = document.getElementById(i);
-        OBSERVER.observe(elementid);
-    });
+    forEachId(all);
 }
 
 // Checks if the screen for gallery is in bound with the elements before changing their IDs to 
@@ -109,10 +103,7 @@ function animateGallery() {
     let title = ["titleh1", "dividertitle", "titleimage"]; 
     let gallery = ["gallery-container","galleryh2", "headerdividergallery"];
     let all = title.concat(gallery);
-    all.forEach((i) => {
-        let elementid = document.getElementById(i);
-        OBSERVER.observe(elementid);
-    });
+    forEachId(all);
 }
 
 function activateButtons() {
@@ -126,7 +117,7 @@ function activateButtons() {
     })
 }
 
-function getAllIDs (elements) {
+function getAllIDs(elements) {
     let result = [];
     elements.forEach((i) => {
         i.forEach((j) => {
@@ -136,3 +127,9 @@ function getAllIDs (elements) {
     return result;
 }
 
+function forEachId(all) {
+    all.forEach((i) => {
+        let elementid = document.getElementById(i);
+        OBSERVER.observe(elementid);
+    });
+}
