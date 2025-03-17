@@ -128,6 +128,7 @@ h4 {
 
 /*============== aboutme specific animations ==============*/
 #dividertitle,
+#aboutme-container,
 #aboutmeh2, 
 #aboutmeh3, 
 #aboutmepronouns,
@@ -136,9 +137,16 @@ h4 {
 #divideraboutme2,
 #aboutmeparagraph,
 #aboutmeparagraph2,
-#aboutmeimage, 
+#aboutmeimage,
+#funfacts-container, 
 #funfacth2, 
 #headerdividerfunfact,
+#subcontainerfunfact-1,
+#subcontainerfunfact-2,
+#subcontainerfunfact-3,
+#subcontainerfunfact-4,
+#subcontainerfunfact-5,
+#subcontainerfunfact-6,
 *[id|= "subsectionheader"],
 *[id|= "subsectionarticle"],
 *[id|= "subsectionimage"] {
@@ -270,8 +278,13 @@ h4 {
     margin-right: 5%;
 }
 
-#titleimage-aboutme {
+#titleimage, #titleimage-animated {
     background-image: url("img/websiteimages/images/TwilightMountains.webp");
+}
+
+#titleimage-animated {
+    animation-name: titleimage-in;
+    animation-duration: 1.5s;
 }
 
 #dividertitle, #dividertitle-animated {
@@ -284,8 +297,8 @@ h4 {
     animation-duration: 1.2s;
 }
 
-/*- about me section -*/
-#aboutme-container {
+/*============== about me section ==============*/
+#aboutme-container, #aboutme-container-animated{
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     background-color: #31465B;
@@ -293,6 +306,11 @@ h4 {
     align-items: center;
     background-image: url("img/websiteimages/decorations/decor1.webp");
 } 
+
+#aboutme-container-animated {
+    animation: animation-fadeinBTT;
+    animation-duration: 1.5s;
+}
 
 #aboutmeheader {
     position: relative;
@@ -380,13 +398,18 @@ h4 {
 }
 
 /*============== funfacts section ==============*/
-#funfacts-container {
+#funfacts-container, #funfacts-container-animated {
     background-image: linear-gradient(180deg, #31465B 20%, #00000021);
     -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(1px);
     flex-direction: column;
     height: fit-content;
 } 
+
+#funfacts-container-animated {
+    animation: animation-fadeinBTT;
+    animation-duration: 1.5s;
+}
 
 #funfactdivider {
     background-image: linear-gradient(90deg, #0C4160, #03080C);
@@ -418,23 +441,33 @@ h4 {
     animation-duration: 1.5s;
 }
 
-#subcontainerfunfact-1 {
+#subcontainerfunfact-1, #subcontainerfunfact-1-animated {
     background-image: url("img/websiteimages/decorations/decor3.webp");
 }
-#subcontainerfunfact-2 {
+#subcontainerfunfact-2, #subcontainerfunfact-2-animated {
     background-image: url("img/websiteimages/decorations/decor4.webp");
 }
-#subcontainerfunfact-3 {
+#subcontainerfunfact-3,#subcontainerfunfact-3-animated {
     background-image: url("img/websiteimages/decorations/decor5.webp");
 }
-#subcontainerfunfact-4 {
+#subcontainerfunfact-4, #subcontainerfunfact-4-animated {
     background-image: url("img/websiteimages/decorations/decor6.webp");
 }
-#subcontainerfunfact-5 {
+#subcontainerfunfact-5, #subcontainerfunfact-5-animated {
     background-image: url("img/websiteimages/decorations/decor7.webp");
 }
-#subcontainerfunfact-6 {
+#subcontainerfunfact-6, #subcontainerfunfact-6-animated {
     background-image: url("img/websiteimages/decorations/decor8.webp");
+}
+
+#subcontainerfunfact-1-animated,
+#subcontainerfunfact-2-animated,
+#subcontainerfunfact-3-animated,
+#subcontainerfunfact-4-animated,
+#subcontainerfunfact-5-animated,
+#subcontainerfunfact-6-animated {
+    animation: animation-fadeinBTT;
+    animation-duration: 1.5s;
 }
 
 /*============== subsections ==============*/

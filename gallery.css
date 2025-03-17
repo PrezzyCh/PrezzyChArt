@@ -7,7 +7,7 @@
 /*===============================================*/
 /*------------------GENERAL TAGS-----------------*/
 /*===============================================*/
-
+#gallery-container,
 #gallerycontainerinner,
 #gallerybuttons,
 #modalcontainer,
@@ -184,8 +184,13 @@
     margin-right: 5%;
 }
 
-#titleimage-aboutme {
+#titleimage, #titleimage-animated {
     background-image: url("img/websiteimages/images/Auroras.webp");
+}
+
+#titleimage-animated {
+    animation-name: titleimage-in;
+    animation-duration: 1.5s;
 }
 
 #dividertitle, #dividertitle-animated {
@@ -308,10 +313,15 @@
 
 /*============== gallery ==============*/
 
-#gallerycontainer {
+#gallery-container, #gallery-container-animated {
     background-color: #31465b21;
     -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(5px);
+}
+
+#gallery-container-animated {
+    animation: animation-fadeinBTT;
+    animation-duration: 1.5s;
 }
 
 #gallerycontainerinner {

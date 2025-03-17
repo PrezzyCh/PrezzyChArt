@@ -42,16 +42,19 @@
 }
 
 /*============== Index specific animations ==============*/
+#introduction-container,
 #introductionh2,
 #headerdividerintroduction,
 #introductionparagraph,
 #introductionparagraph2,
 #dividerintroduction,
 #introductionbutton,
+#gallery-container,
 #galleryh2,
 #headerdividergallery,
 #galleryparagraph,
 #gallerybutton,
+#commission-container,
 #commissionsh2,
 #headerdividercommissions,
 #commissionsparagraph,
@@ -130,8 +133,13 @@
     animation-duration: 1s;
 }
 
-#titleimage-index {
+#titleimage-index, #titleimage-index-animated {
     background-image: url("img/websiteimages/images/NewPercillia.webp");
+}
+
+#titleimage-index-animated{
+    animation-name: titleimage-in;
+    animation-duration: 1.5s;
 }
 
 #titlesubheadings-container, #titlesubheadings-container-animated {
@@ -175,7 +183,7 @@
 }
 
 /*============== introduction ==============*/
-#introduction-container {
+#introduction-container, #introduction-container-animated{
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     background-image: url(img/websiteimages/decorations/decor1.webp), linear-gradient(100deg, #31465B 50%, #31465b00 60%), url("img/websiteimages/images/Peak of Dawn.webp");
@@ -185,7 +193,12 @@
     background-position: min(0px, 50%), center, right;
     background-size: auto 100%, auto , auto 130%;
     background-repeat: no-repeat;
-} 
+}
+
+#introduction-container-animated {
+    animation: animation-fadeinBTT;
+    animation-duration: 1.5s;
+}
 
 #introductionheader {
     position: relative;
@@ -238,6 +251,11 @@
     width: 100%;
     height: fit-content;
     border-radius: inherit;
+}
+
+#gallery-container-animated {
+    animation: animation-fadeinBTT;
+    animation-duration: 1.5s;
 }
 
 #galleryheader {
@@ -297,16 +315,21 @@
 }
 
 /*============== Commissions ==============*/
-#commissions-container {
+#commissions-container, #commissions-container-animated {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background-image: url(img/websiteimages/decorations/decor2.webp), linear-gradient(70deg, #31465b00 40%, #31465B 50%), url("img/websiteimages/images/Royalty.webp");
+    background-image: url(img/websiteimages/decorations/decor2.webp), linear-gradient(70deg, #31465b00 40%, #31465B 50%), url("img/websiteimages/images/Nightmare.webp");
     background-color: #471302; /* Fallback color */
     align-items: flex-end;
     flex-direction: column;
     background-position: max(100%, 0px), center, left;
-    background-size: auto 100%, auto, auto 120%;
+    background-size: auto 100%, auto, auto 180%;
     background-repeat: no-repeat;
+}
+
+#commissions-container-animated {
+    animation: animation-fadeinBTT;
+    animation-duration: 1.5s;
 }
 
 #commissionsheader {

@@ -71,11 +71,11 @@ function animateElements() {
 // -animated to activate their animations.
 function animateIndex() {
     // ------------IDs-----------
-    let title = ["titleh1-index", "titlesubheadings-container", "socials", "titleframe"];
-    let introduction = ["introductionh2", "headerdividerintroduction", "introductionparagraph", 
+    let title = ["titleh1-index", "titlesubheadings-container", "socials", "titleframe", "titleimage-index"];
+    let introduction = ["introduction-container", "introductionh2", "headerdividerintroduction", "introductionparagraph", 
         "introductionparagraph2", "dividerintroduction", "introductionbutton"]
-    let gallery = ["galleryh2", "headerdividergallery", "galleryparagraph", "gallerybutton"];
-    let commissions = ["commissionsh2", "headerdividercommissions", "commissionsparagraph", 
+    let gallery = ["gallery-container", "galleryh2", "headerdividergallery", "galleryparagraph", "gallerybutton"];
+    let commissions = ["commissions-container", "commissionsh2", "headerdividercommissions", "commissionsparagraph", 
         "dividercommissions", "commissionbutton"];
     let all = title.concat(introduction, gallery, commissions);
     all.forEach((i) => {
@@ -88,12 +88,13 @@ function animateIndex() {
 // -animated to activate their animations.
 function animateAboutMe() {
     //------------IDs---------------
-    let title = ["titleh1", "dividertitle"];
-    let aboutme = ["aboutmeh2", "headerdivideraboutme", "aboutmeh3", "aboutmepronouns", 
+    let title = ["titleh1", "dividertitle", "titleimage"];
+    let aboutme = ["aboutme-container", "aboutmeh2", "headerdivideraboutme", "aboutmeh3", "aboutmepronouns", 
         "aboutmeparagraph", "aboutmeparagraph2", "divideraboutme", "divideraboutme2", "aboutmeimage"];
-    let funfact = ["funfacth2", "headerdividerfunfact"];
+    let funfact = ["funfacts-container", "funfacth2", "headerdividerfunfact"];
     let all = getAllIDs([document.querySelectorAll(".subsectionheader-left"), document.querySelectorAll(".subsectionarticle-left"), document.querySelectorAll(".subsectionimage-left"),
-                        document.querySelectorAll(".subsectionheader-right"), document.querySelectorAll(".subsectionarticle-right"), document.querySelectorAll(".subsectionimage-right")]);
+                        document.querySelectorAll(".subsectionheader-right"), document.querySelectorAll(".subsectionarticle-right"), document.querySelectorAll(".subsectionimage-right"),
+                        document.querySelectorAll(".subcontainer-left"), document.querySelectorAll(".subcontainer-right")]);
     all = all.concat(title, aboutme, funfact);
     all.forEach((i) => {
         let elementid = document.getElementById(i);
@@ -105,8 +106,8 @@ function animateAboutMe() {
 // -animated to activate their animations.
 function animateGallery() {
     //------------IDs---------------
-    let title = ["titleh1", "dividertitle"]; 
-    let gallery = ["galleryh2", "headerdividergallery"];
+    let title = ["titleh1", "dividertitle", "titleimage"]; 
+    let gallery = ["gallery-container","galleryh2", "headerdividergallery"];
     let all = title.concat(gallery);
     all.forEach((i) => {
         let elementid = document.getElementById(i);
