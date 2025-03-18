@@ -62,6 +62,8 @@ function animateElements() {
         animateAboutMe();
     } else if (currentHTML.includes("gallery.html")) {
         animateGallery();
+    } else if (currentHTML.includes("commissions.html")) {
+        
     } else {
         animateIndex();
     }

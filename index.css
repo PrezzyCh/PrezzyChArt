@@ -27,8 +27,10 @@
         justify-content: center;
     }
     #introduction-container,
+    #introduction-container-animated,
     #introductioncontentarticlecontainer,
     #commissions-container,
+    #commissions-container-animated,
     #commissionscontentarticlecontainer {
         align-items: center !important;
     }

@@ -16,6 +16,7 @@
 #header-container,
 .maindecor-container,
 #mainsection, 
+.centerheader,
 .contentcontainer, 
 .contentarticlecontainer,
 .transitionlock,
@@ -124,7 +125,8 @@ footer {
 }
 
 @media screen and (max-width: 820px) {
-    #titleframe,
+    #titleframe, 
+    #titleframe-animated,
     #titleframegradient {
         display: none;
     }
@@ -347,6 +349,7 @@ footer {
 }
 
 .mainbuttons {
+    text-align: center;
     height: fit-content;
     padding: 20px;
     padding-left: 40px;
@@ -394,6 +397,16 @@ footer {
     max-width: 50%;
     flex-direction: column;
     align-items: center;
+}
+
+.centerheader {
+    background-image: linear-gradient(90deg, #0C4160, #03080C);
+    height: fit-content;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .sectionheader {
@@ -444,6 +457,40 @@ footer {
     height: 50%;
     align-content: center;
 }
+
+.gallerylist {
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.gallerylistelement {
+    height: 200px;
+    width: fit-content;
+    max-width: 200px;
+    border-radius: 20px;
+    clip-path: fill-box;
+    -webkit-box-orient: horizontal;
+    flex-direction: column;
+    flex-grow: 1; 
+    flex-shrink: 1;
+}
+
+.gallerylistelement > img {
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.gallerylistelement > img:hover, 
+.gallerylistelement > img:active {
+    transform: scale(1.1, 1.1);
+    filter: brightness(80%);
+    transition: transform 0.5s, filter 0.5s;
+}
+
 /*===============================================*/
 /*----------------------IDs----------------------*/
 /*===============================================*/

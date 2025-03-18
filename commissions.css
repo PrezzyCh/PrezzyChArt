@@ -1,0 +1,239 @@
+/*
+    CSS for the aboutme.html file.
+    THESE IDS ARE ONLY USED FOR aboutme
+
+    Created by Prezzy Ch.
+*/
+
+/*===============================================*/
+/*------------------GENERAL TAGS-----------------*/
+/*===============================================*/
+
+#willdrawdiv {
+    display: flex;
+}
+
+h4 {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+li {
+    align-items: center;
+}
+
+li > p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*============== MODULAR VIEW - aboutme ==============*/
+
+@media screen and (max-width: 1300px) {
+    #aboutmecontentarticlecontainer > h3 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #title > h1 { /*Override*/
+        text-align: center;
+        font-size: 80px !important;
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+    
+    .title-container {
+        justify-content: center !important;
+    }
+    #title {
+        align-items: center !important;
+        margin-right: 40px !important; 
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+}
+
+@media screen and (max-width: 420px) {
+    #title > h1 {
+        text-align: center;
+        font-size: 70px !important; 
+    }
+}
+
+/*============== aboutme specific animations ==============*/
+#dividertitle {
+    opacity: 0%;
+}
+
+/*===============================================*/
+/*--------------------CLASSES--------------------*/
+/*===============================================*/
+
+.mainbuttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: min(200px, 100%);
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.mainbuttons:hover,
+.mainbuttons:active {
+    font-size: 20px;
+}
+
+.detailslist {
+    flex-direction: column;
+}
+
+.subarticle {
+    width: 50%;
+}
+
+.subcontainer {
+    height: fit-content;
+    width: 100%;
+    background-color: #395D77;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height: 200px;
+    height: fit-content;
+    border-radius: 30px;
+    background-size: cover;
+}
+
+.gallerylist {
+    justify-content: flex-start;
+}
+
+.subsectionheader {
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.subsectionh3 {
+    margin: 0;
+    text-shadow: 5px 5px #31465b;
+}
+.subsectionarticlecontainer {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.gallerylistelement > img {
+    width: 100%;
+}
+
+/*===============================================*/
+/*----------------------IDs----------------------*/
+/*===============================================*/
+
+/*============== title ==============*/
+
+#title {
+    align-items: flex-end;
+    margin-right: 5%;
+}
+
+#titleimage, #titleimage-animated {
+    background-image: url("img/websiteimages/images/TwilightMountains.webp");
+}
+
+#titleimage-animated {
+    animation-name: titleimage-in;
+    animation-duration: 1.5s;
+}
+
+#dividertitle, #dividertitle-animated {
+    margin-top: 10px;
+    width: 100px;
+    background-image: linear-gradient(90deg, rgb(255, 255, 255), rgb(67, 86, 135));
+}
+#dividertitle-animated {
+    animation: animation-fadeinRTL;
+    animation-duration: 1.2s;
+}
+
+/*============== Commissions panel ==============*/
+
+#commissioninfo-container {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #31465B;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: url("img/websiteimages/decorations/decor1.webp");
+}
+
+#commissioninfocontentarticlecontainer {
+    max-width: 100%;
+    margin-bottom: 0px;
+    align-items: flex-start;
+}
+
+#commissioninfoheader {
+    position: relative;
+    right: 100px;
+}
+
+#commissioninfoh2 {
+    text-shadow: 5px 5px #395d77;
+}
+
+#headerdividercommissioninfo {
+    box-shadow: 5px 5px #395d77;
+}
+
+#dividercommissioninfo {
+    margin-top: 20px;
+    width: 30%;
+}
+
+#commissioninfodetails {
+    margin-top: 30px;
+    max-width: 100%;
+    width: calc(100% - 60px * 2);
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#willdrawdiv {
+    flex-direction: column;
+}
+
+#willdrawdiv > h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#dividerdetails {
+    width: 5px;
+    height: 300px;
+    margin: 20px;
+}
+
+/*============== Commissions prices ==============*/
+
+#prices-container {
+    background-image: linear-gradient(180deg, #31465B 20%, #00000021);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    flex-direction: column;
+    height: fit-content;
+}
+
+*[id|= "subdivider"] {
+    width: 30%;
+    box-shadow: 5px 5px #31465b;
+}
+
+#subcontainer-1 {
+    background-image: url("img/websiteimages/decorations/decor3.webp");
+}
+

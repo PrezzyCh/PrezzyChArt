@@ -10,7 +10,6 @@
 /*===============================================*/
 
 #aboutmeimagecontainer,
-#funfactdivider,
 #funfactheader,
 *[class|= "subcontainer"],
 *[class|= "subsectionarticle"],
@@ -69,7 +68,7 @@ h4 {
         margin-right: 40px !important; 
     }
 
-    #aboutme-container{
+    #aboutme-container, #aboutme-container-animated{
         flex-direction: column-reverse !important;
     }
 
@@ -412,13 +411,6 @@ h4 {
 }
 
 #funfactdivider {
-    background-image: linear-gradient(90deg, #0C4160, #03080C);
-    height: fit-content;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
     margin-bottom: 40px;
 }
 
