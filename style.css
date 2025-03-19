@@ -8,6 +8,8 @@
 
 .sectionheader,
 #loadingcontainer,
+#modalimagecontainer,
+#modalcontainer,
 .title-container, 
 #title, 
 #titlesubheadings-container, 
@@ -177,11 +179,33 @@ footer {
         width: 100% !important;
         margin: 0px !important;
     }
+    .navbarlinks {
+        font-size: 15px;
+    }
+    .navbarlinks:hover,
+    .navbarlinks:active {
+        font-size: 16px !important;
+    }
+    #navbar > .dividerdot {
+        width: 5px;
+        min-width: 5px;
+        height: 5px;
+    }
 }
 
 @media screen and (max-width: 420px) {
     #title > h1 {
         font-size: 85px !important;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .navbarlinks {
+        font-size: 10px;
+    }
+    .navbarlinks:hover,
+    .navbarlinks:active {
+        font-size: 11px !important;
     }
 }
 
@@ -197,7 +221,8 @@ footer {
 #titleh1-index,
 #titleh1,
 #titlesubheadings-container,
-#socials {
+#socials,
+.inactivemodal {
     opacity: 0%;
 }
 
@@ -218,6 +243,26 @@ footer {
     } to {
         opacity: 100%;
         visibility: visible;
+    }
+}
+
+@keyframes modal-animation-fadein {
+    from {
+        opacity: 0%;
+        display: none;
+    } to {
+        opacity: 100%;
+        display: block;
+    }
+}
+
+@keyframes modal-animation-fadeout {
+    from {
+        opacity: 100%;
+        display: block;
+    } to {
+        opacity: 0%;
+        display: none;
     }
 }
 
@@ -491,6 +536,18 @@ footer {
     transition: transform 0.5s, filter 0.5s;
 }
 
+.inactivemodal {
+    display: none;
+    animation: modal-animation-fadeout;
+    animation-duration: 0.5s;
+}
+.activemodal {
+    display: block;
+    opacity: 100%;
+    animation: modal-animation-fadein;
+    animation-duration: 0.5s;
+}
+
 /*===============================================*/
 /*----------------------IDs----------------------*/
 /*===============================================*/
@@ -587,6 +644,69 @@ footer {
     align-self: flex-end;
     z-index: 1;
 }
+
+/*==============Modal===============*/
+#gallerymodal, #gallerymodal-animated {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+}
+
+#modalcontainer {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#modalimagecontainer {
+    height: min(90%, 800px);
+    width: 100%;
+    max-width: fit-content;
+
+    animation: animation-fadeinLTR;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+#modalimage {
+    max-width: 100%;
+    width: auto;
+    max-height: 100%;
+    height: auto;
+    border-radius: 30px;
+    object-fit: contain;
+    box-shadow: 10px 15px 20px #31465B;
+}
+
+#modalclosebutton {
+    position: absolute;
+    font-size: xx-large;
+    top: 15px;
+    right: 35px;
+    transition: color 0.5s, opacity 0.5s;
+    opacity: 80%;
+    color: rgb(175, 180, 185);
+}
+
+#modalclosebutton:active, #modalclosebutton:hover {
+    background-color: rgba(240, 248, 255, 0); /*overrides*/
+    text-decoration: none; /*overrides*/
+
+    transition: color 0.2s, opacity 0.2s;
+    opacity: 100%;
+    color: aliceblue;
+}
+
 /*============== Main ==============*/
 
 #mainsection {
@@ -607,12 +727,3 @@ footer {
     width: 20%;
 }
 
-#footercommissions {
-    transition: none;
-    color: #2e3235;
-}
-
-#footercommissions:hover,
-#footercommissions:active {
-    background-color: rgba(240, 248, 255, 0);
-}

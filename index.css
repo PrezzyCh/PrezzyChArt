@@ -376,17 +376,7 @@
     animation-duration: 1.3s;
 }
 
-#commissionbutton, #commissionbutton-animated {
-    background-color: #494e53;
-    box-shadow: -5px 5px #395d77;
-    color: #6a7883;
-}
 #commissionbutton-animated {
     animation: animation-fadeinRTL;
     animation-duration: 1s;
 }
-
-#commissionbutton-transitionlock { /*Disabled button*/
-    margin-top: 20px;
-}
-

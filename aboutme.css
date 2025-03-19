@@ -452,12 +452,7 @@ h4 {
     background-image: url("img/websiteimages/decorations/decor8.webp");
 }
 
-#subcontainerfunfact-1-animated,
-#subcontainerfunfact-2-animated,
-#subcontainerfunfact-3-animated,
-#subcontainerfunfact-4-animated,
-#subcontainerfunfact-5-animated,
-#subcontainerfunfact-6-animated {
+[class|= "subcontainer"][id$= "animated"]{
     animation: animation-fadeinBTT;
     animation-duration: 1.5s;
 }

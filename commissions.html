@@ -13,6 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="img/websiteimages/symbols/PrezzyChlogodark.png">
 
+        <script src="modal.js"></script>
         <script src="index.js"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="commissions.css">
@@ -23,6 +24,14 @@
 
     <body>
         <div class="loadingscreen" id="loading"></div> 
+        <div class="inactivemodal" id="gallerymodal">
+            <div id="modalcontainer">
+                <section id="modalimagecontainer">
+                    <img id="modalimage" src="img/galleryimages/placeholder.webp" loading="lazy" alt="image frame">
+                </section>
+            </div>
+            <button type="button" id="modalclosebutton"> X </button>
+        </div>
         <header>
             <section id="header-container">
                 <img id="prezzychlogo" src="img/websiteimages/symbols/PrezzyChlogo.webp" alt="Prezzych logo">
@@ -31,7 +40,9 @@
                     <div class="dividerdot"></div>
                     <a class="navbarlinks" id="navbaraboutme" href="aboutme.html"> AboutMe </a>
                     <div class="dividerdot"></div>
-                    <a class="navbarlinks" id="navbargallery"> Gallery </a>
+                    <a class="navbarlinks" id="navbargallery" href="gallery.html"> Gallery </a>
+                    <div class="dividerdot"></div>
+                    <a class="navbarlinks" id="navbarcommissions" href="commissions.html"> Commissions </a>
                 </nav>
             </section>
         </header>
@@ -40,7 +51,7 @@
             <div class="titleimage" id="titleimage"></div>
             <div id="titleframegradient"></div>
             <figure id="title">
-                <h1 id="titleh1"> About me </h1>
+                <h1 id="titleh1"> Commissions </h1>
                 <div class="linedivider" id="dividertitle"></div>
             </figure>
             <div id="main-title-gradient"></div>
@@ -141,11 +152,11 @@
                     <section class="subcontainer" id="subcontainer-1">
                         <div class="subsectionheader" id="subsectionheader-1">
                             <h3 class="subsectionh3" id="subsectionh3-1">Anthro Half Body</h3>
-                            <h4>$30 USD </h4>
-                            <div class="linedivider" id="subdivider-1"></div>
+                            <h4 class="subsectionh4" id="subsectionh4-1">$30 USD </h4>
+                            <div class="subsection-linedivider" id="subdivider-1"></div>
                         </div>
                         <section class="subsectionarticlecontainer">
-                            <ul class="gallerylist">
+                            <ul class="gallerylist" id="gallerylist-1">
                                 <li class="gallerylistelement">
                                     <img class="galleryimages" src="img/galleryimages/2025/compressed/Samurai.webp" loading="lazy" alt="Samurai">
                                 </li>
@@ -160,15 +171,53 @@
                                 </li>
                             </ul>
                             <ul class="detailslist">
-                                <li>
+                                <li class="list">
                                     <div class="dividerdot"></div>
                                     <p class="sectionparagraph">Waist up or thigh up</p>
                                 </li>
-                                <li>
+                                <li class="list">
                                     <div class="dividerdot"></div>
                                     <p class="sectionparagraph">Complex lighting +10USD</p>
                                 </li>
-                                <li>
+                                <li class="list">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Full or partial background +20USD</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+
+                    <section class="subcontainer" id="subcontainer-2">
+                        <div class="subsectionheader" id="subsectionheader-2">
+                            <h3 class="subsectionh3" id="subsectionh3-2">Anthro Half Body</h3>
+                            <h4 class="subsectionh4" id="subsectionh4-2">$30 USD </h4>
+                            <div class="subsection-linedivider" id="subdivider-2"></div>
+                        </div>
+                        <section class="subsectionarticlecontainer">
+                            <ul class="gallerylist" id="gallerylist-2">
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Samurai.webp" loading="lazy" alt="Samurai">
+                                </li>
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Haunted.webp" loading="lazy" alt="Haunted">
+                                </li>
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2024/compressed/Waterfront.webp" loading="lazy" alt="Waterfront">
+                                </li>
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2024/compressed/Stars.webp" loading="lazy" alt="Stars">
+                                </li>
+                            </ul>
+                            <ul class="detailslist">
+                                <li class="list">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Waist up or thigh up</p>
+                                </li>
+                                <li class="list">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Complex lighting +10USD</p>
+                                </li>
+                                <li class="list">
                                     <div class="dividerdot"></div>
                                     <p class="sectionparagraph">Full or partial background +20USD</p>
                                 </li>

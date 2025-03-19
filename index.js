@@ -3,11 +3,11 @@
 let loadingIsActivated = false;
 //constants 
 let siteButtons = [
-    {id: "navbaraboutme", link: "aboutme.html"}, {id: "navbarhome", link: "index.html"}, {id: "navbargallery", link: "gallery.html"}, 
+    {id: "navbaraboutme", link: "aboutme.html"}, {id: "navbarhome", link: "index.html"}, {id: "navbargallery", link: "gallery.html"}, {id: "navbarcommissions", link: "commissions.html"},
     {id: "footerhome", link: "index.html"}, {id: "footeraboutme", link: "aboutme.html"}, {id: "footergallery", link: "gallery.html"},
-    {id: "introductionbutton", link: "aboutme.html"}, {id: "gallerybutton", link: "gallery.html"}
+    {id: "footercommissions", link: "commissions.html"} ,{id: "introductionbutton", link: "aboutme.html"}, {id: "gallerybutton", link: "gallery.html"}, {id: "commissionbutton", link: "commissions.html"}
 ]
-const OBSERVER = new IntersectionObserver((entries) => {
+const OBSERVERID = new IntersectionObserver((entries) => {
     entries.forEach((i) => {
         if (i.isIntersecting) {
             if (!i.target.id.includes("-animated")) {
@@ -17,7 +17,15 @@ const OBSERVER = new IntersectionObserver((entries) => {
     });
 });
 
-
+const OBSERVERCLASS = new IntersectionObserver((entries) => {
+    entries.forEach((i) => {
+        if (i.isIntersecting) {
+            if (!i.target.className.includes("-animated")) {
+                i.target.className = i.target.className + "-animated";
+            }
+        }
+    });
+});
 
 window.onload = function() {
     loadingScreenAnimation();
@@ -63,7 +71,7 @@ function animateElements() {
     } else if (currentHTML.includes("gallery.html")) {
         animateGallery();
     } else if (currentHTML.includes("commissions.html")) {
-        
+        animateCommissions();
     } else {
         animateIndex();
     }
@@ -108,6 +116,19 @@ function animateGallery() {
     forEachId(all);
 }
 
+function animateCommissions() {
+    let title = ["titleh1", "dividertitle", "titleimage"];
+    let details = ["commissioninfo-container", "commissioninfoh2", "headerdividercommissioninfo", 
+                   "commissioninfocontentparagraph", "tosbutton", "queuebutton", "formbutton", "dividercommissioninfo", "commissioninfodetails"];
+    let prices = ["prices-container", "pricesh2", "headerdividerprices"];
+    let classes = document.querySelectorAll(".list");
+    let all = getAllIDs([document.querySelectorAll(".subcontainer"), document.querySelectorAll(".subsectionh3"), document.querySelectorAll(".subsectionh4"), document.querySelectorAll(".gallerylist"),
+                        document.querySelectorAll(".subsection-linedivider")]);
+    all = all.concat(title, details, prices);
+    forEachId(all);
+    forEachClass(classes);
+}
+
 function activateButtons() {
     siteButtons.forEach((i) => {
         let element = document.getElementById(i.id);
@@ -132,6 +153,12 @@ function getAllIDs(elements) {
 function forEachId(all) {
     all.forEach((i) => {
         let elementid = document.getElementById(i);
-        OBSERVER.observe(elementid);
+        OBSERVERID.observe(elementid);
+    });
+}
+
+function forEachClass(all) {
+    all.forEach((i) => {
+        OBSERVERCLASS.observe(i);
     });
 }
