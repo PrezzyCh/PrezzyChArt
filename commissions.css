@@ -28,11 +28,6 @@ li > p {
 
 /*============== MODULAR VIEW - aboutme ==============*/
 
-@media screen and (max-width: 1300px) {
-    #aboutmecontentarticlecontainer > h3 {
-        font-size: 40px;
-    }
-}
 
 @media screen and (max-width: 900px) {
     #title > h1 { /*Override*/
@@ -52,9 +47,53 @@ li > p {
         margin-right: 40px !important; 
     }
 
-}
+    .gallerylist {
+        justify-content: center !important;
+    }
 
-@media screen and (max-width: 450px) {
+    #title > h1 {
+        font-size: 60px !important;
+    }
+
+    .sectionheader {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 30px;
+    }
+
+    .contentcontainer, .contentarticlecontainer {
+        align-items: center !important;
+    }
+
+    #commissioninfodetails, #commissioninfodetails-animated {
+        flex-direction: column !important;
+    }
+
+    #dividerdetails, #dividerdetails-animated {
+        width: 50% !important;
+        height: 5px !important;
+    }
+
+    .contentarticlecontainer > a {
+        width: fit-content !important;
+    }
+
+    .subarticle {
+        width: 100% !important;
+    }
+
+    .subarticle > h3 {
+        text-align: center;
+    }
+
+    .subarticle > ul > li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .subarticle > ul {
+        margin-top: 20px;
+    }
 
 }
 
@@ -62,6 +101,10 @@ li > p {
     #title > h1 {
         text-align: center;
         font-size: 70px !important; 
+    }
+
+    #title > h1 {
+        font-size: 40px !important;
     }
 }
 
@@ -75,7 +118,9 @@ li > p {
 #queuebutton,
 #formbutton,
 #dividercommissioninfo, 
-#commissioninfodetails,
+#willdrawh3,
+#willnotdrawh3,
+#dividerdetails,
 #prices-container,
 #pricesh2,
 #headerdividerprices,
@@ -278,6 +323,13 @@ li > p {
     animation-duration: 1.1s;
 }
 
+#willdrawh3-animated, 
+#willnotdrawh3-animated, 
+.subarticle > ul > .list-animated,
+#dividerdetails-animated {
+    animation: animation-fadeinBTT;
+    animation-duration: 1s;
+}
 
 #willdrawdiv {
     flex-direction: column;
@@ -288,7 +340,7 @@ li > p {
     margin-bottom: 20px;
 }
 
-#dividerdetails {
+#dividerdetails, #dividerdetails-animated {
     width: 5px;
     height: 300px;
     margin: 20px;

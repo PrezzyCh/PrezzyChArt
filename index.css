@@ -18,6 +18,16 @@
 
 /*============== MODULAR VIEW - Index ==============*/
 
+@media screen and (max-width: 1300px){
+    #commissionsheader,
+    #introductionheader,
+    #aboutmeheader {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 30px;
+    }
+}
+
 @media screen and (max-width: 820px){
     /* Header corrector for screens under 1300px */
     #title {
@@ -26,12 +36,7 @@
     #titlecontainer-index {
         justify-content: center;
     }
-    #introduction-container,
-    #introduction-container-animated,
-    #introductioncontentarticlecontainer,
-    #commissions-container,
-    #commissions-container-animated,
-    #commissionscontentarticlecontainer {
+    .contentcontainer, .contentarticlecontainer {
         align-items: center !important;
     }
 }

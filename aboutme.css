@@ -29,6 +29,10 @@ h4 {
     #aboutmecontentarticlecontainer > h3 {
         font-size: 40px;
     }
+
+    #aboutmeheader {
+        right: 100px !important; /*Override*/
+    }
 }
 
 @media screen and (max-width: 900px) {

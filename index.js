@@ -119,7 +119,7 @@ function animateGallery() {
 function animateCommissions() {
     let title = ["titleh1", "dividertitle", "titleimage"];
     let details = ["commissioninfo-container", "commissioninfoh2", "headerdividercommissioninfo", 
-                   "commissioninfocontentparagraph", "tosbutton", "queuebutton", "formbutton", "dividercommissioninfo", "commissioninfodetails"];
+                   "commissioninfocontentparagraph", "tosbutton", "queuebutton", "formbutton", "dividercommissioninfo", "willdrawh3", "willnotdrawh3", "dividerdetails"];
     let prices = ["prices-container", "pricesh2", "headerdividerprices"];
     let classes = document.querySelectorAll(".list");
     let all = getAllIDs([document.querySelectorAll(".subcontainer"), document.querySelectorAll(".subsectionh3"), document.querySelectorAll(".subsectionh4"), document.querySelectorAll(".gallerylist"),

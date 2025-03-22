@@ -112,15 +112,15 @@ footer {
 
 @media screen and (max-width: 1300px){
     /* Header corrector for screens under 1300px */
-    #commissionsheader,
-    #introductionheader,
-    #aboutmeheader {
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-top: 30px;
+    .sectionheader {
         left: 0px !important;
         right: 0px !important;
     }
+
+    .sectionheader > h2 {
+        text-align: center;
+    }
+
     .sectionh3 {
         font-size: 50px !important;
     }
@@ -132,39 +132,49 @@ footer {
     #titleframegradient {
         display: none;
     }
+
     .contentarticlecontainer {
         max-width: 100% !important;
         margin-left: 15px !important;
         margin-right: 15px !important;
     }
+
     .contentarticlecontainer > p {
         font-size: 18px;
     }
+
     .sectionheader {
         align-items: center !important;
     }
+
     .sectionparagraph {
         text-align: center !important;
     }
+
     .navbarlinks {
         margin-left: 0px !important;
         margin-right: 0px !important;
     }
+
     #loadingtext {
         font-size: 60px !important;
     }
+
     #header-container {
         justify-content: center !important;
         flex-direction: column;
     }
+
     #navbar {
         height: 50px;
         margin-right: 0px !important;
     }
+
     #title > h1 {
         text-align: center;
         font-size: 120px !important; 
     }
+    
     .footerinfo-container > p {
         text-align: center;
     }
