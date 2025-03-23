@@ -19,12 +19,10 @@
 /*============== MODULAR VIEW - Index ==============*/
 
 @media screen and (max-width: 1300px){
-    #commissionsheader,
-    #introductionheader,
-    #aboutmeheader {
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-top: 30px;
+    #galleryheader {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
     }
 }
 
@@ -384,4 +382,8 @@
 #commissionbutton-animated {
     animation: animation-fadeinRTL;
     animation-duration: 1s;
+}
+
+#commissionbutton-transitionlock {
+    margin-top: 20px;
 }

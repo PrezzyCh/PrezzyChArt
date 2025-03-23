@@ -5,7 +5,8 @@ let loadingIsActivated = false;
 let siteButtons = [
     {id: "navbaraboutme", link: "aboutme.html"}, {id: "navbarhome", link: "index.html"}, {id: "navbargallery", link: "gallery.html"}, {id: "navbarcommissions", link: "commissions.html"},
     {id: "footerhome", link: "index.html"}, {id: "footeraboutme", link: "aboutme.html"}, {id: "footergallery", link: "gallery.html"},
-    {id: "footercommissions", link: "commissions.html"} ,{id: "introductionbutton", link: "aboutme.html"}, {id: "gallerybutton", link: "gallery.html"}, {id: "commissionbutton", link: "commissions.html"}
+    {id: "footercommissions", link: "commissions.html"} ,{id: "introductionbutton", link: "aboutme.html"}, {id: "gallerybutton", link: "gallery.html"}, {id: "commissionbutton", link: "commissions.html"},
+    {id: "sidebarhome", link: "index.html"}, {id: "sidebaraboutme", link: "aboutme.html"}, {id: "sidebargallery", link: "gallery.html"}, {id: "sidebarcommissions", link: "commissions.html"},
 ]
 const OBSERVERID = new IntersectionObserver((entries) => {
     entries.forEach((i) => {
@@ -30,6 +31,7 @@ const OBSERVERCLASS = new IntersectionObserver((entries) => {
 window.onload = function() {
     loadingScreenAnimation();
     activateButtons();
+    animateSideBar();
 }
 /*===============================================*/
 /*-------------------FUNCTIONS-------------------*/
@@ -121,12 +123,30 @@ function animateCommissions() {
     let details = ["commissioninfo-container", "commissioninfoh2", "headerdividercommissioninfo", 
                    "commissioninfocontentparagraph", "tosbutton", "queuebutton", "formbutton", "dividercommissioninfo", "willdrawh3", "willnotdrawh3", "dividerdetails"];
     let prices = ["prices-container", "pricesh2", "headerdividerprices"];
-    let classes = document.querySelectorAll(".list");
-    let all = getAllIDs([document.querySelectorAll(".subcontainer"), document.querySelectorAll(".subsectionh3"), document.querySelectorAll(".subsectionh4"), document.querySelectorAll(".gallerylist"),
+    let classes = [document.querySelectorAll(".list"), document.querySelectorAll(".gallerylistelement")];
+    let all = getAllIDs([document.querySelectorAll(".subcontainer"), document.querySelectorAll(".subsectionh3"), document.querySelectorAll(".subsectionh4"),
                         document.querySelectorAll(".subsection-linedivider")]);
     all = all.concat(title, details, prices);
     forEachId(all);
     forEachClass(classes);
+}
+
+function animateSideBar() {
+    let sidepanelbutton = document.getElementById("sidepanelbutton");
+    let sidepanelclosebutton = document.getElementById("sidepanelclosebutton");
+    let sidebarcontainer = document.getElementById("sidebarcontainer");
+    let sidebar = document.getElementById("sidebar");
+    sidepanelbutton.onclick = function() {
+        sidebarcontainer.className = "activebar";
+        sidebar.style.display = "flex";
+        sidebar.className = "activesidebar";
+    }
+
+    sidepanelclosebutton.onclick = function() {
+        sidebarcontainer.className = "inactivebar";
+        setTimeout(function() {sidebar.style.display = "none"}, 500);
+        sidebar.className = "inactivesidebar";
+    }
 }
 
 function activateButtons() {
@@ -159,6 +179,8 @@ function forEachId(all) {
 
 function forEachClass(all) {
     all.forEach((i) => {
-        OBSERVERCLASS.observe(i);
+        i.forEach(element => {
+            OBSERVERCLASS.observe(element);
+        });
     });
 }

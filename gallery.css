@@ -18,6 +18,18 @@
 
 
 /*============== MODULAR VIEW - Gallery ==============*/
+@media screen and (max-width: 1300px) {
+    .sectionheader > h2 {
+        text-align: left;
+        font-size: 60px !important;
+    }
+    .sectionheader {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     #modalparagraphcontainer {
         display: none;

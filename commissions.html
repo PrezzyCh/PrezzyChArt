@@ -24,6 +24,28 @@
 
     <body>
         <div class="loadingscreen" id="loading"></div> 
+
+        <div class="inactivesidebar" id="sidebar">
+            <section class="inactivebar" id="sidebarcontainer">
+                <img id="prezzychlogosidebar" src="img/websiteimages/symbols/PrezzyChlogo.webp" alt="Prezzych logo">
+                <section id="sidebarbuttoncontainer">
+                    <a class="sidebarlinks" id="sidebarhome" href="index.html"> Home </a>
+                    <div class="linedivider"></div>
+                    <a class="sidebarlinks" id="sidebaraboutme" href="aboutme.html"> AboutMe </a>
+                    <div class="linedivider"></div>
+                    <a class="sidebarlinks" id="sidebargallery" href="gallery.html"> Gallery </a>
+                    <div class="linedivider"></div>
+                    <a class="sidebarlinks" id="sidebarcommissions" href="commissions.html"> Commissions </a>
+                </section>
+                <section id="sidebartextcontainer">
+                    <p> Made by Prezzy, with ♥️</p>
+                    <div class="linedivider"></div>
+                    <p>© PrezzyCh 2024. All rights reserved. </p>
+                </section>
+            </section>
+            <div id="sidepanelclosebutton"></div>
+        </div>
+        
         <div class="inactivemodal" id="gallerymodal">
             <div id="modalcontainer">
                 <section id="modalimagecontainer">
@@ -35,6 +57,7 @@
         <header>
             <section id="header-container">
                 <img id="prezzychlogo" src="img/websiteimages/symbols/PrezzyChlogo.webp" alt="Prezzych logo">
+                <button type="button" id="sidepanelbutton"></button>
                 <nav id="navbar">
                     <a class="navbarlinks" id="navbarhome" href="index.html"> Home </a>
                     <div class="dividerdot"></div>
@@ -46,7 +69,7 @@
                 </nav>
             </section>
         </header>
-        
+
         <section class="title-container" id="titlecontainer">
             <div class="titleimage" id="titleimage"></div>
             <div id="titleframegradient"></div>
@@ -67,7 +90,7 @@
             <section id="mainsection">
                 <section class="contentcontainer" id="commissioninfo-container">
                     <div class="sectionheader" id="commissioninfoheader">
-                        <h2 class="sectionh3" id="commissioninfoh2">Commission Info</h2>
+                        <h2 class="sectionh2" id="commissioninfoh2">Commission Info</h2>
                         <div class="linedivider" id="headerdividercommissioninfo"></div>
                     </div>
                     <article class="contentarticlecontainer" id="commissioninfocontentarticlecontainer">
@@ -145,7 +168,7 @@
                 </section>
                 <section class="contentcontainer" id="prices-container">
                     <div class="centerheader" id="pricesdivider">
-                        <h2 class="sectionh3" id="pricesh2">Commission Prices</h2>
+                        <h2 class="sectionh2" id="pricesh2">Commission Prices</h2>
                         <div class="linedivider" id="headerdividerprices"></div>
                     </div>
 
@@ -219,11 +242,11 @@
                                 </li>
                                 <li class="list">
                                     <div class="dividerdot"></div>
-                                    <p class="sectionparagraph">Complex lighting +10USD.</p>
+                                    <p class="sectionparagraph">Fully shaded and rendered.</p>
                                 </li>
                                 <li class="list">
                                     <div class="dividerdot"></div>
-                                    <p class="sectionparagraph">Full or partial background +20USD.</p>
+                                    <p class="sectionparagraph">Full or partial background +$20USD.</p>
                                 </li>
                             </ul>
                         </section>
@@ -253,11 +276,11 @@
                             <ul class="detailslist">
                                 <li class="list">
                                     <div class="dividerdot"></div>
-                                    <p class="sectionparagraph">Complex lighting +10USD.</p>
+                                    <p class="sectionparagraph">Fully shaded and rendered</p>
                                 </li>
                                 <li class="list">
                                     <div class="dividerdot"></div>
-                                    <p class="sectionparagraph">Full or partial background +20USD.</p>
+                                    <p class="sectionparagraph">Full or partial background +$20USD.</p>
                                 </li>
                             </ul>
                         </section>
@@ -284,15 +307,50 @@
                             <ul class="detailslist">
                                 <li class="list">
                                     <div class="dividerdot"></div>
-                                    <p class="sectionparagraph">Head and torso.</p>
+                                    <p class="sectionparagraph">Torso and up.</p>
                                 </li>
                                 <li class="list">
                                     <div class="dividerdot"></div>
-                                    <p class="sectionparagraph">Complex lighting +5USD.</p>
+                                    <p class="sectionparagraph">Fully shaded and rendered.</p>
                                 </li>
                                 <li class="list">
                                     <div class="dividerdot"></div>
-                                    <p class="sectionparagraph">Full or partial background +10USD.</p>
+                                    <p class="sectionparagraph">Full or partial background +$10USD.</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+
+                    <section class="subcontainer" id="subcontainer-5">
+                        <div class="subsectionheader" id="subsectionheader-5">
+                            <h3 class="subsectionh3" id="subsectionh3-5">Scene / Illustration</h3>
+                            <h4 class="subsectionh4" id="subsectionh4-5">$50 USD </h4>
+                            <div class="subsection-linedivider" id="subdivider-5"></div>
+                        </div>
+                        <section class="subsectionarticlecontainer">
+                            <ul class="gallerylist" id="gallerylist-5">
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2024/compressed/TwilightMountains.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2024/compressed/Planetfall.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2024/compressed/New Percillia.webp" loading="lazy">
+                                </li>
+                            </ul>
+                            <ul class="detailslist">
+                                <li class="list">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Painted background</p>
+                                </li>
+                                <li class="list">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Fully shaded and rendered</p>
+                                </li>
+                                <li class="list">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">+$10USD per extra character</p>
                                 </li>
                             </ul>
                         </section>

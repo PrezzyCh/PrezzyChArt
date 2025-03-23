@@ -23,9 +23,32 @@
 
     <body>
         <div class="loadingscreen" id="loading"></div> 
+        
+        <div class="inactivesidebar" id="sidebar">
+            <section class="inactivebar" id="sidebarcontainer">
+                <img id="prezzychlogosidebar" src="img/websiteimages/symbols/PrezzyChlogo.webp" alt="Prezzych logo">
+                <section id="sidebarbuttoncontainer">
+                    <a class="sidebarlinks" id="sidebarhome" href="index.html"> Home </a>
+                    <div class="linedivider"></div>
+                    <a class="sidebarlinks" id="sidebaraboutme" href="aboutme.html"> AboutMe </a>
+                    <div class="linedivider"></div>
+                    <a class="sidebarlinks" id="sidebargallery" href="gallery.html"> Gallery </a>
+                    <div class="linedivider"></div>
+                    <a class="sidebarlinks" id="sidebarcommissions" href="commissions.html"> Commissions </a>
+                </section>
+                <section id="sidebartextcontainer">
+                    <p> Made by Prezzy, with ♥️</p>
+                    <div class="linedivider"></div>
+                    <p>© PrezzyCh 2024. All rights reserved. </p>
+                </section>
+            </section>
+            <div id="sidepanelclosebutton"></div>
+        </div>
+
         <header>
             <section id="header-container">
                 <img id="prezzychlogo" src="img/websiteimages/symbols/PrezzyChlogo.webp" alt="Prezzych logo">
+                <button type="button" id="sidepanelbutton"></button>
                 <nav id="navbar">
                     <a class="navbarlinks" id="navbarhome" href="index.html"> Home </a>
                     <div class="dividerdot"></div>
@@ -70,7 +93,7 @@
             <section id="mainsection">
                 <section class="contentcontainer" id="introduction-container">
                     <div class="sectionheader" id="introductionheader">
-                        <h2 class="sectionh3" id="introductionh2"> Welcome! </h2>
+                        <h2 class="sectionh2" id="introductionh2"> Welcome! </h2>
                         <div class="linedivider" id="headerdividerintroduction"></div>
                     </div>
                     <article class="contentarticlecontainer" id="introductioncontentarticlecontainer">
@@ -95,7 +118,7 @@
                 <section class="contentcontainer", id="gallery-container">
                     <section id="gallerycontainer">
                         <div class="sectionheader" id="galleryheader">
-                            <h2 class="sectionh3" id="galleryh2"> Gallery </h2>
+                            <h2 class="sectionh2" id="galleryh2"> Gallery </h2>
                             <div class="linedivider" id="headerdividergallery"></div>
                         </div>
                         <figure id="gallerywindow">
@@ -109,15 +132,14 @@
     
                 <section class="contentcontainer" id="commissions-container">
                     <div class="sectionheader" id="commissionsheader">
-                        <h2 class="sectionh3" id="commissionsh2"> Commissions </h2>
+                        <h2 class="sectionh2" id="commissionsh2"> Commissions </h2>
                         <div class="linedivider" id="headerdividercommissions"></div>
                     </div>
                     <article class="contentarticlecontainer" id="commissionscontentarticlecontainer">
                         <p class="sectionparagraph" id="commissionsparagraph"> 
-                            Commissions are provided here, along with the TOS, pricing, and examples.
-                            <br>
-                            <strong>Commissions are currently not available</strong>, will keep this site up
-                            just in case I want to delve into commissions, stay tuned!
+                            Commissions information are provided here, along with the TOS, pricing, and examples.
+                            <br><br>
+                            Check my socials for openings!
                         </p>
                         <div class="linedivider" id="dividercommissions"></div>
                         <div class="transitionlock" id="commissionbutton-transitionlock">

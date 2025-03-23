@@ -28,7 +28,6 @@ li > p {
 
 /*============== MODULAR VIEW - aboutme ==============*/
 
-
 @media screen and (max-width: 900px) {
     #title > h1 { /*Override*/
         text-align: center;
@@ -130,7 +129,8 @@ li > p {
 *[id|= "subsectionh4"],
 *[id|= "subsectionh4"],
 *[id|= "subdivider"],
-.list {
+.list,
+.gallerylistelement {
     opacity: 0%;
 }
 
@@ -194,13 +194,29 @@ li > p {
     margin-right: 40px;
 }
 
-.gallerylistelement > img {
+.gallerylistelement > img,
+.gallerylistelement-animated > img {
     width: 100%;
 }
 
 .list-animated {
     animation: animation-fadeinLTR;
     animation-duration: 1s;
+}
+
+.gallerylistelement-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1s;
+}
+
+.gallerylistelement-animated:nth-child(2) {
+    animation-duration: 1.2s;
+}
+.gallerylistelement-animated:nth-child(3) {
+    animation-duration: 1.4s;
+}
+.gallerylistelement-animated:nth-child(4) {
+    animation-duration: 1.6s;
 }
 
 /*===============================================*/
@@ -395,6 +411,18 @@ li > p {
     background-image: url("img/websiteimages/decorations/decor4.webp");
 }
 
+#subcontainer-3, #subcontainer-3-animated {
+    background-image: url("img/websiteimages/decorations/decor5.webp");
+}
+
+#subcontainer-4, #subcontainer-4-animated {
+    background-image: url("img/websiteimages/decorations/decor6.webp");
+}
+
+#subcontainer-5, #subcontainer-5-animated {
+    background-image: url("img/websiteimages/decorations/decor7.webp");
+}
+
 .subcontainer[id$= "animated"]{
     animation: animation-fadeinBTT;
     animation-duration: 1.5s;
@@ -413,10 +441,5 @@ h4[id$= "animated"]{
 [id|="subdivider"][id$= "animated"]{
     animation: animation-fadeinLTR;
     animation-duration: 1.2s;
-}
-
-.gallerylist[id$= "animated"] {
-    animation: animation-fadeinLTR;
-    animation-duration: 1.3s;
 }
 

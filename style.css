@@ -10,6 +10,8 @@
 #loadingcontainer,
 #modalimagecontainer,
 #modalcontainer,
+#sidebarcontainer,
+#sidebarbuttoncontainer,
 .title-container, 
 #title, 
 #titlesubheadings-container, 
@@ -53,7 +55,7 @@ p {
     font-size: 20px;
 }
 
-a, button {
+a, button, #sidepanelbutton{
     padding: 5px;
     text-decoration: none;
     font-size: 20px;
@@ -115,13 +117,16 @@ footer {
     .sectionheader {
         left: 0px !important;
         right: 0px !important;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 30px;
     }
 
     .sectionheader > h2 {
         text-align: center;
     }
 
-    .sectionh3 {
+    .sectionh2 {
         font-size: 50px !important;
     }
 }
@@ -151,13 +156,13 @@ footer {
         text-align: center !important;
     }
 
+    #prezzychlogo {
+        margin: 0px !important;
+    }
+
     .navbarlinks {
         margin-left: 0px !important;
         margin-right: 0px !important;
-    }
-
-    #loadingtext {
-        font-size: 60px !important;
     }
 
     #header-container {
@@ -189,17 +194,21 @@ footer {
         width: 100% !important;
         margin: 0px !important;
     }
-    .navbarlinks {
-        font-size: 15px;
+    #header-container {
+        justify-content: start !important;
+        flex-direction: row-reverse;
     }
-    .navbarlinks:hover,
-    .navbarlinks:active {
-        font-size: 16px !important;
+
+    #header-container > * {
+        margin-left: 20px !important;
     }
-    #navbar > .dividerdot {
-        width: 5px;
-        min-width: 5px;
-        height: 5px;
+
+    #sidepanelbutton {
+        display: flex !important;
+        justify-self: start;
+    }
+    #navbar {
+        display: none;
     }
 }
 
@@ -209,21 +218,14 @@ footer {
     }
 }
 
-@media screen and (max-width: 370px) {
-    .navbarlinks {
-        font-size: 10px;
-    }
-    .navbarlinks:hover,
-    .navbarlinks:active {
-        font-size: 11px !important;
-    }
-}
-
 /*============== ANIMATIONS ==============*/
 *[id$="animated"],
 #loadingscreen-animated-reverse,
-.activemodal {
-    opacity: 0%;
+.activemodal,
+.inactivesidebar,
+.activesidebar,
+.inactivebar,
+.activebar {
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     animation-fill-mode: forwards !important; 
 }
@@ -232,7 +234,11 @@ footer {
 #titleh1,
 #titlesubheadings-container,
 #socials,
-.inactivemodal {
+.inactivemodal,
+.inactivesidebar,
+#sidepanelbutton-inactive,
+*[id$="animated"],
+#loadingscreen-animated-reverse {
     opacity: 0%;
 }
 
@@ -253,6 +259,38 @@ footer {
     } to {
         opacity: 100%;
         visibility: visible;
+    }
+}
+
+@keyframes sidebar-fadein {
+    from {
+        opacity: 0%;
+    } to {
+        opacity: 100%;
+    }
+}
+
+@keyframes sidebar-fadeout {
+    from {
+        opacity: 100%;
+    } to {
+        opacity: 0%;
+    }
+}
+
+@keyframes sidebar-slideout {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes sidebar-slidein {
+    from {
+        transform: translateX(-100%);
+    } to {
+        transform: translateX(0);
     }
 }
 
@@ -345,7 +383,7 @@ footer {
 
 .loadingscreen {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     opacity: 100%;
     background-color: #071330;
     height: 100%;
@@ -468,7 +506,7 @@ footer {
     flex-direction: column;
 }
 
-.sectionh3 {
+.sectionh2 {
     font-size: 60px;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -520,7 +558,8 @@ footer {
     gap: 10px;
 }
 
-.gallerylistelement {
+.gallerylistelement,
+.gallerylistelement-animated {
     height: 200px;
     width: fit-content;
     max-width: 200px;
@@ -532,7 +571,8 @@ footer {
     flex-shrink: 1;
 }
 
-.gallerylistelement > img {
+.gallerylistelement > img,
+.gallerylistelement-animated > img  {
     object-fit: cover;
     height: 100%;
     max-width: 100%;
@@ -540,7 +580,9 @@ footer {
 }
 
 .gallerylistelement > img:hover, 
-.gallerylistelement > img:active {
+.gallerylistelement > img:active, 
+.gallerylistelement-animated > img:hover, 
+.gallerylistelement-animated > img:active {
     transform: scale(1.1, 1.1);
     filter: brightness(80%);
     transition: transform 0.5s, filter 0.5s;
@@ -555,6 +597,28 @@ footer {
     display: block;
     opacity: 100%;
     animation: modal-animation-fadein;
+    animation-duration: 0.5s;
+}
+
+.inactivesidebar {
+    display: none;
+    animation: sidebar-fadeout;
+    animation-duration: 0.5s;
+}
+
+.activesidebar {
+    animation: sidebar-fadein;
+    animation-duration: 0.5s;
+    display: flex;
+}
+
+.inactivebar {
+    animation: sidebar-slideout;
+    animation-duration: 0.5s;
+}
+
+.activebar {
+    animation: sidebar-slidein;
     animation-duration: 0.5s;
 }
 
@@ -574,7 +638,7 @@ footer {
     animation-duration: 1s;
 }
 
-/*- header -*/
+/*============== Header ==============*/
 #header-container {
     width: 100%;
     height: auto;
@@ -586,7 +650,10 @@ footer {
     position: fixed;
 }
 
-#prezzychlogo {
+
+/*============== Nav ==============*/
+
+#prezzychlogo, #prezzychlogosidebar {
     height: 80%;
     max-height: 70px;
     margin-left: 20px;
@@ -604,6 +671,73 @@ footer {
     padding-right: 10px;
 }
 
+#sidepanelbutton {
+    display: none;
+    background-image: url(img/websiteimages/symbols/Hamburger.webp);
+    background-position: center;
+    background-size: 70%, 70%;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+}
+
+#sidebar {
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(1px);
+    position: fixed;
+}
+
+#sidebarcontainer {
+    width: max(200px, 40%);
+    height: 100%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(img/websiteimages/decorations/decor1.webp);
+    background-size: cover;
+    background-color: #31465b;
+}
+
+#sidepanelclosebutton {
+    height: 100%;
+    width: min(calc(100% - 200px), 60%);
+}
+
+#prezzychlogosidebar {
+    margin-left: 0px;
+    margin-top: 20px;
+    max-height: 100px;
+}
+
+#sidebarbuttoncontainer {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sidebarbuttoncontainer > .linedivider {
+    width: 100%;
+    height: 2px;
+}
+
+#sidebarbuttoncontainer > * {
+    margin-top: 15px;
+}
+
+#sidebartextcontainer {
+    margin-top : auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#sidebartextcontainer > p {
+    font-size: 15px;
+}
 
 /*==============Title==============*/
 
@@ -656,7 +790,7 @@ footer {
 }
 
 /*==============Modal===============*/
-#gallerymodal, #gallerymodal-animated {
+#gallerymodal {
     position: fixed;
     z-index: 2;
     width: 100%;
@@ -715,6 +849,10 @@ footer {
     transition: color 0.2s, opacity 0.2s;
     opacity: 100%;
     color: aliceblue;
+}
+
+#sidepanelbutton:active, #sidepanelbutton:hover {
+    background-image: url(img/websiteimages/symbols/Hamburger2.webp);
 }
 
 /*============== Main ==============*/
