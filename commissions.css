@@ -205,7 +205,7 @@ li > p {
 }
 
 .gallerylistelement-animated {
-    animation: animation-fadeinLTR;
+    animation: animation-fadeinBTT;
     animation-duration: 1s;
 }
 

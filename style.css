@@ -436,6 +436,10 @@ footer {
     margin-right: 10px;
 }
 
+.main-static {
+    position: unset;
+}
+
 .mainbuttons:hover,
 .mainbuttons:active {
     font-size: 32px;
