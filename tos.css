@@ -40,6 +40,15 @@ li > p {
     #title > h1 {
         font-size: 60px !important;
     }
+    .contentcontainer {
+        align-items: center !important;
+    }
+
+    .contentarticlecontainer {
+        align-items: center !important;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 
     .sectionheader {
         margin-left: 50px;
@@ -47,6 +56,9 @@ li > p {
         margin-top: 30px;
     }
 
+    #copyrightcontentarticlecontainer > .textlist > li > .sectionparagraph {
+        font-size: 17px;
+    }
 
 }
 
@@ -59,10 +71,24 @@ li > p {
     #title > h1 {
         font-size: 40px !important;
     }
+
+    .sectionh2 {
+        font-size: 10vw !important;
+    }
+
+    #copyrightcontentarticlecontainer > .textlist > li > .sectionparagraph {
+        font-size: 12px;
+    }
 }
 
 /*============== aboutme specific animations ==============*/
-#dividertitle {
+#dividertitle,
+.list,
+#mainsection > [id$="-container"],
+[id$="h2"],
+[id^="headerdivider"],
+[id*="paragraph"],
+[id^="divider"] {
     opacity: 0%;
 }
 
@@ -74,8 +100,33 @@ li > p {
     max-width: none;
 }
 
-.textlist {
+.contentcontainer {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #31465B; 
+    align-items: flex-start;
     flex-direction: column;
+}
+
+.sectionheader {
+    position: relative;
+    right: 100px;
+}
+
+.contentarticlecontainer {
+    align-items: start;
+}
+
+.sectionh2 {
+    text-shadow: 5px 5px #395d77;
+}
+
+[id^="headerdivider"] {
+    width: 50% !important;
+}
+
+.linedivider {
+    width: 25%;
 }
 
 /*===============================================*/
@@ -125,68 +176,54 @@ li > p {
     animation-duration: 1.2s;
 }
 
-
+.list-animated {
+    animation: animation-fadeinLTR;
+    animation-duration: 1s;
+}
 /*============== tos panels ==============*/
 
-#ordering-container, #ordering-container-animated,
-#payment-container, #payment-container-animated,
-#communication-container, #communication-container-animated{
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    background-color: #31465B; 
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-#ordering-container-animated,
-#payment-container-animated,
-#communication-container-animated {
+[id$="-container-animated"] {
     animation: animation-fadeinBTT;
     animation-duration: 1.5s;
 }
 
-#orderingheader,
-#paymentheader,
-#communicationheader  {
-    position: relative;
-    right: 100px;
-}
-
-#orderingh2, #orderingh2-animated,
-#paymenth2, #paymenth2-animated
-#communication, #communication-animated {
-    text-shadow: 5px 5px #395d77;
-}
-#orderingh2-animated,
-#paymenth2-animated,
-#communication-animated  {
+.sectionh2[id$="-animated"] {
     animation: animation-fadeinLTR;
     animation-duration: 1s;
 }
 
-#headerdividerordering, #headerdividerordering-animated,
-#headerdividerpayment, #headerdividerpayment-animated,
-#headerdividercommunication, #headerdividercommunication-animated {
+[id^= "headerdivider"] {
     box-shadow: 5px 5px #395d77;
 }
-#headerdividerordering-animated,
-#headerdividerpayment-animated,
-#communication-animated {
+
+.linedivider[id$="-animated"]{
     animation: animation-fadeinLTR;
     animation-duration: 1.2s;
 }
 
-#orderingparagraph-animated, #orderingparagraph2-animated {
+.sectionparagraph[id$="-animated"] {
     animation: animation-fadeinLTR;
     animation-duration: 1.5s;
 }
 
-#orderingcontentarticlecontainer,
-#paymentcontentarticlecontainer,
-#communicationcontentarticlecontainer {
-    align-items: start;
+/*============Singular edits================*/
+
+#paymentparagraph2, #paymentparagraph2-animated {
+    margin-top: 0px;
 }
 
+#copyright-container, #copyright-container-animated {
+    margin-bottom: 100px;
+}
 
+#ordering-container-animated, 
+#communication-container-animated,
+#completion-container-animated {
+    background-image: url(img/websiteimages/decorations/decor0.webp);
+}
 
-
+#payment-container-animated,
+#delivery-container-animated,
+#copyright-container-animated {
+    background-image: url(img/websiteimages/decorations/decor1.webp);
+}

@@ -151,10 +151,6 @@ li > p {
     font-size: 20px;
 }
 
-.detailslist {
-    flex-direction: column;
-}
-
 .subarticle {
     width: 50%;
 }

@@ -5,8 +5,9 @@ let loadingIsActivated = false;
 let siteButtons = [
     {id: "navbaraboutme", link: "aboutme.html"}, {id: "navbarhome", link: "index.html"}, {id: "navbargallery", link: "gallery.html"}, {id: "navbarcommissions", link: "commissions.html"},
     {id: "footerhome", link: "index.html"}, {id: "footeraboutme", link: "aboutme.html"}, {id: "footergallery", link: "gallery.html"},
-    {id: "footercommissions", link: "commissions.html"} ,{id: "introductionbutton", link: "aboutme.html"}, {id: "gallerybutton", link: "gallery.html"}, {id: "commissionbutton", link: "commissions.html"},
+    {id: "footercommissions", link: "commissions.html"}, {id: "footertos", link: "tos.html"} ,{id: "introductionbutton", link: "aboutme.html"}, {id: "gallerybutton", link: "gallery.html"}, {id: "commissionbutton", link: "commissions.html"},
     {id: "sidebarhome", link: "index.html"}, {id: "sidebaraboutme", link: "aboutme.html"}, {id: "sidebargallery", link: "gallery.html"}, {id: "sidebarcommissions", link: "commissions.html"},
+    {id: "tosbutton", link: "tos.html"}
 ]
 const OBSERVERID = new IntersectionObserver((entries) => {
     entries.forEach((i) => {
@@ -74,6 +75,8 @@ function animateElements() {
         animateGallery();
     } else if (currentHTML.includes("commissions.html")) {
         animateCommissions();
+    } else if (currentHTML.includes("tos.html")) {
+        animateTos();
     } else {
         animateIndex();
     }
@@ -127,6 +130,20 @@ function animateCommissions() {
     let all = getAllIDs([document.querySelectorAll(".subcontainer"), document.querySelectorAll(".subsectionh3"), document.querySelectorAll(".subsectionh4"),
                         document.querySelectorAll(".subsection-linedivider")]);
     all = all.concat(title, details, prices);
+    forEachId(all);
+    forEachClass(classes);
+}
+
+function animateTos() {
+    let title = ["titleh1", "dividertitle"];
+    let containers = ["ordering-container", "payment-container", "communication-container", "delivery-container", "completion-container", "copyright-container"];
+    let h2 = ["orderingh2", "paymenth2", "communicationh2", "deliveryh2", "completionh2", "copyrighth2"];
+    let dividers = ["headerdividerordering", "headerdividerpayment", "dividerpayment", "headerdividercommunication", "dividercommunication", "headerdividerdelivery",
+                    "dividerdelivery", "headerdividercompletion", "dividercompletion", "headerdividercopyright", "dividercopyright"];
+    let paragraphs = ["orderingparagraph", "paymentparagraph1", "paymentparagraph2", "communicationparagraph1", "communicationparagraph2", "deliveryparagraph1", 
+                      "deliveryparagraph2", "completionparagraph1", "completionparagraph2", "copyrightparagraph1", "copyrightparagraph2"];
+    let classes = [document.querySelectorAll(".list")];
+    let all = title.concat(containers, h2, dividers, paragraphs);
     forEachId(all);
     forEachClass(classes);
 }
