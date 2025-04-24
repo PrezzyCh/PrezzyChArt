@@ -11,7 +11,10 @@
 
 #gallerywindow,
 #commissionheader, 
-#commissionbutton, 
+#commissionbutton,
+.slideshowtext,
+#slider, 
+#slidernav,
 #commissionbutton-animated {
     display: flex;
 }
@@ -105,6 +108,58 @@
     height: 100px;
     align-items: center;
 }
+
+.slideshowelement {
+    justify-items: end;
+    min-width: 100%;
+    height: 100%;
+    background-position: min(0px, 50%), center, right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slideshowtext {
+    position: relative;
+    z-index: 5;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 100px;
+    margin-right: 40px;
+    width: 50%;
+    max-height: 300px;
+    overflow: scroll;
+}
+
+.slideshowtext > h3 {
+    text-align: end;
+    margin-bottom: 15px;
+    text-shadow: -5px 5px #395d77;
+}
+
+.slideshowtext > .linedivider {
+    width: 100px;
+}
+
+.slideshowtext > p {
+    text-align: end;
+}
+
+.sliderbutton {
+    width: 10px;
+    height: 10px;
+    background-color: aliceblue;
+    opacity: 65%;
+    border-radius: 100%;
+    padding: 0%;
+    margin: 5px;
+    transition: opacity 0.5s;
+}
+
+.sliderbutton:hover, .sliderbutton:active{
+    opacity: 100%;
+    transition: opacity 0.5s;
+}
+
 
 /*===============================================*/
 /*----------------------IDs----------------------*/
@@ -248,6 +303,90 @@
     animation-duration: 1s;
 }
 
+/*============== announcements ==============*/
+
+#announcements-container, #announcements-container-animated {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 450px;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+#announcements-container-animated {
+    animation: animation-fadeinBTT;
+    animation-duration: 1.5s;
+}
+
+#announcementsheader {
+    width: fit-content;
+    position: relative;
+    align-items: flex-end;
+    left: 100px;
+    z-index: 5;
+}
+
+#announcementsh2, #announcementsh2-animated {
+    text-shadow: -5px 5px #395d77;
+}
+#announcementsh2-animated {
+    animation: animation-fadeinRTL;
+    animation-duration: 1s;
+}
+
+#headerdividerannouncements, #headerdividerannouncements-animated{
+    box-shadow: -5px 5px #395d77;
+}
+
+#headerdividerannouncements-animated {
+    animation: animation-fadeinRTL;
+    animation-duration: 1.2s;
+}
+
+#announcementscontentarticlecontainer {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-width: unset;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#sliderfadepanel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-90deg, #31465B 20%, #03080c00);
+}
+
+#slider {
+    overflow-x: auto;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+#slidernav {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    bottom: -300px;
+}
+
+/*--- Elements ---*/
+/* Im too lazy and poor to set up a backend */
+
+#slideshowelement1 {
+    background-image: url(img/galleryimages/2024/compressed/New\ Percillia.webp);
+
+
+}
 
 
 /*============== gallery ==============*/

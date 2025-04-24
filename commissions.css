@@ -8,7 +8,8 @@
 /*------------------GENERAL TAGS-----------------*/
 /*===============================================*/
 
-#willdrawdiv {
+#willdrawdiv,
+#willnotdrawdiv {
     display: flex;
 }
 
@@ -328,6 +329,7 @@ li > p {
     width: calc(100% - 60px * 2);
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 #commissioninfodetails-animated {
@@ -343,16 +345,17 @@ li > p {
     animation-duration: 1s;
 }
 
-#willdrawdiv {
+#willdrawdiv, #willnotdrawdiv {
     flex-direction: column;
 }
 
-#willdrawdiv > h3 {
+#willdrawdiv > h3, #willnotdrawdiv > h3 {
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
 #dividerdetails, #dividerdetails-animated {
+    align-self: center;
     width: 5px;
     height: 300px;
     margin: 20px;
