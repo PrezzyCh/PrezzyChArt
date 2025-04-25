@@ -262,7 +262,7 @@ footer {
     }
 }
 
-@keyframes sidebar-fadein {
+@keyframes fadein {
     from {
         opacity: 0%;
     } to {
@@ -270,7 +270,7 @@ footer {
     }
 }
 
-@keyframes sidebar-fadeout {
+@keyframes fadeout {
     from {
         opacity: 100%;
     } to {
@@ -606,12 +606,12 @@ footer {
 
 .inactivesidebar {
     display: none;
-    animation: sidebar-fadeout;
+    animation: fadeout;
     animation-duration: 0.5s;
 }
 
 .activesidebar {
-    animation: sidebar-fadein;
+    animation: fadein;
     animation-duration: 0.5s;
     display: flex;
 }

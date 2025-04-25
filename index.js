@@ -9,6 +9,11 @@ let siteButtons = [
     {id: "sidebarhome", link: "index.html"}, {id: "sidebaraboutme", link: "aboutme.html"}, {id: "sidebargallery", link: "gallery.html"}, {id: "sidebarcommissions", link: "commissions.html"},
     {id: "tosbutton", link: "tos.html"}
 ]
+
+let sliderText = [
+    {title: "Commissions Now Open!!", body:"Commissions are now open from febuary 2020 to febuary 2025 with limited slot availability. Head down to my commissions page if you are interested!"},
+    {title: "t", body:"Testing"}
+]
 const OBSERVERID = new IntersectionObserver((entries) => {
     entries.forEach((i) => {
         if (i.isIntersecting) {
@@ -31,6 +36,7 @@ const OBSERVERCLASS = new IntersectionObserver((entries) => {
 
 window.onload = function() {
     loadingScreenAnimation();
+    sliderButtonCancellation();
     activateButtons();
     animateSideBar();
 }
@@ -50,6 +56,26 @@ function linkDelay(link, event) {
     setTimeout(() => {
         window.location = link;
     }, 1000);
+}
+
+function sliderButtonCancellation() {
+    let elements = document.querySelectorAll(".sliderbutton");
+    let sliderTextElement = document.getElementById("slideshowtext");
+    let title = document.getElementById("sliderheader");
+    let paragraph = document.getElementById("sliderparagraph");
+    let slider = document.getElementById("slider");
+    elements.forEach(i => {
+        i.onclick = function() {
+            let percentScroll = -(i.value * 100);  
+            slider.style.transform = "translateX(" + percentScroll + "%)";
+            sliderTextElement.className = "slideshow-inactive";
+            sliderTextElement.addEventListener("animationend", function() {
+                title.innerHTML = sliderText[i.value].title;
+                paragraph.innerHTML = sliderText[i.value].body;
+                sliderTextElement.className = "slideshow-active";
+            });
+        } 
+    });
 }
 
 // Handles the loading animation for all HTML files globally

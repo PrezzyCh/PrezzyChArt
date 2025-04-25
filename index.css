@@ -12,13 +12,26 @@
 #gallerywindow,
 #commissionheader, 
 #commissionbutton,
-.slideshowtext,
+#slideshowtext,
 #slider, 
 #slidernav,
 #commissionbutton-animated {
     display: flex;
 }
 
+::-webkit-scrollbar-track-piece, ::-webkit-scrollbar-track {
+    background: rgba(240, 248, 255, 0);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(36, 66, 97, 0.938);
+    border-radius: 5px;
+}
 /*============== MODULAR VIEW - Index ==============*/
 
 @media screen and (max-width: 1300px){
@@ -116,32 +129,7 @@
     background-position: min(0px, 50%), center, right;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.slideshowtext {
-    position: relative;
-    z-index: 5;
-    flex-direction: column;
-    align-items: end;
-    margin-top: 100px;
-    margin-right: 40px;
-    width: 50%;
-    max-height: 300px;
-    overflow: scroll;
-}
-
-.slideshowtext > h3 {
-    text-align: end;
-    margin-bottom: 15px;
-    text-shadow: -5px 5px #395d77;
-}
-
-.slideshowtext > .linedivider {
-    width: 100px;
-}
-
-.slideshowtext > p {
-    text-align: end;
+    overflow: hidden;
 }
 
 .sliderbutton {
@@ -358,18 +346,17 @@
 
 #sliderfadepanel {
     position: absolute;
+    z-index: 1;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(-90deg, #31465B 20%, #03080c00);
 }
 
 #slider {
-    overflow-x: auto;
     flex-direction: row;
     width: 100%;
     height: 100%;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    transition: transform 1s;
 }
 
 #slidernav {
@@ -377,6 +364,53 @@
     position: relative;
     justify-content: center;
     bottom: -300px;
+    z-index: 5;
+}
+
+#slideshowtext, #slideshowtext{
+    align-self: flex-end;
+    position: absolute;
+    z-index: 2;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 120px;
+    padding-right: 10px;
+    margin-right: 40px;
+    width: 50%;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.slideshow-active {
+    animation: fadein;
+    animation-duration: 0.5s;
+}
+
+.slideshow-inactive {
+    animation: fadeout;
+    animation-duration: 0.5s;
+}
+
+#slideshowtext::-webkit-scrollbar-thumb {
+    background: aliceblue;
+}
+
+#slideshowtext > h3 {
+    text-align: end;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    text-shadow: -5px 5px #395d77;
+}
+
+#slideshowtext > .linedivider {
+    padding-top: 5px;
+    height: 0px;
+    width: 100px;
+}
+
+#slideshowtext > p {
+    margin-bottom: 0px;
+    text-align: end;
 }
 
 /*--- Elements ---*/
@@ -384,8 +418,6 @@
 
 #slideshowelement1 {
     background-image: url(img/galleryimages/2024/compressed/New\ Percillia.webp);
-
-
 }
 
 
