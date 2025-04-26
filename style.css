@@ -110,6 +110,20 @@ footer {
     justify-content: space-between;
 }
 
+::-webkit-scrollbar-track-piece, ::-webkit-scrollbar-track {
+    background: rgba(240, 248, 255, 0);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(36, 66, 97, 0.938);
+    border-radius: 5px;
+}
+
 /*============== MODULAR VIEW - Global ==============*/
 
 @media screen and (max-width: 1300px){
@@ -628,6 +642,10 @@ footer {
 
 .textlist {
     flex-direction: column;
+}
+
+.hidden {
+    display: none;
 }
 
 /*===============================================*/
