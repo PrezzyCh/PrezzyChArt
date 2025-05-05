@@ -1,10 +1,11 @@
 
-let currentSlider = 0;
 let maxElements = 0;
 let currIndex = 0;
 let timer;
+let elements;
 
 window.addEventListener('load' , function() {
+    elements = document.querySelectorAll(".sliderbutton");
     initializeElements();
     autoScroll();
     sliderInteraction();
@@ -13,29 +14,32 @@ window.addEventListener('load' , function() {
 function autoScroll() {
     timer = 
     setInterval(function() {
-        if (currIndex > maxElements) {
-            currIndex = 0;
+        let newIndex = currIndex;
+        if (currIndex >= maxElements) {
+            newIndex = 0;
+        } else {
+            newIndex++;
         }
-        slideSlider(currIndex);
-        currIndex++;
+        setActive(elements[newIndex], elements[currIndex]);
+        slideSlider(newIndex);
+        currIndex = newIndex
     }, 10000);
 
 }
 
 function initializeElements() {
-    let elements = document.querySelectorAll(".sliderbutton");
     maxElements = elements.length - 1;
 }
 
 function sliderInteraction() {
-    let elements = document.querySelectorAll(".sliderbutton");
     elements.forEach(i => {
         i.onclick = function() {
-            clearInterval(timer);
             let index = i.value;
-            currIndex = index;
+            clearInterval(timer);
+            setActive(i, elements[currIndex]);
             slideSlider(index);
-            autoScroll();
+            currIndex = index;
+            autoScroll(); //reactivates interval
         } 
     });
 }
@@ -46,8 +50,7 @@ function slideSlider(index) {
     let paragraph = document.getElementById("sliderparagraph");
     let slider = document.getElementById("slider");
 
-    if (currentSlider != index) {
-        currentSlider = index;
+    if (currIndex != index) {
         let percentScroll = -(index * 100);  
         slider.style.transform = "translateX(" + percentScroll + "%)";
         sliderTextElement.className = "slideshow-inactive";
@@ -57,4 +60,9 @@ function slideSlider(index) {
         sliderTextElement.className = "slideshow-active";
         });
     }
+}
+
+function setActive(element, prevElement) {
+    prevElement.className = "sliderbutton";
+    element.className = "sliderbutton sliderbuttonactive";
 }
