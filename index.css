@@ -51,6 +51,9 @@
     #title h2 {
         font-size: 18px;
     }
+    #announcementsheader > h2 {
+        font-size: 35px !important;
+    }
 }
 
 /*============== Index specific animations ==============*/

@@ -1,7 +1,7 @@
 // Master JS file for decorative elements
 // Created by Prezzy Ch.
+// globals
 let loadingIsActivated = false;
-//constants 
 let siteButtons = [
     {id: "navbaraboutme", link: "aboutme.html"}, {id: "navbarhome", link: "index.html"}, {id: "navbargallery", link: "gallery.html"}, {id: "navbarcommissions", link: "commissions.html"},
     {id: "footerhome", link: "index.html"}, {id: "footeraboutme", link: "aboutme.html"}, {id: "footergallery", link: "gallery.html"},
@@ -43,7 +43,7 @@ window.onload = function() {
 // Takes in the link that is going to be set and activates the loading screen before the link is
 // pressed
 // Parameters:
-//  link(String) - the website URL to redirect
+//  link (String)- the website URL to redirect
 //  event - the event to prevent
 function linkDelay(link, event) {
     event.preventDefault();
@@ -126,7 +126,7 @@ function animateGallery() {
 function animateCommissions() {
     let title = ["titleh1", "dividertitle", "titleimage"];
     let details = ["commissioninfo-container", "commissioninfoh2", "headerdividercommissioninfo", 
-                   "commissioninfocontentparagraph", "tosbutton", "queuebutton", "formbutton", "dividercommissioninfo", "willdrawh3", "willnotdrawh3", "dividerdetails"];
+                   "commissioninfocontentparagraph", "tosbutton", "queuebutton", "formbutton", "dividercommissioninfo", "willdrawh3", "willnotdrawh3", "dividerdetails", "commissioninfocontentparagraph-2"];
     let prices = ["prices-container", "pricesh2", "headerdividerprices"];
     let classes = [document.querySelectorAll(".list"), document.querySelectorAll(".gallerylistelement")];
     let all = getAllIDs([document.querySelectorAll(".subcontainer"), document.querySelectorAll(".subsectionh3"), document.querySelectorAll(".subsectionh4"),

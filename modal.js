@@ -1,7 +1,14 @@
+
+
+
 window.addEventListener('load' , function() {
     imgButtonInitialization();
     modalButtonInitialization();
 });
+
+/*===============================================*/
+/*-------------------FUNCTIONS-------------------*/
+/*===============================================*/
 
 // Initializes all of the image buttons and when the image is clicked, the modal and the image will be loaded
 // along with the alt text.
@@ -11,11 +18,11 @@ function imgButtonInitialization() {
     let modalimage = document.getElementById("modalimage");
     let modalheader = document.getElementById("modalheader");
 
-    for (let i = 0; i < elements.length; i++) {
+    for (let i = 0; i < elements.length; i++) { // For each element, run through their on click.
         let item = elements[i];
         item.onclick = function() {
             modal.className = "activemodal";
-            if (modalheader != null) {
+            if (modalheader != null) { // Certain elements may not have header
                 modalheader.innerHTML = item.alt;
             }
             modalimage.src = item.src;

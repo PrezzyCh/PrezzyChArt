@@ -264,10 +264,14 @@ li > p {
     animation-duration: 1.5s;
 }
 
-#commissioninfocontentarticlecontainer {
+#commissioninfocontentarticlecontainer, #experimentalcontentarticlecontainer {
     max-width: 100%;
     margin-bottom: 0px;
     align-items: flex-start;
+}
+
+#experimentalcontentarticlecontainer {
+    margin-bottom: 50px;
 }
 
 #commissioninfoheader {
@@ -298,7 +302,7 @@ li > p {
     width: 30%;
 }
 
-#commissioninfocontentparagraph-animated {
+#commissioninfocontentparagraph-animated, #commissioninfocontentparagraph-2-animated {
     animation: animation-fadeinLTR;
     animation-duration: 1s;
 }
@@ -326,6 +330,7 @@ li > p {
 #commissioninfodetails, #commissioninfodetails-animated {
     margin-top: 30px;
     max-width: 100%;
+    margin-bottom: 0px;
     width: calc(100% - 60px * 2);
     flex-direction: row;
     justify-content: space-between;
