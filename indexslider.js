@@ -12,7 +12,7 @@ window.addEventListener('load' , function() {
     elements = document.querySelectorAll(".sliderbutton");
     setMaxElements();
     autoScroll();
-    sliderInteraction();
+    initilizeSlider();
 });
 
 /*===============================================*/
@@ -41,7 +41,7 @@ function setMaxElements() {
 
 // Initializes each button of the slider. When a button is clicked, it will slide the slider to 
 // the appropriate slide based on the index of the clicked button.
-function sliderInteraction() {
+function initilizeSlider() {
     elements.forEach(i => {
         i.onclick = function() {
             let index = i.value;

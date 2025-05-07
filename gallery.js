@@ -1,45 +1,23 @@
 // Controller for the gallery.html gallery
 // Created by Prezzy Ch.
 
-let activeGalleryYear = 2025;
-let maxYear = 2025;
-let minYear = 2024;
-let buttons = [2025, 2024];
+// CONSTANTS
+const FADEOUTDELAY = 500;
+// Globals
+let currIndex = 0;
+let maxIndex;
+let elements;
+//Objects
+let galleryh2;
+let buttonleft;
+let buttonright;
 
 window.addEventListener('load' , function() {
-    loadActive(activeGalleryYear);
-    directionCheck(activeGalleryYear);
-
-    let buttonleft = document.getElementById("buttonleft");
-    let buttonright = document.getElementById("buttonright");
-    let galleryheader = document.getElementById("galleryheader");
-
-    for (let i = 0; i < buttons.length; i++) {
-        let button = document.getElementById("button" + buttons[i]);
-        button.onclick = function() {
-            galleryheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-            fadeGalleryOut();
-            setTimeout(() => {
-                loadActive(Number(button.value));
-            }, 500);
-        }
-    }
-
-    buttonleft.onclick = function() {
-        galleryheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-        fadeGalleryOut();
-        setTimeout(() => {
-            changeDirection(1);
-        }, 500);
-    }
-
-    buttonright.onclick = function() {
-        galleryheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-        fadeGalleryOut();
-        setTimeout(() => {
-            changeDirection(-1);
-        }, 500);
-    }
+    initializeOnStartup();
+    setMax();
+    initializeGallery();
+    loadActive(elements[0], elements[0]);
+    directionCheck(currIndex);
 
 });
 
@@ -50,60 +28,30 @@ window.addEventListener('load' , function() {
 // Main function to load the active gallery when shown an input with the parameter as the active year
 // Parameter:
 //  active(Number) - active year to change elements to
-function loadActive(active) {
-    directionCheck(active);
-    let galleryh2 = document.getElementById("galleryh2");
-    if (galleryh2 === null) { //corrector
-        galleryh2 = document.getElementById("galleryh2-animated");
-    }
-
-    let button;
-    let gallery;
-
-    for (let i = minYear; i <= maxYear; i++) {
-        button = document.getElementById("button" + i);
-        gallery = document.getElementById("list" + i);
-
-        button.className = "active";
-        button.disabled = false;
-        gallery.style.display = "none";
-    }
-
-    button = document.getElementById("button" + active);
-    gallery = document.getElementById("list" + active); 
-    galleryh2.innerHTML = active;
-    button.className = "inactive";
-    button.disabled = true;
-    gallery.style.display = "flex";
-    activeGalleryYear = active;
+function loadActive(activeGallery, prevGallery) {
+    let activeYear = activeGallery.innerHTML;
+    let prevYear = prevGallery.innerHTML;
+    document.getElementById("list" + prevYear).style.display = "none";
+    document.getElementById("list" + activeYear).style.display = "flex";
+    galleryh2.innerHTML = activeYear;
     fadeGalleryIn();
-}
-
-// Links the arrow buttons with the the parameter direction as a +1 or -1 to change 
-// the active year.
-// Parameter:
-//  direction(Number) - direction in -1 or +1
-function changeDirection(direction) {
-    loadActive(activeGalleryYear + direction);
+    directionCheck(activeGallery.value);
 }
 
 // Checks if the direction is within bounds and deactivates the buttons if they will be out of bounds.
 // Parameter:
-//  active(Number) - active year of the currently element
-function directionCheck(active) {
-    let buttonleft = document.getElementById("buttonleft");
-    let buttonright = document.getElementById("buttonright");
+//  activeIndex (num)- The index that is currently active
+function directionCheck(activeIndex) {
 
     buttonleft.className = "active";
-    buttonleft.disabled = false;
     buttonright.className = "active";
+    buttonleft.disabled = false;
     buttonright.disabled = false;
-
-    if (maxYear <= active) {
+    if (activeIndex <= 0) {
         buttonleft.className = "inactive";
         buttonleft.disabled = true;
-    } 
-    if (minYear >= active) {
+    }
+    if (activeIndex >= maxIndex) {
         buttonright.className = "inactive";
         buttonright.disabled = true;
     }
@@ -119,6 +67,61 @@ function fadeGalleryIn() {
 function fadeGalleryOut() {
     let gallerycontainerinner = document.getElementById("gallerycontainerinner");
     gallerycontainerinner.className = "hidden";
+}
+
+// Sets the max index based on the size of elements.
+function setMax() {
+    maxIndex = elements.length - 1;
+}
+
+// Initializes all gallery buttons that are used to switch gallery.
+function initializeGallery() {
+
+    buttonleft.onclick = function() {
+        initiateModalChange(elements[currIndex - 1], currIndex - 1);
+    }
+
+    buttonright.onclick = function() {
+        initiateModalChange(elements[currIndex + 1], currIndex + 1);
+    }
+
+    elements.forEach(i => {
+        i.onclick = function() {
+            initiateModalChange(i, i.value);
+        }
+    });
+}
+
+// Initiates a gallery change based on the target gallery, fading the gallery out and swapping the
+// gallery along with scrolling the window to the top.
+// Parameters:
+//  target (element)- The target gallery to switch to.
+//  targetIndex (num)- The target index to switch to.
+function initiateModalChange(target, targetIndex) {
+    fadeGalleryOut();
+    galleryheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+    setTimeout(() => {
+        setActive(target, elements[currIndex]);
+        loadActive(target, elements[currIndex]);
+        currIndex = Number(targetIndex);
+    }, FADEOUTDELAY);
+}
+
+// Sets the active button in elements and removes the active class of the previous button.
+// Parameters:
+//  currentElement (element)- The element to activate
+//  prevElement (element)- The previous element to disable.
+function setActive(currentElement, prevElement) {
+    prevElement.className = "gallerybutton active";
+    currentElement.className = "gallerybutton inactive";
+}
+
+// Initializes objects on startup.
+function initializeOnStartup() {
+    elements = this.document.querySelectorAll(".gallerybutton");
+    galleryh2 = document.getElementById("galleryh2");
+    buttonleft = document.getElementById("buttonleft");
+    buttonright = document.getElementById("buttonright");
 }
 
 
