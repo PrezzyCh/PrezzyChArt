@@ -14,8 +14,7 @@
 #sidebarbuttoncontainer,
 .title-container, 
 #title, 
-#titlesubheadings-container, 
-#titlesubheadings-container-animated,
+#titlesubheadings-container,
 #socials,
 #header-container,
 .maindecor-container,
@@ -39,6 +38,10 @@ h1, h2, h3, h4, p, a, button {
 
 h1, h2, h3, h4 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    margin: 0px;
 }
 
 h3 {
@@ -146,8 +149,7 @@ footer {
 }
 
 @media screen and (max-width: 820px) {
-    #titleframe, 
-    #titleframe-animated,
+    #titleframe,
     #titleframegradient {
         display: none;
     }
@@ -233,8 +235,8 @@ footer {
 }
 
 /*============== ANIMATIONS ==============*/
-*[id$="animated"],
 #loadingscreen-animated-reverse,
+#loadingscreen-animated,
 .activemodal,
 .inactivesidebar,
 .activesidebar,
@@ -244,16 +246,38 @@ footer {
     animation-fill-mode: forwards !important; 
 }
 
-#titleh1-index,
-#titleh1,
-#titlesubheadings-container,
-#socials,
 .inactivemodal,
 .inactivesidebar,
 #sidepanelbutton-inactive,
-*[id$="animated"],
-#loadingscreen-animated-reverse {
+#loadingscreen-animated-reverse,
+.animatable {
     opacity: 0%;
+}
+
+.animated {
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards !important; 
+    animation-duration: 1.5s;
+}
+
+.animatable {
+    animation-play-state: paused;
+}
+
+.aleft {
+    animation-name: animation-fadeinLTR;
+}
+
+.aright {
+    animation-name: animation-fadeinRTL;
+}
+
+.abottom {
+    animation-name: animation-fadeinBTT;
+}
+
+.atop {
+    animation-name: animation-fadeinTTB;
 }
 
 @keyframes loadingscreen-out {
@@ -576,8 +600,7 @@ footer {
     gap: 10px;
 }
 
-.gallerylistelement,
-.gallerylistelement-animated {
+.gallerylistelement {
     height: 200px;
     width: fit-content;
     max-width: 200px;
@@ -589,8 +612,7 @@ footer {
     flex-shrink: 1;
 }
 
-.gallerylistelement > img,
-.gallerylistelement-animated > img  {
+.gallerylistelement > img {
     object-fit: cover;
     height: 100%;
     max-width: 100%;
@@ -598,9 +620,7 @@ footer {
 }
 
 .gallerylistelement > img:hover, 
-.gallerylistelement > img:active, 
-.gallerylistelement-animated > img:hover, 
-.gallerylistelement-animated > img:active {
+.gallerylistelement > img:active {
     transform: scale(1.1, 1.1);
     filter: brightness(80%);
     transition: transform 0.5s, filter 0.5s;
@@ -791,7 +811,7 @@ footer {
     position: fixed;
 }
 
-#titleh1-index, #titleh1-index-animated, #titleh1, #titleh1-animated {
+#titleh1-index {
     margin-bottom: 0;
     margin-top: 0;
     background-image: linear-gradient(90deg, rgb(255, 255, 255), rgb(67, 86, 135));
@@ -799,14 +819,9 @@ footer {
     background-clip: text;
 } 
 
-#titleh1, #titleh1-animated { /*for all other h1's ! index*/
+#titleh1 { /*for all other h1's ! index*/
     font-size: 100px;
 }
-#titleh1-animated {
-    animation-name: animation-fadeinRTL;
-    animation-duration: 1s;
-}
-
 #main-title-gradient {
     background-image: linear-gradient(#07133000, #071330);
     width: 100%;

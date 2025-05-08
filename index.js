@@ -10,27 +10,20 @@ let siteButtons = [
     {id: "tosbutton", link: "tos.html"}
 ]
 
-const OBSERVERID = new IntersectionObserver((entries) => {
+let animatableElements;
+
+const OBSERVEROBJECT = new IntersectionObserver((entries) => {
     entries.forEach((i) => {
-        if (i.isIntersecting) {
-            if (!i.target.id.includes("-animated")) {
-                i.target.id = i.target.id + "-animated";
-            }
+        if (i.isIntersecting && i.target.className.includes("animatable")) {
+            i.target.className = i.target.className.replaceAll("animatable", "animated");
         }
     });
 });
 
-const OBSERVERCLASS = new IntersectionObserver((entries) => {
-    entries.forEach((i) => {
-        if (i.isIntersecting) {
-            if (!i.target.className.includes("-animated")) {
-                i.target.className = i.target.className + "-animated";
-            }
-        }
-    });
-});
 
 window.onload = function() {
+    animatableElements = document.querySelectorAll(".animatable");
+    observeAll();
     loadingScreenAnimation();
     activateButtons();
     animateSideBar();
@@ -59,95 +52,10 @@ function loadingScreenAnimation() {
         let loadingscreen = document.getElementById("loading");
         loadingscreen.id = "loadingscreen-animated";
         loadingIsActivated = true;
-        animateElements();
     } else {
         let loadingscreen = document.getElementById("loadingscreen-animated");
         loadingscreen.id = "loadingscreen-animated-reverse";
     }
-}
-
-// Handles custom animation for each part, taking the load location in order to 
-// initiate the animation.
-function animateElements() {
-    let currentHTML = window.location.href;
-    if (currentHTML.includes("aboutme.html")) {
-        animateAboutMe();
-    } else if (currentHTML.includes("gallery.html")) {
-        animateGallery();
-    } else if (currentHTML.includes("commissions.html")) {
-        animateCommissions();
-    } else if (currentHTML.includes("tos.html")) {
-        animateTos();
-    } else {
-        animateIndex();
-    }
-}
-
-// Checks if the screen for index is in bound with the elements before changing their IDs to 
-// -animated to activate their animations.
-function animateIndex() {
-    // ------------IDs-----------
-    let title = ["titleh1-index", "titlesubheadings-container", "socials", "titleframe", "titleimage-index"];
-    let introduction = ["introduction-container", "introductionh2", "headerdividerintroduction", "introductionparagraph", 
-        "introductionparagraph2", "dividerintroduction", "introductionbutton"];
-    let announcements = ["announcements-container", "announcementsh2", "headerdividerannouncements"]
-    let gallery = ["gallery-container", "galleryh2", "headerdividergallery", "galleryparagraph", "gallerybutton"];
-    let commissions = ["commissions-container", "commissionsh2", "headerdividercommissions", "commissionsparagraph", 
-        "dividercommissions", "commissionbutton"];
-    let all = title.concat(introduction, announcements, gallery, commissions);
-    forEachId(all);
-}
-
-// Checks if the screen for about me is in bound with the elements before changing their IDs to 
-// -animated to activate their animations.
-function animateAboutMe() {
-    //------------IDs---------------
-    let title = ["titleh1", "dividertitle", "titleimage"];
-    let aboutme = ["aboutme-container", "aboutmeh2", "headerdivideraboutme", "aboutmeh3", "aboutmepronouns", 
-        "aboutmeparagraph", "aboutmeparagraph2", "divideraboutme", "divideraboutme2", "aboutmeimage"];
-    let funfact = ["funfacts-container", "funfacth2", "headerdividerfunfact"];
-    let all = getAllIDs([document.querySelectorAll(".subsectionheader-left"), document.querySelectorAll(".subsectionarticle-left"), document.querySelectorAll(".subsectionimage-left"),
-                        document.querySelectorAll(".subsectionheader-right"), document.querySelectorAll(".subsectionarticle-right"), document.querySelectorAll(".subsectionimage-right"),
-                        document.querySelectorAll(".subcontainer-left"), document.querySelectorAll(".subcontainer-right")]);
-    all = all.concat(title, aboutme, funfact);
-    forEachId(all);
-}
-
-// Checks if the screen for gallery is in bound with the elements before changing their IDs to 
-// -animated to activate their animations.
-function animateGallery() {
-    //------------IDs---------------
-    let title = ["titleh1", "dividertitle", "titleimage"]; 
-    let gallery = ["gallery-container","galleryh2", "headerdividergallery"];
-    let all = title.concat(gallery);
-    forEachId(all);
-}
-
-function animateCommissions() {
-    let title = ["titleh1", "dividertitle", "titleimage"];
-    let details = ["commissioninfo-container", "commissioninfoh2", "headerdividercommissioninfo", 
-                   "commissioninfocontentparagraph", "tosbutton", "queuebutton", "formbutton", "dividercommissioninfo", "willdrawh3", "willnotdrawh3", "dividerdetails", "commissioninfocontentparagraph-2"];
-    let prices = ["prices-container", "pricesh2", "headerdividerprices"];
-    let classes = [document.querySelectorAll(".list"), document.querySelectorAll(".gallerylistelement")];
-    let all = getAllIDs([document.querySelectorAll(".subcontainer"), document.querySelectorAll(".subsectionh3"), document.querySelectorAll(".subsectionh4"),
-                        document.querySelectorAll(".subsection-linedivider")]);
-    all = all.concat(title, details, prices);
-    forEachId(all);
-    forEachClass(classes);
-}
-
-function animateTos() {
-    let title = ["titleh1", "dividertitle"];
-    let containers = ["ordering-container", "payment-container", "communication-container", "delivery-container", "completion-container", "copyright-container"];
-    let h2 = ["orderingh2", "paymenth2", "communicationh2", "deliveryh2", "completionh2", "copyrighth2"];
-    let dividers = ["headerdividerordering", "headerdividerpayment", "dividerpayment", "headerdividercommunication", "dividercommunication", "headerdividerdelivery",
-                    "dividerdelivery", "headerdividercompletion", "dividercompletion", "headerdividercopyright", "dividercopyright"];
-    let paragraphs = ["orderingparagraph", "paymentparagraph1", "paymentparagraph2", "communicationparagraph1", "communicationparagraph2", "deliveryparagraph1", 
-                      "deliveryparagraph2", "completionparagraph1", "completionparagraph2", "copyrightparagraph1", "copyrightparagraph2"];
-    let classes = [document.querySelectorAll(".list")];
-    let all = title.concat(containers, h2, dividers, paragraphs);
-    forEachId(all);
-    forEachClass(classes);
 }
 
 function animateSideBar() {
@@ -178,28 +86,10 @@ function activateButtons() {
         }
     })
 }
+// NEW ANIMATION FRAMEWORK FOR 2.10
 
-function getAllIDs(elements) {
-    let result = [];
-    elements.forEach((i) => {
-        i.forEach((j) => {
-            result.push(j.id);
-        }); 
-    }); 
-    return result;
-}
-
-function forEachId(all) {
-    all.forEach((i) => {
-        let elementid = document.getElementById(i);
-        OBSERVERID.observe(elementid);
-    });
-}
-
-function forEachClass(all) {
-    all.forEach((i) => {
-        i.forEach(element => {
-            OBSERVERCLASS.observe(element);
-        });
-    });
+function observeAll() {
+    animatableElements.forEach((i) => {
+        OBSERVEROBJECT.observe(i);
+    })
 }

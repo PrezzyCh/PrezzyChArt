@@ -157,73 +157,40 @@ li > p {
     text-align: center;
 }
 
-#titleimage, #titleimage-animated {
+#titleimage {
     background-image: url("img/websiteimages/images/Planetfall.webp");
     background-position-y: top;
 }
 
-#titleimage-animated {
-    animation-name: titleimage-in;
-    animation-duration: 1.5s;
-}
-
-#dividertitle, #dividertitle-animated {
+#dividertitle {
     margin-top: 10px;
     width: 50%;
 }
-#dividertitle-animated {
-    animation: animation-fadeinRTL;
-    animation-duration: 1.2s;
-}
 
-.list-animated {
-    animation: animation-fadeinLTR;
-    animation-duration: 1s;
-}
 /*============== tos panels ==============*/
-
-[id$="-container-animated"] {
-    animation: animation-fadeinBTT;
-    animation-duration: 1.5s;
-}
-
-.sectionh2[id$="-animated"] {
-    animation: animation-fadeinLTR;
-    animation-duration: 1s;
-}
 
 [id^= "headerdivider"] {
     box-shadow: 5px 5px #395d77;
 }
 
-.linedivider[id$="-animated"]{
-    animation: animation-fadeinLTR;
-    animation-duration: 1.2s;
-}
-
-.sectionparagraph[id$="-animated"] {
-    animation: animation-fadeinLTR;
-    animation-duration: 1.5s;
-}
-
 /*============Singular edits================*/
 
-#paymentparagraph2, #paymentparagraph2-animated {
+#paymentparagraph2{
     margin-top: 0px;
 }
 
-#copyright-container, #copyright-container-animated {
+#copyright-container {
     margin-bottom: 100px;
 }
 
-#ordering-container-animated, 
-#communication-container-animated,
-#completion-container-animated {
+#ordering-container, 
+#communication-container,
+#completion-container {
     background-image: url(img/websiteimages/decorations/decor0.webp);
 }
 
-#payment-container-animated,
-#delivery-container-animated,
-#copyright-container-animated {
+#payment-container,
+#delivery-container,
+#copyright-container {
     background-image: url(img/websiteimages/decorations/decor1.webp);
 }
