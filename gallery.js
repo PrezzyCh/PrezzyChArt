@@ -17,8 +17,6 @@ window.addEventListener('load' , function() {
     setMax();
     initializeGallery();
     loadActive(elements[0], elements[0]);
-    directionCheck(currIndex);
-
 });
 
 /*===============================================*/
@@ -31,6 +29,7 @@ window.addEventListener('load' , function() {
 function loadActive(activeGallery, prevGallery) {
     let activeYear = activeGallery.innerHTML;
     let prevYear = prevGallery.innerHTML;
+    setActive(activeGallery, prevGallery);
     document.getElementById("list" + prevYear).style.display = "none";
     document.getElementById("list" + activeYear).style.display = "flex";
     galleryh2.innerHTML = activeYear;
@@ -101,7 +100,6 @@ function initiateModalChange(target, targetIndex) {
     fadeGalleryOut();
     galleryheader.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
     setTimeout(() => {
-        setActive(target, elements[currIndex]);
         loadActive(target, elements[currIndex]);
         currIndex = Number(targetIndex);
     }, FADEOUTDELAY);

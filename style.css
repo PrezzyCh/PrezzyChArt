@@ -235,13 +235,14 @@ footer {
 }
 
 /*============== ANIMATIONS ==============*/
-#loadingscreen-animated-reverse,
-#loadingscreen-animated,
+.aloadingout,
+.aloadingin,
 .activemodal,
 .inactivesidebar,
 .activesidebar,
 .inactivebar,
-.activebar {
+.activebar,
+.animated {
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     animation-fill-mode: forwards !important; 
 }
@@ -249,14 +250,11 @@ footer {
 .inactivemodal,
 .inactivesidebar,
 #sidepanelbutton-inactive,
-#loadingscreen-animated-reverse,
 .animatable {
     opacity: 0%;
 }
 
 .animated {
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation-fill-mode: forwards !important; 
     animation-duration: 1.5s;
 }
 
@@ -280,7 +278,52 @@ footer {
     animation-name: animation-fadeinTTB;
 }
 
-@keyframes loadingscreen-out {
+/* Unique animations */
+.aloadingin {
+    animation: loadingscreen-fadeout;
+    animation-duration: 1s;
+}
+
+.aloadingout {
+    animation: loadingscreen-fadein;
+    animation-duration: 1s;
+}
+
+.inactivemodal {
+    display: none;
+    animation: modal-animation-fadeout;
+    animation-duration: 0.5s;
+}
+.activemodal {
+    display: block;
+    opacity: 100%;
+    animation: modal-animation-fadein;
+    animation-duration: 0.5s;
+}
+
+.inactivesidebar {
+    display: none;
+    animation: fadeout;
+    animation-duration: 0.5s;
+}
+
+.activesidebar {
+    animation: fadein;
+    animation-duration: 0.5s;
+    display: flex;
+}
+
+.inactivebar {
+    animation: sidebar-slideout;
+    animation-duration: 0.5s;
+}
+
+.activebar {
+    animation: sidebar-slidein;
+    animation-duration: 0.5s;
+}
+
+@keyframes loadingscreen-fadeout {
     from {
         opacity: 100%;
         visibility: visible;
@@ -290,7 +333,7 @@ footer {
     }
 }
 
-@keyframes loadingscreen-in {
+@keyframes loadingscreen-fadein {
     from {
         opacity: 0%;
         visibility: hidden;
@@ -626,40 +669,6 @@ footer {
     transition: transform 0.5s, filter 0.5s;
 }
 
-.inactivemodal {
-    display: none;
-    animation: modal-animation-fadeout;
-    animation-duration: 0.5s;
-}
-.activemodal {
-    display: block;
-    opacity: 100%;
-    animation: modal-animation-fadein;
-    animation-duration: 0.5s;
-}
-
-.inactivesidebar {
-    display: none;
-    animation: fadeout;
-    animation-duration: 0.5s;
-}
-
-.activesidebar {
-    animation: fadein;
-    animation-duration: 0.5s;
-    display: flex;
-}
-
-.inactivebar {
-    animation: sidebar-slideout;
-    animation-duration: 0.5s;
-}
-
-.activebar {
-    animation: sidebar-slidein;
-    animation-duration: 0.5s;
-}
-
 .textlist {
     flex-direction: column;
 }
@@ -671,18 +680,6 @@ footer {
 /*===============================================*/
 /*----------------------IDs----------------------*/
 /*===============================================*/
-
-/*============== loading screen ==============*/
-#loadingscreen-animated {
-    animation-delay: 0.5s;
-    animation: loadingscreen-out;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-}
-#loadingscreen-animated-reverse {
-    animation: loadingscreen-in;
-    animation-duration: 1s;
-}
 
 /*============== Header ==============*/
 #header-container {

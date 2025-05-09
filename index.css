@@ -14,8 +14,7 @@
 #commissionbutton,
 #slideshowtext,
 #slider, 
-#slidernav,
-#commissionbutton-animated {
+#slidernav {
     display: flex;
 }
 /*============== MODULAR VIEW - Index ==============*/
@@ -131,7 +130,7 @@
 /*===============================================*/
 /*============== Title ==============*/
 
-#titleframe, #titleframe-animated {
+#titleframe {
     height: 800px;
     background-image: url("img/websiteimages/decorations/decor0.webp") , linear-gradient(75deg ,#31465B 55%, #0000 50%);
     background-size: 800px, auto;
@@ -146,7 +145,7 @@
     animation-name: titleframe-in;
 }
 
-#titleh1-index, #titleh1-index-animated {
+#titleh1-index {
     font-size: 150px;
 }
 
@@ -155,7 +154,7 @@
     animation-name: titleimage-in;
 }
 
-#titlesubheadings-container, #titlesubheadings-container-animated {
+#titlesubheadings-container{
     align-items: center;
     justify-content: center;
 }
@@ -186,7 +185,7 @@
 }
 
 /*============== introduction ==============*/
-#introduction-container, #introduction-container-animated{
+#introduction-container {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     background-image: url(img/websiteimages/decorations/decor1.webp), linear-gradient(100deg, #31465B 50%, #31465b00 60%), url("img/websiteimages/images/Peak of Dawn.webp");
@@ -203,15 +202,15 @@
     right: 100px;
 }
 
-#introductionh2, #introductionh2-animated {
+#introductionh2 {
     text-shadow: 5px 5px #395d77;
 }
 
-#headerdividerintroduction, #headerdividerintroduction-animated {
+#headerdividerintroduction {
     box-shadow: 5px 5px #395d77;
 }
 
-#dividerintroduction, #dividerintroduction-animated {
+#dividerintroduction {
     width: 200px;
 }
 
@@ -222,7 +221,7 @@
 
 /*============== announcements ==============*/
 
-#announcements-container, #announcements-container-animated {
+#announcements-container {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     height: 450px;
@@ -239,11 +238,11 @@
     z-index: 5;
 }
 
-#announcementsh2, #announcementsh2-animated {
+#announcementsh2 {
     text-shadow: -5px 5px #395d77;
 }
 
-#headerdividerannouncements, #headerdividerannouncements-animated{
+#headerdividerannouncements {
     box-shadow: -5px 5px #395d77;
 }
 
@@ -360,11 +359,11 @@
     flex-direction: column;
 }
 
-#galleryh2, #galleryh2-animated {
+#galleryh2 {
     text-shadow: 0px 5px #395d77;
 }
 
-#headerdividergallery, #headerdividergallery-animated {
+#headerdividergallery {
     box-shadow: 0px 5px #395d77;
 }
 
@@ -381,20 +380,20 @@
     background-position-x: center;
 }
 
-#galleryparagraph, #galleryparagraph-animated {
+#galleryparagraph {
     margin-left: 10px;
     margin-right: 10px;
 }
 
 
-#gallerybutton, #gallerybutton-animated {
+#gallerybutton {
     box-shadow: 0px 5px #395d77;
     margin-left: 50px;
     margin-right: 50px;
 }
 
 /*============== Commissions ==============*/
-#commissions-container, #commissions-container-animated {
+#commissions-container {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     background-image: url(img/websiteimages/decorations/decor1.webp), linear-gradient(100deg, #31465B 50%, #31465b00 60%), url("img/websiteimages/images/Nightmare.webp");
@@ -416,15 +415,15 @@
     right: 100px;
 }
 
-#commissionsh2, #commissionsh2-animated {
+#commissionsh2 {
     text-shadow: 5px 5px #395d77;
 }
 
-#headerdividercommissions, #headerdividercommissions-animated{
+#headerdividercommissions {
     box-shadow: 5px 5px #395d77;
 }
 
-#dividercommissions, #dividercommissions-animated {
+#dividercommissions {
     width: 200px;
 }
 

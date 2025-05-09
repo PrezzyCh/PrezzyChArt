@@ -82,15 +82,6 @@ li > p {
 }
 
 /*============== aboutme specific animations ==============*/
-#dividertitle,
-.list,
-#mainsection > [id$="-container"],
-[id$="h2"],
-[id^="headerdivider"],
-[id*="paragraph"],
-[id^="divider"] {
-    opacity: 0%;
-}
 
 /*===============================================*/
 /*--------------------CLASSES--------------------*/

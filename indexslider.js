@@ -13,6 +13,7 @@ window.addEventListener('load' , function() {
     setMaxElements();
     autoScroll();
     initilizeSlider();
+    initiateSlide(0);
 });
 
 /*===============================================*/
@@ -29,7 +30,7 @@ function autoScroll() {
         } else {
             newIndex++;
         }
-        initiateSlide(elements[newIndex], newIndex);
+        initiateSlide(newIndex);
     }, SCROLLTIME);
 
 }
@@ -46,7 +47,7 @@ function initilizeSlider() {
         i.onclick = function() {
             let index = i.value;
             clearInterval(timer);
-            initiateSlide(i, index);
+            initiateSlide(index);
             autoScroll(); //reactivates interval
         } 
     });
@@ -58,6 +59,7 @@ function initilizeSlider() {
 //  index (num)- The slide target index.
 function sliderProtocols(index) {
     // Checks if the index is the same.
+    setActive(elements[index], elements[currIndex]);
     if (currIndex != index) {
         let sliderTextElement = document.getElementById("slideshowtext");
         let title = document.getElementById("sliderheader");
@@ -80,8 +82,7 @@ function sliderProtocols(index) {
 // Parameters:
 //  elementToSlide (element)- The element to slide to
 //  elementToSlideIndex (num)- The element to slide to index. 
-function initiateSlide(elementToSlide, elementToSlideIndex) {
-    setActive(elementToSlide, elements[currIndex]);
+function initiateSlide(elementToSlideIndex) {
     sliderProtocols(elementToSlideIndex);
     currIndex = elementToSlideIndex;
 }

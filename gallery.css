@@ -66,9 +66,20 @@
 }
 
 /*============== gallery specific animations ==============*/
-#galleryh2,
-#headerdividergallery {
-    opacity: 0%;
+
+.unhidden {
+    animation: animation-fadein;
+}
+
+.hidden {
+    animation: animation-fadeout;
+}
+
+.hidden, .unhidden {
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
 
 @keyframes animation-fadein {
@@ -97,11 +108,6 @@
     max-width: 100%;
 }
 
-.gallerylistelement-animated {
-    animation: animation-fadeinBTT;
-    animation-duration: 1.1s;
-}
-
 .inactive, .inactive:hover, .inactive:active {
     background-color: rgba(240, 248, 255, 0.103);
     text-decoration: none;
@@ -124,23 +130,6 @@
     border-radius: 5px;
     margin-right: 10px;
     width: 15%;
-}
-
-/* utility classes */
-.unhidden {
-    animation: animation-fadein;
-    animation-duration: 0.5s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-}
-
-.hidden {
-    animation: animation-fadeout;
-    animation-duration: 0.5s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
 }
 
 /*===============================================*/

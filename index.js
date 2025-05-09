@@ -1,7 +1,6 @@
 // Master JS file for decorative elements
 // Created by Prezzy Ch.
 // globals
-let loadingIsActivated = false;
 let siteButtons = [
     {id: "navbaraboutme", link: "aboutme.html"}, {id: "navbarhome", link: "index.html"}, {id: "navbargallery", link: "gallery.html"}, {id: "navbarcommissions", link: "commissions.html"},
     {id: "footerhome", link: "index.html"}, {id: "footeraboutme", link: "aboutme.html"}, {id: "footergallery", link: "gallery.html"},
@@ -48,16 +47,15 @@ function linkDelay(link, event) {
 
 // Handles the loading animation for all HTML files globally
 function loadingScreenAnimation() {
-    if (!loadingIsActivated) {
-        let loadingscreen = document.getElementById("loading");
-        loadingscreen.id = "loadingscreen-animated";
-        loadingIsActivated = true;
+    let loadingscreen = document.getElementById("loading");
+    if (!loadingscreen.className.includes("aloadingin")) {
+        loadingscreen.className = "loadingscreen aloadingin";
     } else {
-        let loadingscreen = document.getElementById("loadingscreen-animated");
-        loadingscreen.id = "loadingscreen-animated-reverse";
+        loadingscreen.className = "loadingscreen aloadingout";
     }
 }
 
+// Handles Sidebar animations
 function animateSideBar() {
     let sidepanelbutton = document.getElementById("sidepanelbutton");
     let sidepanelclosebutton = document.getElementById("sidepanelclosebutton");
@@ -76,6 +74,7 @@ function animateSideBar() {
     }
 }
 
+// Activates all buttons with their respective ID's and event delay.
 function activateButtons() {
     siteButtons.forEach((i) => {
         let element = document.getElementById(i.id);
@@ -86,8 +85,8 @@ function activateButtons() {
         }
     })
 }
-// NEW ANIMATION FRAMEWORK FOR 2.10
 
+// Observes all objects that has the 'animatable' class name.
 function observeAll() {
     animatableElements.forEach((i) => {
         OBSERVEROBJECT.observe(i);
