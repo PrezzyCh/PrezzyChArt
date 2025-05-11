@@ -1,3 +1,5 @@
+// JS file to manage the index announcement slider.
+// Created by Prezzy Ch.
 
 // CONSTANTS
 const SCROLLTIME = 10000;

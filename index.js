@@ -1,5 +1,6 @@
 // Master JS file for decorative elements
 // Created by Prezzy Ch.
+
 // globals
 let siteButtons = [
     {id: "navbaraboutme", link: "aboutme.html"}, {id: "navbarhome", link: "index.html"}, {id: "navbargallery", link: "gallery.html"}, {id: "navbarcommissions", link: "commissions.html"},
@@ -8,7 +9,6 @@ let siteButtons = [
     {id: "sidebarhome", link: "index.html"}, {id: "sidebaraboutme", link: "aboutme.html"}, {id: "sidebargallery", link: "gallery.html"}, {id: "sidebarcommissions", link: "commissions.html"},
     {id: "tosbutton", link: "tos.html"}
 ]
-
 let animatableElements;
 
 const OBSERVEROBJECT = new IntersectionObserver((entries) => {

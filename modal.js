@@ -1,7 +1,18 @@
+// JS file to manage modal popupps when an element has the galleryimages class.
+// Created by Prezzy Ch.
 
+// globals
+let modalElements;
+let modal;
+let modalimage;
+let modalheader;
 
 
 window.addEventListener('load' , function() {
+    modalElements = this.document.getElementsByClassName("galleryimages");
+    modal = this.document.getElementById("gallerymodal");
+    modalimage = this.document.getElementById("modalimage");
+    modalheader = this.document.getElementById("modalheader");
     imgButtonInitialization();
     modalButtonInitialization();
 });
@@ -13,13 +24,8 @@ window.addEventListener('load' , function() {
 // Initializes all of the image buttons and when the image is clicked, the modal and the image will be loaded
 // along with the alt text.
 function imgButtonInitialization() {
-    let elements = document.getElementsByClassName("galleryimages");
-    let modal = document.getElementById("gallerymodal");
-    let modalimage = document.getElementById("modalimage");
-    let modalheader = document.getElementById("modalheader");
-
-    for (let i = 0; i < elements.length; i++) { // For each element, run through their on click.
-        let item = elements[i];
+    for (let i = 0; i < modalElements.length; i++) { // For each element, run through their on click.
+        let item = modalElements[i];
         item.onclick = function() {
             modal.className = "activemodal";
             if (modalheader != null) { // Certain elements may not have header
