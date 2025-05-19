@@ -290,6 +290,15 @@ li > p {
     height: fit-content;
 }
 
+#notice {
+    background-color: darkorange;
+    min-height: fit-content;
+}
+
+#notice > p {
+    margin: 20px;
+}
+
 /*============== subsections ==============*/
 
 

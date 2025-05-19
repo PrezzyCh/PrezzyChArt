@@ -347,11 +347,8 @@
 }
 
 /*============== gallery ==============*/
-#gallerycontainer {
-    clip-path: fill-box;
-    width: 100%;
-    height: fit-content;
-    border-radius: inherit;
+#gallery-container {
+    flex-direction: column;
 }
 
 #galleryheader {
@@ -377,10 +374,10 @@
     flex-direction: column;
     margin: 0;
     padding-bottom: 20px;
-
     background-image: url("img/websiteimages/images/GalleryPreview.webp");
     background-size: cover;
-    background-position-x: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 #galleryparagraph {
