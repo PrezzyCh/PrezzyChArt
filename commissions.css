@@ -9,7 +9,8 @@
 /*===============================================*/
 
 #willdrawdiv,
-#willnotdrawdiv {
+#willnotdrawdiv,
+#notice {
     display: flex;
 }
 
@@ -78,6 +79,17 @@ li > p {
         width: fit-content !important;
     }
 
+    .subsectionheader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px !important;
+    }
+
+    .subsectionh3 {
+        text-align: center;
+    }
+
     .subarticle {
         width: 100% !important;
     }
@@ -93,6 +105,12 @@ li > p {
 
     .subarticle > ul {
         margin-top: 20px;
+    }
+    
+    #notice {
+        flex-direction: column !important;
+        align-items: center;
+        padding-top: 20px;
     }
 
 }
@@ -293,10 +311,18 @@ li > p {
 #notice {
     background-color: darkorange;
     min-height: fit-content;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #notice > p {
+    width: 80%;
     margin: 20px;
+}
+
+#noticeimage {
+    width: max(80px, 10%);
+    object-fit: contain;
 }
 
 /*============== subsections ==============*/

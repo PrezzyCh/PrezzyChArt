@@ -784,11 +784,6 @@ footer {
 
 /*==============Title==============*/
 
-#titlecontainer-index {
-    justify-content: flex-start;
-    min-height: 700px;
-}
-
 #titlecontainer { /*Made for all other sections ! index*/
     justify-content: flex-end;
     min-height: 500px;
@@ -808,17 +803,13 @@ footer {
     position: fixed;
 }
 
-#titleh1-index {
-    margin-bottom: 0;
-    margin-top: 0;
-    background-image: linear-gradient(90deg, rgb(255, 255, 255), rgb(67, 86, 135));
-    color: transparent;
-    background-clip: text;
-} 
-
 #titleh1 { /*for all other h1's ! index*/
     font-size: 100px;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(90deg, rgb(255, 255, 255), rgb(67, 86, 135));
 }
+
 #main-title-gradient {
     background-image: linear-gradient(#07133000, #071330);
     width: 100%;
