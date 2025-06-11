@@ -792,7 +792,7 @@ footer {
 #titleframegradient {
     height: 100%;
 	width: min(450px, 40%);
-    background-image: linear-gradient(-90deg, #0C4160 50%, #03080c00);
+    background-image: linear-gradient(-90deg, #0C4160 10%, #03080c00);
     position: fixed;
     z-index: -1;
 }
