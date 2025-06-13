@@ -85,6 +85,7 @@ function sliderProtocols(index) {
 //  elementToSlide (element)- The element to slide to
 //  elementToSlideIndex (num)- The element to slide to index. 
 function initiateSlide(elementToSlideIndex) {
+    console.log("active");
     sliderProtocols(elementToSlideIndex);
     currIndex = elementToSlideIndex;
 }
