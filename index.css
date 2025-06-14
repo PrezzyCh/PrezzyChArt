@@ -91,12 +91,6 @@
     transition: border-radius 0.5s, background-size 0.5s;
 }
 
-.transitionlock {
-    width: fit-content;
-    height: 100px;
-    align-items: center;
-}
-
 .slideshowelement {
     justify-items: end;
     min-width: 100%;

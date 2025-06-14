@@ -28,7 +28,8 @@ ul,
 li,
 footer, 
 .footer-container,
-.footerlinks-container {
+.footerlinks-container,
+#footeremail {
     display: flex;
 }
 
@@ -68,7 +69,7 @@ a, button, #sidepanelbutton{
 }
 
 a:active, a:hover, button:active, button:hover {
-    background-color: aliceblue;
+    background-color: aliceblue !important;
     transition: color 0.5s, background-color 0.5s, font-size 0.5s;
     transition-timing-function: ease-out;
     color: #3c4955;
@@ -481,6 +482,12 @@ footer {
     height: 10px;
 }
 
+.transitionlock {
+    width: fit-content;
+    height: 100px;
+    align-items: center;
+}
+
 .decorlines {
     background-color: #FFFFFF;
     border-radius: 10%;
@@ -633,7 +640,12 @@ footer {
 .footerinfo-container {
     width: fit-content;
     height: 50%;
-    align-content: center;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.footerinfo-container > p {
+    text-align: center;
 }
 
 .gallerylist {
@@ -902,5 +914,15 @@ footer {
 
 #footerinfos > .linedivider {
     width: 20%;
+}
+
+#footeremail {
+    padding: 10px;
+    background-color: #395d77;
+}
+
+#footeremail > img {
+    height: 30px;
+    margin-right: 10px;
 }
 
