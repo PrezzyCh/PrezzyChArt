@@ -3,10 +3,10 @@
 
 // globals
 let siteButtons = [
-    {id: "navbaraboutme", link: "aboutme"}, {id: "navbarhome", link: "prezzych.com"}, {id: "navbargallery", link: "gallery"}, {id: "navbarcommissions", link: "commissions"},
-    {id: "footerhome", link: "prezzych.com"}, {id: "footeraboutme", link: "aboutme"}, {id: "footergallery", link: "gallery"},
+    {id: "navbaraboutme", link: "aboutme"}, {id: "navbarhome", link: "index"}, {id: "navbargallery", link: "gallery"}, {id: "navbarcommissions", link: "commissions"},
+    {id: "footerhome", link: "index"}, {id: "footeraboutme", link: "aboutme"}, {id: "footergallery", link: "gallery"},
     {id: "footercommissions", link: "commissions"}, {id: "footertos", link: "tos"} ,{id: "introductionbutton", link: "aboutme"}, {id: "gallerybutton", link: "gallery"}, {id: "commissionbutton", link: "commissions"},
-    {id: "sidebarhome", link: "prezzych.com"}, {id: "sidebaraboutme", link: "aboutme"}, {id: "sidebargallery", link: "gallery"}, {id: "sidebarcommissions", link: "commissions"},
+    {id: "sidebarhome", link: "index"}, {id: "sidebaraboutme", link: "aboutme"}, {id: "sidebargallery", link: "gallery"}, {id: "sidebarcommissions", link: "commissions"},
     {id: "tosbutton", link: "tos"}
 ]
 let animatableElements;
