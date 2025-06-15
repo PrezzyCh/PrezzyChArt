@@ -1,0 +1,370 @@
+/*
+    CSS for the commissions.html file.
+
+    Created by Prezzy Ch.
+*/
+
+/*===============================================*/
+/*------------------GENERAL TAGS-----------------*/
+/*===============================================*/
+
+#willdrawdiv,
+#willnotdrawdiv,
+#notice {
+    display: flex;
+}
+
+h4 {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+li {
+    align-items: center;
+}
+
+li > p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*============== MODULAR VIEW - aboutme ==============*/
+
+@media screen and (max-width: 900px) {
+    #title > h1 { /*Override*/
+        text-align: center;
+        font-size: 80px !important;
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+    
+    .title-container {
+        justify-content: center !important;
+    }
+    #title {
+        align-items: center !important;
+        margin-right: 40px !important; 
+    }
+
+    .gallerylist {
+        justify-content: center !important;
+    }
+
+    #title > h1 {
+        font-size: 60px !important;
+    }
+
+    .sectionheader {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 30px;
+    }
+
+    .contentcontainer, .contentarticlecontainer {
+        align-items: center !important;
+    }
+
+    #commissioninfodetails {
+        flex-direction: column !important;
+    }
+
+    #dividerdetails {
+        width: 50% !important;
+        height: 5px !important;
+    }
+
+    .contentarticlecontainer > a {
+        width: fit-content !important;
+    }
+
+    .subsectionheader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px !important;
+    }
+
+    .subsectionh3 {
+        text-align: center;
+    }
+
+    .subarticle {
+        width: 100% !important;
+    }
+
+    .subarticle > h3 {
+        text-align: center;
+    }
+
+    .subarticle > ul > li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .subarticle > ul {
+        margin-top: 20px;
+    }
+    
+    #notice {
+        flex-direction: column !important;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    #title > h1 {
+        text-align: center;
+        font-size: 70px !important; 
+    }
+
+    #title > h1 {
+        font-size: 40px !important;
+    }
+
+    .gallerylistelement {
+        animation-delay: 0s !important;
+    }
+}
+
+/*============== aboutme specific animations ==============*/
+
+/*===============================================*/
+/*--------------------CLASSES--------------------*/
+/*===============================================*/
+
+.mainbuttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+    min-width: 200px;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.mainbuttons:hover,
+.mainbuttons:active {
+    font-size: 21px;
+}
+
+.transitionlock {
+    height: 90px;
+}
+
+.subarticle {
+    width: 50%;
+}
+
+.subcontainer {
+    height: fit-content;
+    width: 100%;
+    background-color: #395D77;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height: 200px;
+    height: fit-content;
+    border-radius: 30px;
+    background-size: cover;
+}
+
+.gallerylist {
+    justify-content: flex-start;
+}
+
+.subsectionheader {
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.subsection-linedivider {
+    height: 5px;
+    background-color: #FFFFFF;
+}
+
+.subsectionh3 {
+    margin: 0;
+    text-shadow: 5px 5px #31465b;
+}
+.subsectionarticlecontainer {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.gallerylistelement {
+    opacity: 0%;
+}
+
+.gallerylistelement > img {
+    width: 100%;
+}
+
+.gallerylistelement:nth-child(1) {
+    animation-delay: 0s;
+}
+.gallerylistelement:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.gallerylistelement:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.gallerylistelement:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+/*===============================================*/
+/*----------------------IDs----------------------*/
+/*===============================================*/
+
+/*============== title ==============*/
+
+#title {
+    align-items: flex-end;
+    margin-right: 5%;
+}
+
+#titleimage{
+    background-image: url("img/websiteimages/images/Planetfall.webp");
+    animation-name: titleimage-in;
+    background-position-y: top;
+}
+
+#dividertitle {
+    margin-top: 10px;
+    width: 100px;
+    background-image: linear-gradient(90deg, rgb(255, 255, 255), rgb(67, 86, 135));
+}
+
+
+/*============== Commissions panel ==============*/
+
+#commissioninfo-container {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #31465B;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: url("img/websiteimages/decorations/decor1.webp");
+}
+
+#commissioninfocontentarticlecontainer, #experimentalcontentarticlecontainer {
+    max-width: 100%;
+    margin-bottom: 0px;
+    align-items: flex-start;
+}
+
+#experimentalcontentarticlecontainer {
+    margin-bottom: 50px;
+}
+
+#commissioninfoheader {
+    position: relative;
+    right: 100px;
+}
+
+#commissioninfoh2 {
+    text-shadow: 5px 5px #395d77;
+}
+
+
+#headerdividercommissioninfo{
+    box-shadow: 5px 5px #395d77;
+}
+
+#dividercommissioninfo {
+    width: 30%;
+}
+#commissioninfocontentparagraph-2 > a {
+    text-decoration: underline;
+}
+
+#commissioninfodetails{
+    margin-top: 30px;
+    max-width: 100%;
+    margin-bottom: 0px;
+    width: calc(100% - 60px * 2);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#willdrawdiv, #willnotdrawdiv {
+    flex-direction: column;
+}
+
+#willdrawdiv > h3, #willnotdrawdiv > h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#dividerdetails {
+    align-self: center;
+    width: 5px;
+    height: 300px;
+    margin: 20px;
+}
+
+/*============== Commissions prices ==============*/
+
+#prices-container {
+    background-image: linear-gradient(180deg, #31465B 20%, #00000021);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    flex-direction: column;
+    height: fit-content;
+}
+
+#notice {
+    background-color: darkorange;
+    min-height: fit-content;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#notice > p {
+    width: 80%;
+    margin: 20px;
+}
+
+#noticeimage {
+    width: max(80px, 10%);
+    object-fit: contain;
+}
+
+/*============== subsections ==============*/
+
+
+#pricesh2{
+    text-shadow: 0px 5px #395d77;
+    text-align: center;
+}
+
+#headerdividerprices {
+    box-shadow: 0px 5px #395d77;
+}
+
+*[id|= "subdivider"] {
+    width: 30%;
+    box-shadow: 5px 5px #31465b;
+}
+
+#subcontainer-1 {
+    background-image: url("img/websiteimages/decorations/decor3.webp");
+}
+
+#subcontainer-2 {
+    background-image: url("img/websiteimages/decorations/decor4.webp");
+}
+
+#subcontainer-3 {
+    background-image: url("img/websiteimages/decorations/decor5.webp");
+}
+
+#subcontainer-4{
+    background-image: url("img/websiteimages/decorations/decor6.webp");
+}
+
+#subcontainer-5 {
+    background-image: url("img/websiteimages/decorations/decor7.webp");
+}

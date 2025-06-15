@@ -1,0 +1,459 @@
+<!-- 
+    Website by PrezzyCh
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="art, prezzy, prezzych, digitalart, digital art">
+        <meta name="author" content="PrezzyCh">
+        <meta name="description" content="Commission info">
+        <title> Commissions </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/websiteimages/symbols/PrezzyChlogodark.png">
+
+        <script src="modal.js"></script>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="commissions.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="loadingscreen" id="loading"></div> 
+
+        <div class="inactivesidebar" id="sidebar">
+            <section class="inactivebar" id="sidebarcontainer">
+                <img id="prezzychlogosidebar" src="img/websiteimages/symbols/PrezzyChlogo.webp" alt="Prezzych logo">
+                <section id="sidebarbuttoncontainer">
+                    <a class="sidebarlinks" id="sidebarhome" href="prezzych.com"> Home </a>
+                    <div class="linedivider"></div>
+                    <a class="sidebarlinks" id="sidebaraboutme" href="prezzych.com/aboutme"> AboutMe </a>
+                    <div class="linedivider"></div>
+                    <a class="sidebarlinks" id="sidebargallery" href="prezzych.com/gallery"> Gallery </a>
+                    <div class="linedivider"></div>
+                    <a class="sidebarlinks" id="sidebarcommissions" href="prezzych.com/commissions"> Commissions </a>
+                </section>
+                <section id="sidebartextcontainer">
+                    <p> Made by Prezzy, with ♥️</p>
+                    <div class="linedivider"></div>
+                    <p>© PrezzyCh 2024. All rights reserved. </p>
+                </section>
+            </section>
+            <div id="sidepanelclosebutton"></div>
+        </div>
+        
+        <div class="inactivemodal" id="gallerymodal">
+            <div id="modalcontainer">
+                <section id="modalimagecontainer">
+                    <img id="modalimage" src="img/galleryimages/placeholder.webp" loading="lazy" alt="image frame">
+                </section>
+            </div>
+            <button type="button" id="modalclosebutton"> X </button>
+        </div>
+        <header>
+            <section id="header-container">
+                <img id="prezzychlogo" src="img/websiteimages/symbols/PrezzyChlogo.webp" alt="Prezzych logo">
+                <button type="button" id="sidepanelbutton"></button>
+                <nav id="navbar">
+                    <a class="navbarlinks" id="navbarhome" href="prezzych.com"> Home </a>
+                    <div class="dividerdot"></div>
+                    <a class="navbarlinks" id="navbaraboutme" href="prezzych.com/aboutme"> AboutMe </a>
+                    <div class="dividerdot"></div>
+                    <a class="navbarlinks" id="navbargallery" href="prezzych.com/gallery"> Gallery </a>
+                    <div class="dividerdot"></div>
+                    <a class="navbarlinks" id="navbarcommissions" href="prezzych.com/commissions"> Commissions </a>
+                </nav>
+            </section>
+        </header>
+
+        <section class="title-container" id="titlecontainer">
+            <div class="titleimage animatable" id="titleimage"></div>
+            <div id="titleframegradient"></div>
+            <figure id="title">
+                <h1 class="animatable aright" id="titleh1"> Commissions </h1>
+                <div class="linedivider animatable aright" id="dividertitle"></div>
+            </figure>
+            <div id="main-title-gradient"></div>
+        </section>
+
+        <main>
+            <figure class="maindecor-container"> 
+                <div class="decorlines"></div>
+                <h2 class="decorsignature">◊  (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧  ◊</h2>
+                <div class="decorlines"></div>
+            </figure>
+
+            <section id="mainsection">
+                <section class="contentcontainer animatable abottom" id="commissioninfo-container">
+                    <div class="sectionheader" id="commissioninfoheader">
+                        <h2 class="sectionh2 animatable aleft" id="commissioninfoh2">Commission Info</h2>
+                        <div class="linedivider animatable aleft" id="headerdividercommissioninfo"></div>
+                    </div>
+                    <article class="contentarticlecontainer" id="commissioninfocontentarticlecontainer">
+                        <p class="sectionparagraph animatable aleft" id="commissioninfocontentparagraph"> 
+                            My commission status and availability will be announced on my socials and orders may be placed via commission form. 
+                            <br>
+                            Be sure to read my TOS before making an order!
+                        </p>
+                        <div class="transitionlock">
+                            <a class="mainbuttons animatable aleft" id="tosbutton" href="prezzych.com/tos"> Terms of Service </a>
+                        </div>
+                        <div class="transitionlock">
+                            <a class="mainbuttons animatable aleft" id="queuebutton" href="https://trello.com/b/EsGU6bmU/prezzych-public-queue"> Commission Queue </a>
+                        </div>
+                        <div class="transitionlock">
+                            <a class="mainbuttons animatable aleft" id="formbutton" href="https://forms.gle/dssjqeb4Zwqic9Kt8"> Commission Form </a>
+                        </div>
+
+                        <p class="sectionparagraph animatable aleft" id="commissioninfocontentparagraph-2">
+                            If you have any questions or inquiries, please contact me at
+                            <a href="mailto:prezzych@gmail.com">prezzych@gmail.com</a>
+                        </p>
+                        <div class="linedivider animatable aleft" id="dividercommissioninfo"></div>
+                    </article>
+                    <section class="contentarticlecontainer" id="commissioninfodetails">
+                        <div class="subarticle" id="willdrawdiv">
+                            <h3 class="animatable aleft" id="willdrawh3">What I will draw</h3>
+                            <ul class="textlist">
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Anthro</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Feral</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Felines</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Canines</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Aves (or ave like)</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Mild blood or gore</p>
+                                </li>
+                            </ul>
+                        </div> 
+                        <div class="linedivider animatable abottom" id="dividerdetails"></div>
+                        <div class="subarticle" id="willnotdrawdiv">
+                            <h3 class="animatable aright" id="willnotdrawh3">What I will not draw</h3>
+                            <ul class="textlist">
+                                <li class="list animatable aright">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">NSFW</p>
+                                </li>
+                                <li class="list animatable aright">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Suggestive</p>
+                                </li>
+                                <li class="list animatable aright">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Offensive content</p>
+                                </li>
+                                <li class="list animatable aright">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Excessive blood and gore</p>
+                                </li>
+                                <li class="list animatable aright">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Complex Mechs</p>
+                                </li>
+                            </ul>
+                        </div> 
+                    </section>
+                    <article class="contentarticlecontainer" id="experimentalcontentarticlecontainer">
+                        <p class="sectionparagraph animatable aleft" id="commissioninfocontentparagraph-3"> 
+                            If you have any ideas outside of what I have provided, please mark the commission as experimental on the form 
+                            and put the details of your commission in the form for me to review!
+                            <br>
+                            <em>Filling this portion out does not guarantee acceptance</em>
+                        </p>
+                    </article>
+                </section>
+                <section class="contentcontainer animatable abottom" id="prices-container">
+                    <div class="centerheader" id="pricesdivider">
+                        <h2 class="sectionh2 animatable atop" id="pricesh2">Commission Prices</h2>
+                        <div class="linedivider animatable atop" id="headerdividerprices"></div>
+                    </div>
+
+                    <section class="subcontainer animatable abottom" id="notice">
+                        <img id="noticeimage" src="img/websiteimages/symbols/Notification.webp">
+                        <p>
+                            <strong>Note:</strong> Some samples are from my older works and I may not draw in that style anymore. Please take a peek at my latest
+                            works on my socials or reference a previous work I have done when filling out the commission form. Thx! ♥️
+                        </p>
+                    </section>
+
+                    <section class="subcontainer animatable abottom" id="subcontainer-1">
+                        <div class="subsectionheader" id="subsectionheader-1">
+                            <h3 class="subsectionh3 animatable aleft" id="subsectionh3-1">Feral Full Body - Dotted Paper</h3>
+                            <h4 class="subsectionh4 animatable aleft" id="subsectionh4-1">$10 USD </h4>
+                            <div class="subsection-linedivider animatable aleft" id="subdivider-1"></div>
+                        </div>
+                        <section class="subsectionarticlecontainer">
+                            <ul class="gallerylist" id="gallerylist-1">
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/Commissions gallery/compressed/Cafe Birb.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/Commissions gallery/compressed/Dreams.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/Commissions gallery/compressed/Heart of a Falcon.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/Commissions gallery/compressed/Little Engineer.webp" loading="lazy">
+                                </li>
+                            </ul>
+                            <ul class="textlist">
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Clothing is allowed!</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Side objects +5USD per object, max of 3.</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Small background and mini decorations.</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Cell shading only.</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Feral only</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+
+                    <section class="subcontainer animatable abottom" id="subcontainer-2">
+                        <div class="subsectionheader" id="subsectionheader-2">
+                            <h3 class="subsectionh3 animatable aleft" id="subsectionh3-2">Anthro Half Body / Portrait</h3>
+                            <h4 class="subsectionh4 animatable aleft" id="subsectionh4-2">$15 USD </h4>
+                            <div class="subsection-linedivider animatable aleft" id="subdivider-2"></div>
+                        </div>
+                        <section class="subsectionarticlecontainer">
+                            <ul class="gallerylist" id="gallerylist-2">
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Samurai.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Aviator2025.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/creation.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Navy.webp" loading="lazy">
+                                </li>
+                            </ul>
+                            <ul class="textlist">
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Waist up or thigh up.</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Fully shaded and rendered.</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Full or partial background +$10USD.</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Anthro only</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+
+                    <section class="subcontainer animatable abottom" id="subcontainer-3">
+                        <div class="subsectionheader" id="subsectionheader-3">
+                            <h3 class="subsectionh3 animatable aleft" id="subsectionh3-3">Full Body</h3>
+                            <h4 class="subsectionh4 animatable aleft" id="subsectionh4-3">$15 USD </h4>
+                            <div class="subsection-linedivider animatable aleft" id="subdivider-3"></div>
+                        </div>
+                        <section class="subsectionarticlecontainer">
+                            <ul class="gallerylist" id="gallerylist-3">
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/SOL.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Autumn Leaves.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2024/compressed/Guardian.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2024/compressed/Autumn Quarter.webp" loading="lazy">
+                                </li>
+                            </ul>
+                            <ul class="textlist">
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Fully shaded and rendered</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Full or partial background +$10USD.</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Anthro and Feral!</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+
+                    <section class="subcontainer animatable abottom" id="subcontainer-4">
+                        <div class="subsectionheader" id="subsectionheader-4">
+                            <h3 class="subsectionh3 animatable aleft" id="subsectionh3-4">Headshot</h3>
+                            <h4 class="subsectionh4 animatable aleft" id="subsectionh4-4">$10 USD </h4>
+                            <div class="subsection-linedivider animatable aleft" id="subdivider-4"></div>
+                        </div>
+                        <section class="subsectionarticlecontainer">
+                            <ul class="gallerylist" id="gallerylist-4">
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Angy cat.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Cyan.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2024/compressed/Royalty.webp" loading="lazy">
+                                </li>
+                            </ul>
+                            <ul class="textlist">
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Torso and up.</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Fully shaded and rendered.</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Full or partial background +$10USD.</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Anthro and Feral!</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+
+                    <section class="subcontainer animatable abottom" id="subcontainer-5">
+                        <div class="subsectionheader" id="subsectionheader-5">
+                            <h3 class="subsectionh3 animatable aleft" id="subsectionh3-5">Scene / Illustration</h3>
+                            <h4 class="subsectionh4 animatable aleft" id="subsectionh4-5">$20 USD </h4>
+                            <div class="subsection-linedivider animatable aleft" id="subdivider-5"></div>
+                        </div>
+                        <section class="subsectionarticlecontainer">
+                            <ul class="gallerylist" id="gallerylist-5">
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2024/compressed/TwilightMountains.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2024/compressed/Planetfall.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2024/compressed/New Percillia.webp" loading="lazy">
+                                </li>
+                                <li class="gallerylistelement animatable abottom">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/World Between Worlds.webp" loading="lazy">
+                                </li>
+                            </ul>
+                            <ul class="textlist">
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Painted background</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Fully shaded and rendered</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">+$10USD per extra character, max of 4</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Extremely complex artworks may take time!</p>
+                                </li>
+                                <li class="list animatable aleft">
+                                    <div class="dividerdot"></div>
+                                    <p class="sectionparagraph">Anthro and Feral!</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+
+                </section>
+            </section>
+
+
+            <figure class="maindecor-container"> 
+                <div class="decorlines"></div>
+                <h2 class="decorsignature"> ✧ </h2>
+                <div class="decorlines"></div>
+            </figure>
+
+            <footer>
+                <section class="footer-container">
+                    <article class="footerlinks-container">
+                        <h3 class="footerheaders"> Socials </h3>
+                        <div class="dividerdot"></div>
+                        <a class="footer-a" href="https://www.instagram.com/prezzych/"> Instagram </a>
+                        <a class="footer-a" href="https://www.deviantart.com/prezzych"> Deviantart </a>
+                        <a class="footer-a" href="https://cara.app/prezzych/all"> Cara </a>
+                        <a class="footer-a" href="https://bsky.app/profile/prezzych.bsky.social"> BlueSky </a>
+                    </article>
+                    <article class="footerlinks-container">
+                        <h3 class="footerheaders"> Explore </h3>
+                        <div class="dividerdot"></div>
+                        <a class="footer-a" id="footerhome" href="prezzych.com"> Home </a>
+                        <a class="footer-a" id="footeraboutme" href="prezzych.com/aboutme"> About Me </a>
+                        <a class="footer-a" id="footergallery" href="prezzych.com/gallery"> Gallery </a>
+                    </article>
+                    <article class="footerlinks-container">
+                        <h3 class="footerheaders"> Other </h3>
+                        <div class="dividerdot"></div>
+                        <a class="footer-a" id="footercommissions"> Commissions </a>
+                        <a class="footer-a" id="footertos"> Terms of Service </a>
+                    </article>
+                </section>
+                <section class="footer-container" id="footerinfos">
+                    <article class="footerinfo-container">
+                        <p>If you have questions, feel free to contact me!</p>
+                        <a id="footeremail" href="mailto:prezzych@gmail.com">
+                            <img src="img/websiteimages/symbols/mail.webp" loading="lazy" alt="Instagram logo">
+                            prezzych@gmail.com
+                        </a>
+                    </article>
+                    <div class="linedivider"></div>
+                    <article class="footerinfo-container">
+                        <p>Made by Prezzy, with ♥️ - © PrezzyCh 2024. All rights reserved. </p>
+                    </article>
+                </section>
+            </footer>
+        </main>
+    </body>
+</html>

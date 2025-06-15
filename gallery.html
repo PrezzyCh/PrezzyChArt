@@ -14,6 +14,7 @@
         <link rel="icon" href="img/websiteimages/symbols/PrezzyChlogodark.png">
 
         <script src="gallery.js"></script>
+        <script src="modal.js"></script>
         <script src="index.js"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="gallery.css">
@@ -23,11 +24,29 @@
     </head>
 
     <body>
-        <div class="loadingscreen" id="loading">
-            <div id="loadingcontainer">
-                <h1 id="loadingtext"> Loading </h1>
-            </div>
-        </div> 
+        <div class="loadingscreen" id="loading"></div> 
+
+        <div class="inactivesidebar" id="sidebar">
+            <section class="inactivebar" id="sidebarcontainer">
+                <img id="prezzychlogosidebar" src="img/websiteimages/symbols/PrezzyChlogo.webp" alt="Prezzych logo">
+                <section id="sidebarbuttoncontainer">
+                    <a class="sidebarlinks" id="sidebarhome" href="prezzych.com"> Home </a>
+                    <div class="linedivider"></div>
+                    <a class="sidebarlinks" id="sidebaraboutme" href="prezzych.com/aboutme"> AboutMe </a>
+                    <div class="linedivider"></div>
+                    <a class="sidebarlinks" id="sidebargallery" href="prezzych.com/gallery"> Gallery </a>
+                    <div class="linedivider"></div>
+                    <a class="sidebarlinks" id="sidebarcommissions" href="prezzych.com/commissions"> Commissions </a>
+                </section>
+                <section id="sidebartextcontainer">
+                    <p> Made by Prezzy, with ♥️</p>
+                    <div class="linedivider"></div>
+                    <p>© PrezzyCh 2024. All rights reserved. </p>
+                </section>
+            </section>
+            <div id="sidepanelclosebutton"></div>
+        </div>
+
         <div class="inactivemodal" id="gallerymodal">
             <div id="modalcontainer">
                 <section id="modalparagraphcontainer">
@@ -69,22 +88,25 @@
         <header>
             <section id="header-container">
                 <img id="prezzychlogo" src="img/websiteimages/symbols/PrezzyChlogo.webp" alt="Prezzych logo">
+                <button type="button" id="sidepanelbutton"></button>
                 <nav id="navbar">
-                    <a class="navbarlinks" id="navbarhome" href="index.html"> Home </a>
+                    <a class="navbarlinks" id="navbarhome" href="prezzych.com"> Home </a>
                     <div class="dividerdot"></div>
-                    <a class="navbarlinks" id="navbaraboutme" href="aboutme.html"> AboutMe </a>
+                    <a class="navbarlinks" id="navbaraboutme" href="prezzych.com/aboutme"> AboutMe </a>
                     <div class="dividerdot"></div>
-                    <a class="navbarlinks" id="navbargallery"> Gallery </a>
+                    <a class="navbarlinks" id="navbargallery" href="prezzych.com/gallery"> Gallery </a>
+                    <div class="dividerdot"></div>
+                    <a class="navbarlinks" id="navbarcommissions" href="prezzych.com/commissions"> Commissions </a>
                 </nav>
             </section>
         </header>
         
-        <section class="title-container" id="titlecontainer-end">
-            <div class="titleimage" id="titleimage-aboutme"></div>
+        <section class="title-container" id="titlecontainer">
+            <div class="titleimage animatable" id="titleimage"></div>
             <div id="titleframegradient"></div>
             <figure id="title">
-                <h1 id="titleh1"> Gallery </h1>
-                <div class="linedivider" id="dividertitle"></div>
+                <h1 class="animatable aright" id="titleh1"> Gallery </h1>
+                <div class="linedivider animatable aright" id="dividertitle"></div>
             </figure>
             <div id="main-title-gradient"></div>
         </section>
@@ -97,14 +119,35 @@
             </figure>
 
             <section id="mainsection">
-                <section class="contentcontainer" id="gallerycontainer">
+                <section class="contentcontainer animatable abottom" id="gallery-container">
                     <div class="unhidden" id="gallerycontainerinner">
                         <div class="sectionheader" id="galleryheader">
-                            <h2 class="sectionh3" id="galleryh2">2024</h2>
-                            <div class="linedivider" id="headerdividergallery"></div>
+                            <h2 class="sectionh2 animatable aleft" id="galleryh2">2024</h2>
+                            <div class="linedivider animatable aleft" id="headerdividergallery"></div>
                         </div>
                         <div id="gallery">
                             <ul class="gallerylist" id="list2025">
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/World Between Worlds.webp" loading="lazy" alt="World Between Worlds">
+                                </li>
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Navy.webp" loading="lazy" alt="Navy">
+                                </li>
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Aviator2025.webp" loading="lazy" alt="Aviator">
+                                </li>
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/SOL.webp" loading="lazy" alt="SOL">
+                                </li>
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Angy cat.webp" loading="lazy" alt="Angy cat">
+                                </li>
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Cyan.webp" loading="lazy" alt="Cyan">
+                                </li>
+                                <li class="gallerylistelement">
+                                    <img class="galleryimages" src="img/galleryimages/2025/compressed/Autumn Leaves.webp" loading="lazy" alt="Autumn Leaves">
+                                </li>
                                 <li class="gallerylistelement">
                                     <img class="galleryimages" src="img/galleryimages/2025/compressed/Samurai.webp" loading="lazy" alt="Samurai">
                                 </li>
@@ -175,8 +218,8 @@
                         <div id="gallerybuttons">
                             <button class="active" id="buttonleft"> < </button>
                             <ul id="gallerybuttonslist">
-                                <li><button type="button" class="active" id="button2025" value="2025">2025</button></li>
-                                <li><button type="button" class="active" id="button2024" value="2024">2024</button></li>
+                                <li><button type="button" class="gallerybutton active" id="button2025" value="0">2025</button></li>
+                                <li><button type="button" class="gallerybutton active" id="button2024" value="1">2024</button></li>
                             </ul>
                             <button class="active" id="buttonright"> > </button>
                         </div>
@@ -203,23 +246,28 @@
                     <article class="footerlinks-container">
                         <h3 class="footerheaders"> Explore </h3>
                         <div class="dividerdot"></div>
-                        <a class="footer-a" id="footerhome" href="index.html"> Home </a>
-                        <a class="footer-a" id="footeraboutme" href="aboutme.html"> About Me </a>
-                        <a class="footer-a" id="footergallery" href="gallery.html"> Gallery </a>
+                        <a class="footer-a" id="footerhome" href="prezzych.com"> Home </a>
+                        <a class="footer-a" id="footeraboutme" href="prezzych.com/aboutme"> About Me </a>
+                        <a class="footer-a" id="footergallery" href="prezzych.com/gallery"> Gallery </a>
                     </article>
                     <article class="footerlinks-container">
                         <h3 class="footerheaders"> Other </h3>
                         <div class="dividerdot"></div>
                         <a class="footer-a" id="footercommissions"> Commissions </a>
+                        <a class="footer-a" id="footertos"> Terms of Service </a>
                     </article>
                 </section>
                 <section class="footer-container" id="footerinfos">
                     <article class="footerinfo-container">
-                        <p> Made by Prezzy, with ♥️</p>
+                        <p>If you have questions, feel free to contact me!</p>
+                        <a id="footeremail" href="mailto:prezzych@gmail.com">
+                            <img src="img/websiteimages/symbols/mail.webp" loading="lazy" alt="Instagram logo">
+                            prezzych@gmail.com
+                        </a>
                     </article>
                     <div class="linedivider"></div>
                     <article class="footerinfo-container">
-                        <p>© PrezzyCh 2024. All rights reserved. </p>
+                        <p>Made by Prezzy, with ♥️ - © PrezzyCh 2024. All rights reserved. </p>
                     </article>
                 </section>
             </footer>

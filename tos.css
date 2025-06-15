@@ -1,0 +1,187 @@
+/*
+    CSS for the tos.html file.
+
+    Created by Prezzy Ch.
+*/
+
+/*===============================================*/
+/*------------------GENERAL TAGS-----------------*/
+/*===============================================*/
+
+li {
+    align-items: center;
+}
+
+li > p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*============== MODULAR VIEW - aboutme ==============*/
+
+@media screen and (max-width: 900px) {
+    #title > h1 { /*Override*/
+        text-align: center;
+        font-size: 80px !important;
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+    
+    .title-container {
+        justify-content: center !important;
+    }
+    #title {
+        align-items: center !important;
+        margin-right: 40px !important; 
+    }
+
+    #title > h1 {
+        font-size: 60px !important;
+    }
+    .contentcontainer {
+        align-items: center !important;
+    }
+
+    .contentarticlecontainer {
+        align-items: center !important;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .sectionheader {
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 30px;
+    }
+
+    #copyrightcontentarticlecontainer > .textlist > li > .sectionparagraph {
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    #title > h1 {
+        text-align: center;
+        font-size: 70px !important; 
+    }
+
+    #title > h1 {
+        font-size: 40px !important;
+    }
+
+    .sectionh2 {
+        font-size: 10vw !important;
+    }
+
+    #copyrightcontentarticlecontainer > .textlist > li > .sectionparagraph {
+        font-size: 12px;
+    }
+}
+
+/*============== aboutme specific animations ==============*/
+
+/*===============================================*/
+/*--------------------CLASSES--------------------*/
+/*===============================================*/
+
+.contentarticlecontainer {
+    max-width: none;
+}
+
+.contentcontainer {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #31465B; 
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.sectionheader {
+    position: relative;
+    right: 100px;
+}
+
+.contentarticlecontainer {
+    align-items: start;
+}
+
+.sectionh2 {
+    text-shadow: 5px 5px #395d77;
+}
+
+[id^="headerdivider"] {
+    width: 50% !important;
+}
+
+.linedivider {
+    width: 25%;
+}
+
+/*===============================================*/
+/*----------------------IDs----------------------*/
+/*===============================================*/
+
+#header-container {
+    z-index: 2;
+}
+
+/*============== title ==============*/
+
+#titlecontainer {
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 300px;
+}
+
+#title {
+    align-items: center;
+    position: unset;
+    margin-right: 5%;
+}
+
+#title > h1 {
+    background-image: unset;
+    color: aliceblue;
+    text-align: center;
+}
+
+#titleimage {
+    background-image: url("img/websiteimages/images/Planetfall.webp");
+    background-position-y: top;
+}
+
+#dividertitle {
+    margin-top: 10px;
+    width: 50%;
+}
+
+/*============== tos panels ==============*/
+
+[id^= "headerdivider"] {
+    box-shadow: 5px 5px #395d77;
+}
+
+/*============Singular edits================*/
+
+#paymentparagraph2{
+    margin-top: 0px;
+}
+
+#copyright-container {
+    margin-bottom: 100px;
+}
+
+#ordering-container, 
+#communication-container,
+#completion-container {
+    background-image: url(img/websiteimages/decorations/decor0.webp);
+}
+
+#payment-container,
+#delivery-container,
+#copyright-container {
+    background-image: url(img/websiteimages/decorations/decor1.webp);
+}

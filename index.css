@@ -1,6 +1,5 @@
 /*
     CSS for the Index.html file.
-    THESE IDS ARE ONLY USED FOR INDEX
 
     Created by Prezzy Ch.
 */
@@ -11,26 +10,38 @@
 
 #gallerywindow,
 #commissionheader, 
-#commissionbutton, 
-#commissionbutton-animated {
+#commissionbutton,
+#slideshowtext,
+#slider, 
+#slidernav {
     display: flex;
 }
-
 /*============== MODULAR VIEW - Index ==============*/
+
+@media screen and (max-width: 1300px){
+    #galleryheader {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+}
 
 @media screen and (max-width: 820px){
     /* Header corrector for screens under 1300px */
     #title {
-        align-items: center;
-    } 
-    #titlecontainer-index {
-        justify-content: center;
-    }
-    #introduction-container,
-    #introductioncontentarticlecontainer,
-    #commissions-container,
-    #commissionscontentarticlecontainer {
         align-items: center !important;
+    } 
+    #titlecontainer {
+        justify-content: center !important;
+    }
+
+    .contentcontainer, .contentarticlecontainer {
+        align-items: center !important;
+    }
+    #slideshowtext {
+        align-self: center !important;
+        width: 80% !important;
+        margin-right: 0px !important;
     }
 }
 
@@ -39,25 +50,24 @@
     #title h2 {
         font-size: 18px;
     }
+    #announcementsheader > h2 {
+        font-size: 35px !important;
+    }
+    h3 {
+        font-size: 30px !important;
+    }
 }
 
 /*============== Index specific animations ==============*/
-#introductionh2,
-#headerdividerintroduction,
-#introductionparagraph,
-#introductionparagraph2,
-#dividerintroduction,
-#introductionbutton,
-#galleryh2,
-#headerdividergallery,
-#galleryparagraph,
-#gallerybutton,
-#commissionsh2,
-#headerdividercommissions,
-#commissionsparagraph,
-#dividercommissions,  
-#commissionbutton {
-    opacity: 0%;
+
+@keyframes titleframe-in {
+    from {
+        width: 0%;
+        opacity: 100%;
+    } to {
+        width: min(800px, 50%);
+        opacity: 100%;
+    }
 }
 
 /*===============================================*/
@@ -67,8 +77,6 @@
 .socialsbuttons {
     width: 50px;
     height: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
     background-size: cover;
     background-position: center;
     background-size: 100% !important;
@@ -82,10 +90,35 @@
     transition: border-radius 0.5s, background-size 0.5s;
 }
 
-.transitionlock {
-    width: fit-content;
-    height: 100px;
-    align-items: center;
+.slideshowelement {
+    justify-items: end;
+    min-width: 100%;
+    height: 100%;
+    background-position: min(0px, 50%), center, right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    filter: blur(2px) brightness(0.85) contrast(90%);
+}
+
+.sliderbutton {
+    width: 10px;
+    height: 10px;
+    background-color: aliceblue;
+    opacity: 40%;
+    border-radius: 100%;
+    padding: 0%;
+    margin: 5px;
+    transition: opacity 0.5s;
+}
+
+.sliderbutton:hover, .sliderbutton:active{
+    opacity: 100%;
+    transition: opacity 0.5s;
+}
+
+.sliderbuttonactive {
+    opacity: 100%;
 }
 
 /*===============================================*/
@@ -94,7 +127,6 @@
 /*============== Title ==============*/
 
 #titleframe {
-	width: min(800px, 50%);
     height: 800px;
     background-image: url("img/websiteimages/decorations/decor0.webp") , linear-gradient(75deg ,#31465B 55%, #0000 50%);
     background-size: 800px, auto;
@@ -104,25 +136,31 @@
     z-index: -1;
 }
 
-#titleh1-index, #titleh1-index-animated {
+#titlecontainer {
+    justify-content: flex-start;
+    min-height: 700px;
+}
+
+#titleframe {
+    width: 200%;
+    animation-name: titleframe-in;
+}
+
+#titleh1 {
     font-size: 150px;
-}
-#titleh1-index-animated {
-    animation-name: animation-fadeinLTR;
-    animation-duration: 1s;
+    margin-bottom: 0;
+    margin-top: 0;
+    background-image: linear-gradient(80deg, rgb(255, 255, 255), rgb(67, 86, 135) 90%);
 }
 
-#titleimage-index {
+#titleimage{
     background-image: url("img/websiteimages/images/NewPercillia.webp");
+    animation-name: titleimage-in;
 }
 
-#titlesubheadings-container, #titlesubheadings-container-animated {
+#titlesubheadings-container{
     align-items: center;
     justify-content: center;
-}
-#titlesubheadings-container-animated {
-    animation-name: animation-fadeinLTR;
-    animation-duration: 1.4s;
 }
 
 #title h2 {
@@ -130,17 +168,19 @@
     text-wrap-mode: nowrap;
 }
 
-#socials-animated {
-    display: flex;
-    animation-name: animation-fadeinLTR;
-    animation-duration: 1s;
-}
-
 /*Icon trademark belongs to their respective holders:
     Instagram, https://about.meta.com/brand/resources/instagram/instagram-brand/ 
     Deviantart, https://www.deviantart.com/about
     Cara, https://blog.cara.app/blog/faq
+    Bluesky, https://bsky.social/about/support/tos
 */
+
+#socials {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
 #socialsinsta { 
     background-image: url("img/websiteimages/symbols/Instagram.webp");
 }
@@ -167,59 +207,160 @@
     background-position: min(0px, 50%), center, right;
     background-size: auto 100%, auto , auto 130%;
     background-repeat: no-repeat;
-} 
+}
 
 #introductionheader {
     position: relative;
     right: 100px;
 }
 
-#introductionh2, #introductionh2-animated {
+#introductionh2 {
     text-shadow: 5px 5px #395d77;
 }
-#introductionh2-animated {
-    animation: animation-fadeinLTR;
-    animation-duration: 1s;
-}
 
-#headerdividerintroduction, #headerdividerintroduction-animated {
+#headerdividerintroduction {
     box-shadow: 5px 5px #395d77;
 }
-#headerdividerintroduction-animated {
-    animation: animation-fadeinLTR;
-    animation-duration: 1.2s;
-}
 
-#introductionparagraph-animated, #introductionparagraph2-animated {
-    animation: animation-fadeinLTR;
-    animation-duration: 1.5s;
-}
-
-#dividerintroduction, #dividerintroduction-animated {
+#dividerintroduction {
     width: 200px;
-}
-#dividerintroduction-animated {
-    animation: animation-fadeinLTR;
-    animation-duration: 1.3s;
 }
 
 #introductioncontentarticlecontainer {
     align-items: start;
 }
 
-#introductionbutton-animated {
-    animation: animation-fadeinLTR;
-    animation-duration: 1s;
+
+/*============== announcements ==============*/
+
+#announcements-container {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 450px;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
 }
 
+#announcementsheader {
+    width: fit-content;
+    position: relative;
+    align-items: flex-end;
+    left: 100px;
+    z-index: 5;
+}
 
+#announcementsh2 {
+    text-shadow: -5px 5px #395d77;
+}
+
+#headerdividerannouncements {
+    box-shadow: -5px 5px #395d77;
+}
+
+#announcementscontentarticlecontainer {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-width: unset;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#sliderfadepanel {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-90deg, #31465B 20%, #03080c00);
+}
+
+#slider {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+}
+
+#slidernav {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    bottom: -300px;
+    z-index: 5;
+}
+
+#slideshowtext, #slideshowtext{
+    align-self: flex-end;
+    position: absolute;
+    z-index: 2;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 120px;
+    padding-right: 10px;
+    margin-right: 40px;
+    width: 50%;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.slideshow-active {
+    animation: fadein;
+    animation-duration: 0.5s;
+}
+
+.slideshow-inactive {
+    animation: fadeout;
+    animation-duration: 0.5s;
+}
+
+#slideshowtext::-webkit-scrollbar-thumb {
+    background: aliceblue;
+}
+
+#slideshowtext > h3 {
+    text-align: end;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    text-shadow: -5px 5px #395d77;
+}
+
+#slideshowtext > .linedivider {
+    padding-top: 5px;
+    height: 0px;
+    width: 100px;
+}
+
+#slideshowtext > p {
+    margin-bottom: 0px;
+    text-align: end;
+    max-height: 150px;
+}
+
+#sliderparagraph > a {
+    text-decoration: underline;
+}
+
+/*--- Elements ---*/
+/* Im too lazy and poor to set up a backend */
+
+#slideshowelement-0 {
+    background-image: url(img/websiteimages/images/coms.jpg);
+}
+#slideshowelement-1 {
+    background-image: url(img/websiteimages/images/AF.jpg);
+    filter: blur(2px);
+}
+#slideshowelement-2 {
+    background-image: url(img/websiteimages/images/funny.webp);
+}
 
 /*============== gallery ==============*/
-#gallerycontainer {
-    clip-path: fill-box;
-    width: 100%;
-    height: fit-content;
-    border-radius: inherit;
+#gallery-container {
+    flex-direction: column;
 }
 
 #galleryheader {
@@ -230,20 +371,12 @@
     flex-direction: column;
 }
 
-#galleryh2, #galleryh2-animated {
+#galleryh2 {
     text-shadow: 0px 5px #395d77;
 }
-#galleryh2-animated {
-    animation: animation-fadeinTTB;
-    animation-duration: 1s;
-}
 
-#headerdividergallery, #headerdividergallery-animated {
+#headerdividergallery {
     box-shadow: 0px 5px #395d77;
-}
-#headerdividergallery-animated {
-    animation: animation-fadeinTTB;
-    animation-duration: 1.5s;
 }
 
 #gallerywindow {
@@ -253,97 +386,59 @@
     flex-direction: column;
     margin: 0;
     padding-bottom: 20px;
-
     background-image: url("img/websiteimages/images/GalleryPreview.webp");
     background-size: cover;
-    background-position-x: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
-#galleryparagraph, #galleryparagraph-animated {
+#galleryparagraph {
     margin-left: 10px;
     margin-right: 10px;
 }
-#galleryparagraph-animated {
-    animation: animation-fadeinTTB;
-    animation-duration: 1.3s;
-}
 
-#gallerybutton, #gallerybutton-animated {
+
+#gallerybutton {
     box-shadow: 0px 5px #395d77;
     margin-left: 50px;
     margin-right: 50px;
 }
-#gallerybutton-animated {
-    animation: animation-fadeinTTB;
-    animation-duration: 1s;
-}
 
 /*============== Commissions ==============*/
 #commissions-container {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    background-image: url(img/websiteimages/decorations/decor2.webp), linear-gradient(70deg, #31465b00 40%, #31465B 50%), url("img/websiteimages/images/Royalty.webp");
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-image: url(img/websiteimages/decorations/decor1.webp), linear-gradient(100deg, #31465B 50%, #31465b00 60%), url("img/websiteimages/images/Nightmare.webp");
     background-color: #471302; /* Fallback color */
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: column;
-    background-position: max(100%, 0px), center, left;
-    background-size: auto 100%, auto, auto 120%;
+    background-position: min(0px, 50%), center, right;
+    background-size: auto 100%, auto, auto 180%;
     background-repeat: no-repeat;
 }
 
+#commissionscontentarticlecontainer {
+    align-items: start;
+}
+
+
 #commissionsheader {
     position: relative;
-    align-items: flex-end;
-    left: 100px;
+    right: 100px;
 }
 
-#commissionsh2, #commissionsh2-animated {
-    text-shadow: -5px 5px #395d77;
-}
-#commissionsh2-animated {
-    animation: animation-fadeinRTL;
-    animation-duration: 1s;
+#commissionsh2 {
+    text-shadow: 5px 5px #395d77;
 }
 
-#headerdividercommissions, #headerdividercommissions-animated{
-    box-shadow: -5px 5px #395d77;
-}
-#headerdividercommissions-animated {
-    animation: animation-fadeinRTL;
-    animation-duration: 1.2s;
+#headerdividercommissions {
+    box-shadow: 5px 5px #395d77;
 }
 
-#commissionscontentarticlecontainer {
-    align-items: end;
-}
-
-#commissionsparagraph, #commissionsparagraph-animated {
-    text-align: right;
-}
-#commissionsparagraph-animated {
-    animation: animation-fadeinRTL;
-    animation-duration: 1.5s;
-}
-
-#dividercommissions, #dividercommissions-animated {
+#dividercommissions {
     width: 200px;
 }
-#dividercommissions-animated {
-    animation: animation-fadeinRTL;
-    animation-duration: 1.3s;
-}
 
-#commissionbutton, #commissionbutton-animated {
-    background-color: #494e53;
-    box-shadow: -5px 5px #395d77;
-    color: #6a7883;
-}
-#commissionbutton-animated {
-    animation: animation-fadeinRTL;
-    animation-duration: 1s;
-}
-
-#commissionbutton-transitionlock { /*Disabled button*/
+#commissionbutton-transitionlock {
     margin-top: 20px;
 }
-
