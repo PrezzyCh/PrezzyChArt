@@ -29,6 +29,7 @@ li,
 footer, 
 .footer-container,
 .footerlinks-container,
+.footerinfo-container,
 #footeremail {
     display: flex;
 }
@@ -640,7 +641,8 @@ footer {
 .footerinfo-container {
     width: fit-content;
     height: 50%;
-    justify-items: center;
+    align-items: center;
+    flex-direction: column;
     margin-bottom: 20px;
 }
 
@@ -884,12 +886,12 @@ footer {
 }
 
 #modalclosebutton:active, #modalclosebutton:hover {
-    background-color: rgba(240, 248, 255, 0); /*overrides*/
+    background-color: rgba(240, 248, 255, 0) !important; /*overrides*/
     text-decoration: none; /*overrides*/
 
     transition: color 0.2s, opacity 0.2s;
     opacity: 100%;
-    color: aliceblue;
+    color: aliceblue !important;
 }
 
 #sidepanelbutton:active, #sidepanelbutton:hover {
@@ -919,6 +921,7 @@ footer {
 #footeremail {
     padding: 10px;
     background-color: #395d77;
+    max-width: 258px;
 }
 
 #footeremail > img {

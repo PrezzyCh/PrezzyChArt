@@ -3,11 +3,11 @@
 
 // globals
 let siteButtons = [
-    {id: "navbaraboutme", link: "aboutme.html"}, {id: "navbarhome", link: "index.html"}, {id: "navbargallery", link: "gallery.html"}, {id: "navbarcommissions", link: "commissions.html"},
-    {id: "footerhome", link: "index.html"}, {id: "footeraboutme", link: "aboutme.html"}, {id: "footergallery", link: "gallery.html"},
-    {id: "footercommissions", link: "commissions.html"}, {id: "footertos", link: "tos.html"} ,{id: "introductionbutton", link: "aboutme.html"}, {id: "gallerybutton", link: "gallery.html"}, {id: "commissionbutton", link: "commissions.html"},
-    {id: "sidebarhome", link: "index.html"}, {id: "sidebaraboutme", link: "aboutme.html"}, {id: "sidebargallery", link: "gallery.html"}, {id: "sidebarcommissions", link: "commissions.html"},
-    {id: "tosbutton", link: "tos.html"}
+    {id: "navbaraboutme", link: "prezzych.com/aboutme"}, {id: "navbarhome", link: "prezzych.com"}, {id: "navbargallery", link: "prezzych.com/gallery"}, {id: "navbarcommissions", link: "prezzych.com/commissions"},
+    {id: "footerhome", link: "prezzych.com"}, {id: "footeraboutme", link: "prezzych.com/aboutme"}, {id: "footergallery", link: "prezzych.com/gallery"},
+    {id: "footercommissions", link: "prezzych.com/commissions"}, {id: "footertos", link: "prezzych.com/tos"} ,{id: "introductionbutton", link: "prezzych.com/aboutme"}, {id: "gallerybutton", link: "prezzych.com/gallery"}, {id: "commissionbutton", link: "prezzych.com/commissions"},
+    {id: "sidebarhome", link: "prezzych.com"}, {id: "sidebaraboutme", link: "prezzych.com/aboutme"}, {id: "sidebargallery", link: "prezzych.com/gallery"}, {id: "sidebarcommissions", link: "prezzych.com/commissions"},
+    {id: "tosbutton", link: "prezzych.com/tos"}
 ]
 let animatableElements;
 
