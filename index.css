@@ -351,10 +351,6 @@
     background-image: url(img/websiteimages/images/coms.jpg);
 }
 #slideshowelement-1 {
-    background-image: url(img/websiteimages/images/AF.jpg);
-    filter: blur(2px);
-}
-#slideshowelement-2 {
     background-image: url(img/websiteimages/images/funny.webp);
 }
 
