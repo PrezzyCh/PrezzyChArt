@@ -3,11 +3,11 @@
 
 // globals
 let siteButtons = [
-    {id: "navbaraboutme", link: "aboutme"}, {id: "navbarhome", link: "index"}, {id: "navbargallery", link: "gallery"}, {id: "navbarcommissions", link: "commissions"},
-    {id: "footerhome", link: "index"}, {id: "footeraboutme", link: "aboutme"}, {id: "footergallery", link: "gallery"},
-    {id: "footercommissions", link: "commissions"}, {id: "footertos", link: "tos"} ,{id: "introductionbutton", link: "aboutme"}, {id: "gallerybutton", link: "gallery"}, {id: "commissionbutton", link: "commissions"},
-    {id: "sidebarhome", link: "index"}, {id: "sidebaraboutme", link: "aboutme"}, {id: "sidebargallery", link: "gallery"}, {id: "sidebarcommissions", link: "commissions"},
-    {id: "tosbutton", link: "tos"}
+    {id: "navbaraboutme", link: "aboutme.html"}, {id: "navbarhome", link: "index.html"}, {id: "navbargallery", link: "gallery.html"}, {id: "navbarcommissions", link: "commissions.html"},
+    {id: "footerhome", link: "index.html"}, {id: "footeraboutme", link: "aboutme.html"}, {id: "footergallery", link: "gallery.html"},
+    {id: "footercommissions", link: "commissions.html"}, {id: "footertos", link: "tos.html"} ,{id: "introductionbutton", link: "aboutme.html"}, {id: "gallerybutton", link: "gallery.html"}, {id: "commissionbutton", link: "commissions.html"},
+    {id: "sidebarhome", link: "index.html"}, {id: "sidebaraboutme", link: "aboutme.html"}, {id: "sidebargallery", link: "gallery.html"}, {id: "sidebarcommissions", link: "commissions.html"},
+    {id: "tosbutton", link: "tos.html"}
 ]
 let animatableElements;
 
